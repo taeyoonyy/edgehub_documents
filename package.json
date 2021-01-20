@@ -6,10 +6,12 @@
   "author": "taeyoonyy <tyyu@lsis.com>",
   "license": "MIT",
   "devDependencies": {
+    "nodemon": "^2.0.7",
     "vuepress": "^1.8.0"
   },
   "scripts": {
     "docs:dev": "vuepress dev docs",
+    "docs:dev:nodemon": "nodemon --ext md,vue --watch .vuepress --watch . --exec vuepress dev docs",
     "docs:build": "vuepress build docs"
   }
 }

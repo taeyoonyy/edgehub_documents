@@ -5,7 +5,8 @@ module.exports = {
     // logo: '/headerlogo.svg',
     sidebar: [
       '/',
-      'account'
+      'account',
+      'movie'
     ]
   }
 }

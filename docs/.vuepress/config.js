@@ -8,6 +8,7 @@ module.exports = {
       'web',
       'account',
       'component',
+      'details',
       'movie'
     ]
   }

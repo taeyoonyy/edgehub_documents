@@ -82,16 +82,22 @@ Protocol마다 필요한 정보가 다르며, 자세한 내용은 Protocol 설�
 #### 6. Device Tags
 Edgehub에서는 Device에서 수집된 데이터를 Tag 로 분류합니다.  
 Device Tags 테이블에서는 Device에서 데이터를 수집하고 Tag로 저장하기 위해 필요한 정보를 입력합니다.  
+##### Tag ID
 * Tag: 수집된 데이터를 분류하고 사용하기 위해 Edgehub에서 부여하는 이름입니다.
+##### Tag Info
 * Tag info: 수집을 위해 필요한 Device와 관련된 정보를 설정합니다. Protocol에 따라 필요한 정보가 다릅니다.
+##### Condition
 * Interval: Tag 마다 설정할 수 있는 수집 주기입니다. 단위는 ms 입니다.
+* Transform: 수집된 데이터를 Tag에 저장하기 전 pre-processing이 필요한 경우 사용하는 기능입니다.
 * Load condition: 데이터를 수집하여 Edgehub inner database에 저장하는 기능을 사용할 때 저장하는 조건입니다.
 입력 조건을 만족하지 않으면 저장하지 않고, 입력 조건이 없으면 항상 저장합니다.  
 (Inner database를 사용할 때)
 * History: Edgehub inner database에 저장 기능 사용 여부를 결정하는 버튼입니다. Inner database가 설정되어 있고, Enable을 선택하면 저장기능을 사용하고, Inner database가 설정되어 있지 않거나 Disable를 선택하면 저장기능을 사용하지 않습니다.
 * Buffer: Tag 마다 저장할 수 있는 개수를 설정합니다. 최대 X 까지 입력 가능합니다.
+##### Property
 * Category: Tag의 Category를 구분하기 위한 정보를 입력합니다. 사용자가 필요한 경우 입력합니다. (Option)
 * Comment: Tag와 관련된 정보를 입력합니다. 사용자가 필요한 경우 입력합니다. (Option)
+##### Data
 * Type: Tag value의 Type입니다. 선택된 Type에 따라 데이터가 Value에 출력됩니다.
 * Value: 수집된 Tag의 value 입니다. 수집주기와 무관하게 1s마다 값이 갱신됩니다.
 * Byte Size: Value에 출력되는 값의 byte size 입니다.

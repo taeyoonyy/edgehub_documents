@@ -7,7 +7,7 @@ module.exports = {
       '/',
       'web',
       'account',
-      'component',
+      'entity',
       'details',
       'movie'
     ]

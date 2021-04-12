@@ -21,7 +21,7 @@ Admin account으로 접속 후 화면 우측 상단의 관리자 아이디 클�
 ![img](./img/account/account_add_btn.png)  
 
 Account에는 4가지 종류의  Authority가 있습니다.
-- Admin: EdgeHub-i | interactor 의 모든 기능 이용 가능
+- Admin: Interactor 의 모든 기능 이용 가능
 - RWC: Account 생성을 제외한 모든 기능 사용 가능 (Read, Write 그리고 Commit)
 - RW: Read와 Write 가능
 - R: Read 가능

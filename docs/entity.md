@@ -21,37 +21,6 @@ Group 과 Entity 생성 시 영문자, 한글, 숫자 그리고 일부 특수문
 Device는 PLC와 같이 데이터 수집의 대상이 되는 기기 입니다.   
 Group 이름 또는 Device 이름을 클릭하면 해당 페이지가 출력됩니다.  
 
-### Gruop page
-선택한 Group과 Group에 속해있는 Device의 정보가 출력됩니다.
-<img src="./img/entity/group.png">
-
-#### 1. Group Name  
-Entity 생성 시 입력한 Group 이름입니다.
-
-#### 2. Group ON / OFF Button
-Group에 속한 모든 Device가 Interactor와 통신을 시작 또는 중지하기 위한 버튼 입니다.
-ON 버튼 클릭 시 통신이 중지되어 있는 Device와 통신을 시작하며, OFF 버튼 클릭 시 모든 Device와의 통신을 중지합니다.  
-버튼은 Device들의 통신 상태를 나타내지 않습니다.  
-
-#### 3. Group Tag Count
-Group에 속한 모든 Device에 등록된 Tag의 숫자 입니다.
-
-#### 4. Group Description
-Group의 세부 정보를 입력할 수 있습니다.
-
-#### 5. Device Name
-Entity 생성 시 입력한 Device 이름입니다.
-
-#### 6. Device Protocol
-Device entity에서 선택된 통신 프로토콜 입니다.
-
-#### 7. Device Tag Count
-Device에 등록된 Tag의 숫자입니다.
-
-#### 8. Device Description
-Device Information에서 등록된 Device의 세부정보 입니다.
-
-
 ### Device Information Page
 데이터 수집의 대상이 되는 기기와 통싵을 위한 프로토콜을 설정하고, 연결하기 위한 정보를 설정하는 페이지 입니다.
 <img src="./img/entity/device.png">

@@ -3,9 +3,9 @@ title: Introduction
 lang: en-US
 ---
 
-![img](./img/loginlogo-interactor.svg)  
+![img](../../img/loginlogo-interactor.svg)  
 
-### 이 문서는 EdgeHub-i | Interactor 의 사용을 돕기 위해서 제작되었습니다.
+### 이 문서는 EdgeHub-i | Interactor 의 사용을 돕기 위해서 작성되었습니다.
 #### Last Updated: 04/12/2021
 
 <span style="position: absolute; bottom: 30px; color: gray">

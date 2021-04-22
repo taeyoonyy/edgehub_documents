@@ -8,10 +8,10 @@ Interactor에 등록되는 Entity는 크게 두 가지로 분류할 수 있습�
 
 ## Entity 추가
 화면 왼쪽의 Navigation에서 Entity를 추가하거나 삭제할 수 있습니다.  
-![img](./img/entity/add.png)
+![img](../../img/entity/add.png)
 
 `+` 버튼을 클릭하면 아래와 같은 Modal 창이 나타납니다. Device Entity는 사용자의 편의성을 위해서 Group으로 구분하여 추가할 수 있습니다. 다른 Entity는 Group 없이 Category에 추가됩니다.  
-<img src="./img/entity/add_modal.png" width="400">
+<img src="../../img/entity/add_modal.png" width="400">
 ::: tip 입력 조건
 Group 과 Entity 생성 시 영문자, 한글, 숫자 그리고 일부 특수문자를 사용할 수 있습니다.  
 (사용할 수 없는 특수 문자 - comma(,), period mark(.), space( ) 그리고  Backslach(\\))
@@ -23,7 +23,7 @@ Group 이름 또는 Device 이름을 클릭하면 해당 페이지가 출력됩�
 
 ### Device Information Page
 데이터 수집의 대상이 되는 기기와 통싵을 위한 프로토콜을 설정하고, 연결하기 위한 정보를 설정하는 페이지 입니다.
-<img src="./img/entity/device.png">
+<img src="../../img/entity/device.png">
 
 #### 1. Device Name
 사용자가 설정한 Device 이름입니다.
@@ -55,7 +55,7 @@ Protocol마다 필요한 정보가 다르며, 자세한 내용은 Protocol 설�
 ### Tags Page
 기기의 데이터를 수집하기 위한 세부 정보를 입력하는 페이지 입니다.  
 수집된 데이터는 Tag라는 이름으로 정의하여 사용합니다.
-<img src="./img/entity/tags.png">
+<img src="../../img/entity/tags.png">
 
 #### 1. Tags Table
 Tags 테이블에서는 Device에서 데이터를 수집하고 Tag로 저장하기 위해 필요한 정보를 입력합니다.
@@ -87,7 +87,7 @@ Tags 테이블에서는 Device에서 데이터를 수집하고 Tag로 저장하�
 
 ### Actions Page
 Actions Table에서는 Tag에서 설정한 데이터 수집에 성공했을 때 필요한 추가적인 동작을 설정합니다.
-<img src="./img/entity/actions.png">
+<img src="../../img/entity/actions.png">
 
 #### 1. Actions Table
 Actions 테이블에서는 해당 Entity의 Tags 테이블에 등록된 Tag를 대상으로 추가적인 동작을 설정합니다.

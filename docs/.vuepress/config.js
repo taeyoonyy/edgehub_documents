@@ -11,9 +11,7 @@ module.exports = {
         children: [
           './markdown/interactor/web',
           './markdown/interactor/account',
-          './markdown/interactor/entity',
-          './markdown/interactor/details',
-          './markdown/interactor/movie'
+          './markdown/interactor/entity'
         ]
       },
       {
@@ -21,6 +19,7 @@ module.exports = {
         sidebarDepth: 1,
         children: [
           './markdown/device/deviceProtocol',
+          './markdown/device/modbusTcp',
           './markdown/device/MelsecEthernet'
         ]
       },
@@ -46,10 +45,20 @@ module.exports = {
         ]
       },
       {
+        title: 'Details',
+        sidebarDepth: 1,
+        children: [
+          './markdown/details/details',
+          './markdown/details/transform'
+        ]
+      },
+      {
         title: 'Elixir Syntax',
         sidebarDepth: 1,
         children: [
-          './markdown/elixir/elixirSyntax'
+          './markdown/elixir/elixirSyntax',
+          './markdown/elixir/basics',
+          './markdown/elixir/controlStructures',
         ]
       }
     ]

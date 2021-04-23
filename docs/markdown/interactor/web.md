@@ -1,9 +1,9 @@
-# Web
+# Web Page 
 
 이 페이지는 Edgegub-i | Interactor web (이하 Interactor)의 사용 방법을 설명합니다.  
 
-## 전체 화면 구조
-Login 후 출력되는 화면입니다.   
+## Web Structure  
+Web 전체적인 구조에 대해서 설명합니다. 아래는 Login 후 출력되는 화면입니다.   
 ![img](../../img/web/web1.png)
 
 ### 1. Top Navigation Bar (Main)

@@ -20,7 +20,7 @@ else
 end
 ```
 {virtual, aaa, tag1} 의 값이 3일 때 tag2는 2의 값을 가지게 됩니다.
-![img](../../img/elixirSyntax/if_example.jpg)
+(이미지 추가 예정)
 
 ## Cond
 여러 패턴에 대해 매치할 때 사용합니다. _ 변수는 위에서 일치하는 값이 없을 때 선택됩니다. 일치하는 값도 

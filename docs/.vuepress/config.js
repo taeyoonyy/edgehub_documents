@@ -9,56 +9,56 @@ module.exports = {
         title: 'Interactor',
         sidebarDepth: 1,
         children: [
-          './markdown/interactor/web',
-          './markdown/interactor/account',
-          './markdown/interactor/entity'
+          './md/interactor/web',
+          './md/interactor/account',
+          './md/interactor/entity'
         ]
       },
       {
         title: 'Device Protocol',
         sidebarDepth: 1,
         children: [
-          './markdown/device/deviceProtocol',
-          './markdown/device/modbusTcp',
-          './markdown/device/MelsecEthernet'
+          './md/device/deviceProtocol',
+          './md/device/modbusTcp',
+          './md/device/MelsecEthernet'
         ]
       },
       {
         title: 'Server Protocol',
         sidebarDepth: 1,
         children: [
-          './markdown/server/serverProtocol'
+          './md/server/serverProtocol'
         ]
       },
       {
         title: 'Database Protocol',
         sidebarDepth: 1,
         children: [
-          './markdown/database/databaseProtocol'
+          './md/database/databaseProtocol'
         ]
       },
       {
         title: 'Internal Entity',
         sidebarDepth: 1,
         children: [
-          './markdown/internalEntity/internalEntity'
+          './md/internalEntity/internalEntity'
         ]
       },
       {
         title: 'Details',
         sidebarDepth: 1,
         children: [
-          './markdown/details/details',
-          './markdown/details/transform'
+          './md/details/details',
+          './md/details/transform'
         ]
       },
       {
         title: 'Elixir Syntax',
         sidebarDepth: 1,
         children: [
-          './markdown/elixir/elixirSyntax',
-          './markdown/elixir/basics',
-          './markdown/elixir/controlStructures',
+          './md/elixir/elixirSyntax',
+          './md/elixir/basics',
+          './md/elixir/controlStructures',
         ]
       }
     ]

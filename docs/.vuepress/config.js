@@ -49,6 +49,8 @@ module.exports = {
         sidebarDepth: 1,
         children: [
           './md/details/details',
+          './md/details/dataType',
+          './md/details/valueType',
           './md/details/transform'
         ]
       },

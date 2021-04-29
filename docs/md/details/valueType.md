@@ -1,6 +1,5 @@
 # Value Type
 
-## Value Type
 Interactor에서 수집 또는 생성된 Raw Type의 데이터는 15개의 값 타입(Value Type)을 적용하여 Value Type의 값을 가질 수 있습니다.
 ![img](../../img/details/valuetype.png)
 ### 1. Value Type
@@ -22,6 +21,8 @@ Tag의 Raw 값의 Byte 사이즈
 부동 소수점 숫자 형식으로 실수 타입 입니다.  
 32비트 단정밀도(Single-precision)와 64비트 배정밀도(Double-precision)을 지원합니다.  
 대상 Tag의 값이 32비트(4바이트) 또는 64비트(8바이트)가 아니면 의도하지 않은 값이 출력될 수 있습니다.  
+External Entity의 Tag에 Float를 사용할 때 데이터가 4바이트면 자동으로 단정밀도, 8바이트면 자동으로 배정밀도가 적용 됩니다.  
+Internal Entity의 Tag에 Float를 사용하면 항상 배정밀도가 적용 됩니다.  
 
 ### 3.1 단정밀도 (Float, IEEE754 Single precision 32-bit)
 참고: <https://www.binaryconvert.com/convert_float.html>

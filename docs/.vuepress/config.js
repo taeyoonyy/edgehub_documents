@@ -20,7 +20,6 @@ module.exports = {
         children: [
           './md/device/deviceProtocol',
           './md/device/modbusTcp',
-          './md/device/melsecethernet',
           './md/device/fenet'
         ]
       },

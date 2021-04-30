@@ -1,4 +1,4 @@
-# Control Stractures
+# Control Structures
 
 ## If
 If 와 do 사이의 값이 참이면 do 다음의 결과가 출력되고, 거짓이면 else 다음의 결과가 출력됩니다.  

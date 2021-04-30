@@ -11,7 +11,9 @@
   },
   "scripts": {
     "docs:dev": "vuepress dev docs",
+    "dev": "vuepress dev docs",
     "docs:dev:nodemon": "nodemon --ext md,vue --watch .vuepress --watch . --exec vuepress dev docs",
-    "docs:build": "vuepress build docs"
+    "docs:build": "vuepress build docs",
+    "build": "vuepress build docs"
   }
 }

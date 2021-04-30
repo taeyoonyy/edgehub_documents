@@ -14,11 +14,11 @@ Management와 Protocol의 페이지이동, Online User 정보 그리고 제품 �
 - Setting: System, License, HW, SW Information 정보 출력 및 Account 관리를 할 수 있는 페이지
 
 ### 2. Top Navigation Bar (Sub)
-File 가져오기 내보내기, Commit 과 Clear, View 모드 전환 그리고 매뉴얼 확인을 위한 버튼이 있습니다.
+File 가져오기 내보내기, Commit 과 Clear, View 모드 전환 그리고 사용 설명서 출력 버튼이 있습니다.
 - File: 설정한 데이터를 Excel과 .edgehub 파일로 내보내거나 가져오기 기능
 - Edit: Web에서 설정한 데이터를 수행하기 위한 Commit과 설정 데이터 초기화를 위한 Clear
 - View: 추가/수정/삭제 등의 기능을 사용할 수 있는 Edit 모드와 읽기만 가능한 Read 모드 변환
-- Help: 온라인 또는 오프라인 매뉴얼
+- Help: 온라인 또는 오프라인 사용 설명서
 
 ### 3. Left Navigation Bar
 Management 페이지 사용을 위해 Entity 추가/삭제, Entity 상태정보, Entity 페이지 이동을 위한 버튼이 있습니다.

@@ -20,7 +20,8 @@ module.exports = {
         children: [
           './md/device/deviceProtocol',
           './md/device/modbusTcp',
-          './md/device/MelsecEthernet'
+          './md/device/melsecEthernet',
+          './md/device/fenet'
         ]
       },
       {
@@ -61,6 +62,7 @@ module.exports = {
           './md/elixir/elixirSyntax',
           './md/elixir/basics',
           './md/elixir/controlStructures',
+          './md/elixir/binary'
         ]
       }
     ]

@@ -24,7 +24,7 @@ Tag의 Value는 v로 정의되어 있습니다.
 Elixir Syntax를 직접 입력하여 전처리를 수행할 수 있습니다. 전처리를 위한 Tag의 값은 v 로 정의되어 있으며, 데이터가 value type이 적용되기 전 raw인 것에 주의하여 Elixir Syntax를 적용해야 합니다.
 
 #### Example1) Modbus TCP Protocol을 사용하는 Device에서 수집된 데이터에 1을 더하고 싶을 때
-Modbus TCP 프로토콜로 1 word의 데이터 257을 수집하면, 수집된 값인 Raw는 <<1, 1>와 같은 형태의 Binary 데이터가 됩니다.
+Modbus TCP 프로토콜로 1 word의 데이터 257을 수집하면, 수집된 값인 Raw는 <<1, 1>>과 같은 형태의 Binary 데이터가 됩니다.
 10진수 257은 hex로 표현하면 0x0101이고, 이를 Elixir의 바이너리 형태로 표현하면 <<1, 1>> 입니다. 
 ::: tip Elixir의 Binary
 Elixir의 Binray 데이터는 << >> 를 사용하여 표현합니다.  

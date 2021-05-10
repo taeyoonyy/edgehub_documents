@@ -19,6 +19,7 @@ module.exports = {
         sidebarDepth: 1,
         children: [
           './md/device/deviceProtocol',
+          './md/device/melsecEthernet',
           './md/device/modbusTcp',
           './md/device/fenet'
         ]

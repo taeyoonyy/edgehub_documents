@@ -28,7 +28,8 @@ module.exports = {
         title: 'Server Protocol',
         sidebarDepth: 1,
         children: [
-          './md/server/serverProtocol'
+          './md/server/serverProtocol',
+          './md/server/http',
         ]
       },
       {

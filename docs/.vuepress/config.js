@@ -53,7 +53,8 @@ module.exports = {
           './md/details/details',
           './md/details/dataType',
           './md/details/valueType',
-          './md/details/transform'
+          './md/details/transform',
+          './md/details/buffer'
         ]
       },
       {
@@ -63,7 +64,8 @@ module.exports = {
           './md/elixir/elixirSyntax',
           './md/elixir/basics',
           './md/elixir/controlStructures',
-          './md/elixir/binary'
+          './md/elixir/binary',
+          './md/elixir/etc'
         ]
       }
     ]

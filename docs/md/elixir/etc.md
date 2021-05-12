@@ -9,4 +9,4 @@ v = {device, LS, SMARTIO, tag1, buffer, value}
 (v |> Enum.map(&(:math.pow(&1, 2))) |> Enum.sum ) / length(v) |> :math.sqrt
 ```
 __Virtual Tag Logic에서 RMS 사용 예시__  
-<img src="../../img/\elixirSyntax/rms.png">
+<img src="../../img/elixirSyntax/rms.png">

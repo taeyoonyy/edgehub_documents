@@ -1,6 +1,6 @@
-# HTTP
+# HTTP & HTTPS
 
-HTTP 클라이언트의 요청에 응답할 수 있는 HTTP 서버를 만들 수 있습니다.  
+HTTP 및 HTTPS (이하 HTTPS 생략) 클라이언트의 요청에 응답할 수 있는 HTTP 서버를 만들 수 있습니다.  
 클라이언트는 Get Method를 사용하여 Tag 데이터를 수집할 수 있습니다.  
 
 ## Client URL 사용 방법
@@ -12,7 +12,7 @@ Example - http://127.0.0.1:2290/custom/tag1
 
 
 ## Response 구조
-### 1. 정상적인 Path 사용 (ISON 추가 필요)
+### 1. 정상적인 Path 사용
 ```
 {
   "value_string": "0x64", //Value의 hex를 String으로 나타낸 값
@@ -24,6 +24,23 @@ Example - http://127.0.0.1:2290/custom/tag1
   "binary": "d" // Binary
 }
 ```
+
+데이터 중 raw와 binary 출력에는 다음과 같은 규칙이 적용됩니다.
+#### 1. 데이터가 String으로 출력 가능한 ASCII code인 경우 String으로 출력
+Example - 데이터가 0x4141일 때 Raw는 "AA"로 출력
+
+#### 2. 데이터가 String으로 출력 불가능한 ASCII code인 경우 Unicode로 출력
+Example - 데이터가 0x0041일 때 Raw는 "\u0000A" (0x00은 ASCII로 NUL 이기 때문에 String으로 출력 불가능)
+
+#### 3. 데이터가 ASCII code가 아닌 경우 ISON(Interactor Serialized Object Notation)으로 출력
+Example - 데이터가 0x0080일 때 아래와 같이 출력
+```
+"raw": {
+  "ISON-value": "0080",
+  "ISON-type": "Bytes"
+},
+```
+
 ### 2. 존재하지 않는 Path 사용
 ```
 null

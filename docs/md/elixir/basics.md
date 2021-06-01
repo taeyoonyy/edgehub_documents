@@ -1,5 +1,8 @@
 # Basics
-이 페이지는 Elixir의 기본 연산에 대해 설명합니다. 
+이 페이지는 Elixir의 기본 연산에 대해 설명합니다.
+::: danger CHECK
+this is danger
+::: 
 <div class="info">
   <div class="info-title">WHERE TO USE</div>
   - <p>Virtual > Logic</p>

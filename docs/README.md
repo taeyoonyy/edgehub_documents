@@ -9,9 +9,6 @@ lang: en-US
 #### Last Updated: 05/27/2021
 #### Version 0.1.0
 
-<span style="position: absolute; bottom: 30px; color: gray">
-CC-BY-NC-ND Licensed | Copyright © 2021-present Taeyoon Yu
-</span>
 
 ## GUIDE
 <div class="info">
@@ -30,3 +27,7 @@ CAUTION은 주의사항
 ::: danger WARNING
 WARNING은 거의 사용하지 않는.
 :::
+
+<footer>
+CC-BY-NC-ND Licensed | Copyright © 2021-present Taeyoon Yu
+</footer>

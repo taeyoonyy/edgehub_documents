@@ -2,17 +2,12 @@
 이 페이지는 주어진 매개변수를 기반으로 의사결정을 진행하는 프로그래밍 블럭에 대해 설명합니다.
 <div class="info">
   <div class="info-title">WHERE TO USE</div>
-  - <p>Virtual Entity의 Logic에서는 <b>example1</b>과 같이 사용할 수 있습니다.</p>
+  - <p>Device, Database, Virtual > Tags > <b>Transform</b></p>
+  - <p>Device, Database, Virtual > Tags > <b>Load Condition</b></p>
+  - <p>Device, Database, Virtual, Sync > Actions > <b>Condition</b></p>
+  - <p>Device, Database, Virtual, Sync > Actions > <b>Logic</b></p>
+  - <p>Virtual > Tags > <b>Logic</b></p>
 </div>
-
-- ***example1***: {virtual, aaa, tag1} 의 값이 3일 때 tag2는 2의 값을 가지게 됩니다.
-``` elixir
-if {virtual, virtual_name, tag1} === 1 do
-  1
-else
-  2
-end
-```
 
 <div class="toc-title">Table of Contents</div>
 
@@ -37,7 +32,16 @@ else
 end
 # 조건에 대한 결과가 false이므로 "This is not an Integer"가 반환됩니다.
 ```
+- ***example***: Virtual Entity의 Logic에서의 사용 예시  
+{virtual, aaa, tag1} 의 값이 3일 때 tag2는 2의 값을 가지게 됩니다.  
 
+``` elixir
+if {virtual, virtual_name, tag1} === 1 do
+  1
+else
+  2
+end
+```
 ## case
 case 뒤에 오는 값에 따라 결과값을 반환합니다.
 ``` elixir

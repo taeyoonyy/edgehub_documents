@@ -1,9 +1,5 @@
 # Etc
 이 페이지는 Interactor에서 유용하게 사용할 수 있는 Syntax를 설명합니다.
-<div class="info">
-  <div class="info-title">WHERE TO USE</div>
-  - <p>설명</p>
-</div>
 
 <div class="toc-title">Table of Contents</div>
 

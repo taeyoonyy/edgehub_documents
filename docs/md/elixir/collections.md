@@ -2,7 +2,11 @@
 이 페이지는 List와 Map에 대해 설명합니다.
 <div class="info">
   <div class="info-title">WHERE TO USE</div>
-  - <p>내용</p>
+  - <p>Device, Database, Virtual > Tags > <b>Transform</b></p>
+  - <p>Device, Database, Virtual > Tags > <b>Load Condition</b></p>
+  - <p>Device, Database, Virtual, Sync > Actions > <b>Condition</b></p>
+  - <p>Device, Database, Virtual, Sync > Actions > <b>Logic</b></p>
+  - <p>Virtual > Tags > <b>Logic</b></p>
 </div>
 
 <div class="toc-title">Table of Contents</div>
@@ -26,6 +30,10 @@ iex> tl([1, 2, 3, 4, 5])
 ## Map
 Map은 key와 value로 이루어진 store로 `%{}`와 함께 정의됩니다.  
 key는 중복이 불가하며, key와 value는 모든 데이터타입을 허용합니다.
+::: warning 
+Value Type이 Object인 경우 값은 Map으로 출력됩니다.  
+단, 사용자가 직접 Map을 입력할 수 없습니다(Tag Reference 외에 `{}` 사용불가).
+:::
 ``` elixir
 # NUMBER
 iex> map_num = %{1 => 1, 2 => 2}

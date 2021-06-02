@@ -16,7 +16,7 @@ Example - http://127.0.0.1:2290/custom/tag1
 
 ## Response 구조
 ### 1. 정상적인 Path 사용
-```
+``` json
 {
   "value_string": "0x64", //Value의 hex를 String으로 나타낸 값
   "value": "d", // Value type이 적용된 값
@@ -37,7 +37,7 @@ Example - 데이터가 0x0041일 때 Raw는 "\u0000A" (0x00은 ASCII로 NUL 이�
 
 #### 3. 데이터가 ASCII code가 아닌 경우 ISON(Interactor Serialized Object Notation)으로 출력
 Example - 데이터가 0x0080일 때 아래와 같이 출력
-```
+``` json
 "raw": {
   "ISON-value": "0080",
   "ISON-type": "Bytes"
@@ -45,7 +45,7 @@ Example - 데이터가 0x0080일 때 아래와 같이 출력
 ```
 
 ### 2. 존재하지 않는 Path 사용
-```
+``` json
 null
 ```
 
@@ -69,7 +69,8 @@ Path는 영문자와 점(".") 을 사용하여 설정할 수 있습니다.
 점(".") 없이 영문자 또는 숫자를 입력하여 Path를 만들면 하나의 Tag 값을 가르키는 Path가 됩니다.  
 <img src="../../img/server/path1.png" width="800">  
 tag1의 데이터를 수집하기 위해서 /custom/aaa 를 사용한 결과 입니다.
-```
+
+``` json
 {
   "value_string": "0x00",
   "value": "\u0000",
@@ -84,7 +85,8 @@ tag1의 데이터를 수집하기 위해서 /custom/aaa 를 사용한 결과 입
 점(".")을 사용하여 Path를 만들면 두 개 이상의 Tag 값을 가지는 Path가 됩니다.  
 <img src="../../img/server/path2.png" width="800">  
 /cusom/aaa를 사용하면 tag1과 tag2의 값을 수집할 수 있습니다.  
-```
+
+``` json
 {
   "ddd": {
     "value_string": "0x64",

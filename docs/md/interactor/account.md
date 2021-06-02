@@ -1,6 +1,9 @@
 # Account
-
 이 페이지는 Admin Account 생성, Login 및 Account 추가를 설명합니다.
+
+<div class="toc-title">Table of Contents</div>
+
+[[toc]]
 
 ## Admin Account
 EdgeHub-i 를 설치하고 http://localhost:1290에 처음 접속하면 아래와 같은 Admin account 생성 화면을 확인할 수 있습니다.  
@@ -25,4 +28,3 @@ Account에는 4가지 종류의  Authority가 있습니다.
 - RWC: Account 생성을 제외한 모든 기능 사용 가능 (Read, Write 그리고 Commit)
 - RW: Read와 Write 가능
 - R: Read 가능
-

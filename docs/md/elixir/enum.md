@@ -5,13 +5,9 @@
   - <p>내용</p>
 </div>
 
-## Table of Contents
-- [map](#map)
-- [min](#min)
-- [max](#max)
-- [filter](#filter)
-- [reduce](#reduce)
-- [sort](#sort)
+<div class="toc-title">Table of Contents</div>
+
+[[toc]]
 
 ## map
 `Enum.map(enumerable, fun)` 새로운 Collection을 반환합니다.

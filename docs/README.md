@@ -12,3 +12,21 @@ lang: en-US
 <span style="position: absolute; bottom: 30px; color: gray">
 CC-BY-NC-ND Licensed | Copyright © 2021-present Taeyoon Yu
 </span>
+
+## GUIDE
+<div class="info">
+  <div class="info-title">WHERE TO USE</div>
+  - <p>Virtual > Logic</p>
+</div>
+
+::: tip NOTICE
+NOTICE는 general note
+:::
+
+::: warning CAUTION
+CAUTION은 주의사항
+:::
+
+::: danger WARNING
+WARNING은 거의 사용하지 않는.
+:::

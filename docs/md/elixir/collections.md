@@ -5,10 +5,9 @@
   - <p>내용</p>
 </div>
 
-## Table of Contents
-- [List Concatenation](#list-concatenation)
-- [List Head / Tail](#list-head-Tail)
-- [Map](#map)
+<div class="toc-title">Table of Contents</div>
+
+[[toc]]
 
 ## List Concatenation
 `++` 연산자를 이용하여 List를 결합합니다.

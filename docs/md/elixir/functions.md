@@ -1,13 +1,14 @@
 # Functions
-이 페이지는 Elixir의 함수에 대해 설명합니다.
+이 페이지는 Elixir의 함수에 대해 설명합니다. :speech_balloon:
 <div class="info">
   <div class="info-title">WHERE TO USE</div>
   - <p>내용</p>
 </div>
 
 
-## Table of Contents
-- [Anonymous Functions](#anonymous-functions)
+<div class="toc-title">Table of Contents</div>
+
+[[toc]]
 
 ## Anonymous Functions
 익명함수는 이름이 없는 함수로서 다른 함수에 전달될 목적으로 자주 사용됩니다.  

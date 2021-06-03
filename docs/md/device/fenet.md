@@ -1,10 +1,7 @@
 # FENET ETHERNET
+
 FENET 프로토콜을 선택하여 LS-ELECTRIC의 Fenet 프로토콜을 사용하는 PLC의 디바이스 메모리를 읽거나 쓸 수 있습니다.
 변수 연속 읽기와 변수 연속 쓰기를 사용합니다.
-
-<div class="toc-title">Table of Contents</div>
-
-[[toc]]
 
 ### 대상 제품 -  Fenet 프로토콜을 사용할 수 있는 PLC 
 * Master-K
@@ -45,3 +42,4 @@ Start Address와 Length의 설정값을 사용한 데이터 요청에 대해 정
 ## Action 
 PLC에 데이터를 쓰기 위해 Action을 설정합니다.  
 (작성 중)
+

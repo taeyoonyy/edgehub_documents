@@ -1,7 +1,7 @@
 # Basics
 이 페이지는 Elixir의 기본 연산에 대해 설명합니다.
 <div class="info">
-  <div class="info-title">WHERE TO USE</div>
+  <div class="info-title"><img src="../../img/icon/info.svg">WHERE TO USE</div>
   - <p>Device, Database, Virtual > Tags > <b>Transform</b></p>
   - <p>Device, Database, Virtual > Tags > <b>Load Condition</b></p>
   - <p>Device, Database, Virtual, Sync > Actions > <b>Condition</b></p>
@@ -9,7 +9,7 @@
   - <p>Virtual > Tags > <b>Logic</b></p>
 </div>
 
-<div class="toc-title">Table of Contents</div>
+<div class="toc-title"><img src="../../img/icon/list.svg">Table of Contents</div>
 
 [[toc]]
 
@@ -40,10 +40,6 @@ iex> rem(5, 2) # 'rem'는 나머지를 반환합니다.
 ```
 
 ## Bit Operations
-<!-- Bitwise를 이용하여 비트연산을 합니다.
-::: tip NOTE
-**Bitwise**: 비트에 대한 연산 시 사용할 수 있는 Elixir의 함수집합입니다.
-::: -->
 ``` elixir
 # AND
 iex> 9 &&& 3
@@ -79,8 +75,8 @@ iex> 1 >>> 2
 iex> bsr(1, 2)
 0
 ```
-::: warning WARNING
-Bit Operations은 정수만 연산 가능합니다.
+::: warning <p class="custom-block-title"><img src="../../img/icon/warning.svg">WARNING</p>
+가능합니다.
 :::
 
 ## Rounding Numbers
@@ -207,7 +203,7 @@ false
 iex> !nil
 true
 ```
-::: warning WARNING
+::: warning <p class="custom-block-title"><img src="../../img/icon/warning.svg">WARNING</p>
 `or`, `and`, `not`의 좌측에는 boolean type이 위치해야 합니다.
 ``` elixir
 iex> true and 5
@@ -258,7 +254,7 @@ true
 iex> 1 <= 1.0
 true
 ```
-::: tip NOTICE
+::: tip <p class="custom-block-title"><img src="../../img/icon/tip.svg">NOTICE</p>
 비교 연산자는 아래에 명시된 데이터 타입에서도 지원되며, 비교 우위는 다음과 같습니다.  
 ``` elixir
 number < atom < reference < function < port < pid < tuple < map < list < bitstring

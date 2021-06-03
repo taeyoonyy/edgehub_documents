@@ -1,7 +1,7 @@
 # Control Structures
 이 페이지는 주어진 매개변수를 기반으로 의사결정을 진행하는 프로그래밍 블럭에 대해 설명합니다.
 <div class="info">
-  <div class="info-title">WHERE TO USE</div>
+  <div class="info-title"><img src="../../img/icon/info.svg">WHERE TO USE</div>
   - <p>Device, Database, Virtual > Tags > <b>Transform</b></p>
   - <p>Device, Database, Virtual > Tags > <b>Load Condition</b></p>
   - <p>Device, Database, Virtual, Sync > Actions > <b>Condition</b></p>
@@ -9,7 +9,7 @@
   - <p>Virtual > Tags > <b>Logic</b></p>
 </div>
 
-<div class="toc-title">Table of Contents</div>
+<div class="toc-title"><img src="../../img/icon/list.svg">Table of Contents</div>
 
 [[toc]]
 
@@ -80,7 +80,7 @@ end
 # result
 "match!"
 ```
-::: warning WARNING
+::: warning <p class="custom-block-title"><img src="../../img/icon/warning.svg">WARNING</p>
 일치하는 case가 없을 시 `CaseClauseError` 에러가 발생하므로 else(`_`)를 고려해야 합니다.
 :::
 
@@ -111,6 +111,6 @@ end
 # result
 "Catch all"
 ```
-::: warning WARNING
+::: warning <p class="custom-block-title"><img src="../../img/icon/warning.svg">WARNING</p>
 일치하는 condition이 없을 시 `CondClauseError` 에러가 발생하므로 유의해야 합니다.
 :::

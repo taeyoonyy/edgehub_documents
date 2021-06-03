@@ -1,7 +1,7 @@
 # Etc
 이 페이지는 Interactor에서 유용하게 사용할 수 있는 Syntax를 설명합니다.
 
-<div class="toc-title">Table of Contents</div>
+<div class="toc-title"><img src="../../img/icon/list.svg">Table of Contents</div>
 
 [[toc]]
 

@@ -2,7 +2,7 @@
 FENET 프로토콜을 선택하여 LS-ELECTRIC의 Fenet 프로토콜을 사용하는 PLC의 디바이스 메모리를 읽거나 쓸 수 있습니다.
 변수 연속 읽기와 변수 연속 쓰기를 사용합니다.
 
-<div class="toc-title">Table of Contents</div>
+<div class="toc-title"><img src="../../img/icon/list.svg">Table of Contents</div>
 
 [[toc]]
 

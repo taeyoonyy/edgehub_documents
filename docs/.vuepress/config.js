@@ -2,7 +2,7 @@ module.exports = {
   title: 'Docs',
   // url: 'https://127.0.0.1:1291',
   themeConfig: {
-    // logo: '/headerlogo.svg',
+    logo: 'loginlogo-interactor.svg',
     sidebar: [
       '/',
       {
@@ -72,5 +72,8 @@ module.exports = {
         ]
       }
     ]
+  },
+  sass: {
+    data: '@import "@theme/styles/style.scss"'
   }
 }

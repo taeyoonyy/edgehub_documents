@@ -10,7 +10,7 @@ Elixir Syntax의 자세한 내용은 아래의 URL을 참고바랍니다.
 <https://elixirschool.com/en/>
 
 ### HOW TO USE
-::: tip NOTE
+::: tip <p class="custom-block-title"><img src="../../img/icon/tip.svg">NOTICE</p>
 IEX => 설명 추가
 ``` elixir
 iex>

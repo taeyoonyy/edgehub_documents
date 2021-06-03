@@ -12,18 +12,18 @@ lang: en-US
 
 ## GUIDE
 <div class="info">
-  <div class="info-title">WHERE TO USE</div>
-  - <p>Virtual > Logic</p>
+  <div class="info-title"><img src="info.svg">WHERE TO USE</div>
+  <p>content</p>
 </div>
 
-::: tip NOTICE
+::: tip <p class="custom-block-title"><img src="tip.svg">NOTICE</p>
 NOTICE는 general note
 :::
 
-::: warning WARNING
+::: warning <p class="custom-block-title"><img src="warning.svg">WARNING</p>
 WARNING은 주의사항
 :::
 
-::: danger ALERT
+::: danger <p class="custom-block-title"><img src="danger.svg">ALERT</p>
 WARNING은 거의 사용하지 않는.
 :::

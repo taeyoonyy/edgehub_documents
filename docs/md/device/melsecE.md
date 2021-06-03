@@ -1,7 +1,11 @@
 # MELSEC ETHERNET
-
 MELSEC ETHERNET 프로토콜을 선택하여 Mitsubishi의 MC프로토콜을 사용하는 PLC의 디바이스 메모리를 읽거나 쓸 수 있습니다.
 일괄 읽기와 일괄 쓰기를 사용합니다.  
+
+<div class="toc-title">Table of Contents</div>
+
+[[toc]]
+
 
 ### 대상 제품 - QnA호환 3E프레임  
 * QnA: QnA시리즈 PLC CPU
@@ -10,6 +14,7 @@ MELSEC ETHERNET 프로토콜을 선택하여 Mitsubishi의 MC프로토콜을 사
 
 ## Connection Information
 Connection Information은 타겟 디바이스와 통신하기 위해 모든 데이터에 공통으로 적용되는 설정 값 입니다.
+
 #### PLC에서 확인이 필요한 PLC의 설정 값
 자세한 내용은 사용하는 Mitsubishi PLC 사용 설명서를 참고해 주세요.
 * __Address__: PLC의 아이피 주소
@@ -55,4 +60,3 @@ __Start Address__: D0, Length: 2, __Value(Raw)__: 0x0009000A, __Byte Size__: 4
 ## Action 
 PLC에 데이터를 쓰기 위해 Action을 설정합니다.  
 (작성 중)
-

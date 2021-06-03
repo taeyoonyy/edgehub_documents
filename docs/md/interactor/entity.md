@@ -1,6 +1,9 @@
 # Entity
-
 이 페이지는 Edgegub-i | Interactor web (이하 Interactor)에서 Entity 등록 방법과, Entity 사용 방법을 간단하게 설명합니다.
+
+<div class="toc-title">Table of Contents</div>
+
+[[toc]]
 
 Interactor에 등록되는 Entity는 크게 두 가지로 분류할 수 있습니다.
 * External Entity: 외부 디바이스 또는 SW와 연결되는 Entity (Device, Server, Database)

@@ -28,9 +28,6 @@ iex> Enum.map([key1: "value1", key2: "value2"], fn {k, v} -> {k, "map-" <> v} en
 iex> Enum.min([1, 2, 3, 4, 5])
 1
 
-iex> Enum.min([~D[2000-01-01], ~D[2100-01-01]])
-~D[2000-01-01]
-
 iex > Enum.min([1, 2], fn -> "callback" end)
 1
 iex > Enum.min([], fn -> "callback" end) # Collection이 비어있을 시 뒤의 콜백함수가 호출됩니다.
@@ -45,9 +42,6 @@ Date Type 관련 설명 추가 예정
 ``` elixir
 iex> Enum.max([5, 3, 0, -1])
 5
-
-iex> Enum.max([~D[2000-01-01], ~D[2100-01-01]])
-~D[2100-01-01]
 
 iex > Enum.max([1, 2], fn -> "callback" end)
 2

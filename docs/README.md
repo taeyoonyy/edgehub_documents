@@ -13,17 +13,17 @@ lang: en-US
 ## GUIDE
 <div class="info">
   <div class="info-title"><img src="info.svg">WHERE TO USE</div>
-  <p>content</p>
+  사용 가능한 곳에 대해 설명합니다.
 </div>
 
 ::: tip <p class="custom-block-title"><img src="tip.svg">NOTICE</p>
-NOTICE는 general note
+알림사항 또는 추가적인 내용에 대해 설명합니다.
 :::
 
 ::: warning <p class="custom-block-title"><img src="warning.svg">WARNING</p>
-WARNING은 주의사항
+주의사항에 대해 설명합니다.
 :::
 
 ::: danger <p class="custom-block-title"><img src="danger.svg">ALERT</p>
-WARNING은 거의 사용하지 않는.
+경고사항에 대해 설명합니다.
 :::

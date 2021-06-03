@@ -9,10 +9,14 @@ Elixir Syntax의 자세한 내용은 아래의 URL을 참고바랍니다.
 ### Elixir Guide (Elixir School)
 <https://elixirschool.com/en/>
 
-### HOW TO USE
+<div class="spacer"/>
+
 ::: tip <p class="custom-block-title"><img src="../../img/icon/tip.svg">NOTICE</p>
-IEX => 설명 추가
+`iex`는 Elixir 설치 시 사용할 수 있는 Interactive Shell입니다.  
+`iex` 실행 후 페이지의 예시를 입력하면 동일한 결과를 얻을 수 있습니다.  
+다만 Interactor에서는 Elixir syntax를 사용하는 위치 또는 type에 따라 다른 결과가 출력될 수 있습니다.
 ``` elixir
-iex>
+iex> 2 + 3 # 입력값
+5 # 출력값
 ```
 :::

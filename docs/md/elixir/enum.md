@@ -14,7 +14,7 @@
 - [sort](#sort)
 
 ## map
-`Enum.map(enumerable, fun)` 새로운 Collection을 반환합니다.
+새로운 Collection을 반환합니다.
 ``` elixir
 iex> Enum.map([1, 2, 3, 4, 5, 6, 7, 8, 9], fn(x) -> x * 2 end)
 [2, 4, 6, 8, 10, 12, 14, 16, 18]
@@ -23,7 +23,7 @@ iex> Enum.map([key1: "value1", key2: "value2"], fn {k, v} -> {k, "map-" <> v} en
 [key1: "map-value1", key2: "map-value2"]
 ```
 ## min
-`Enum.min(enumerable)`, `Enum.min(enumerable, callback)` Collection의 최소값을 반환합니다.
+Collection의 최소값을 반환합니다.
 ``` elixir
 iex> Enum.min([1, 2, 3, 4, 5])
 1
@@ -38,7 +38,7 @@ iex > Enum.min([], fn -> "callback" end) # Collection이 비어있을 시 뒤의
 ```
 
 ## max
-`Enum.max(enumerable)`, `Enum.max(enumerable, callback)` Collection의 최대값을 반환합니다.
+Collection의 최대값을 반환합니다.
 ``` elixir
 iex> Enum.max([5, 3, 0, -1])
 5
@@ -53,14 +53,14 @@ iex > Enum.max([], fn -> "callback" end) # Collection이 비어있을 시 뒤의
 ```
 
 ## filter
-`Enum.filter(enumerable, (fn(element) -> condition))` 두번째 인자인 함수의 조건에 맞는 아이템을 Collection으로 반환합니다. 
+조건에 맞는 아이템을 Collection으로 반환합니다. 
 ``` elixir
 iex> Enum.filter([1, 2, 3, 4], fn(x) -> rem(x, 2) == 0 end)
 [2, 4]
 ```
 
 ## reduce
-`reduce(enumerable, fun)`, `reduce(enumerable, acc, fun)` 콜백함수에 누산기(accumulator) 옵션을 지원합니다. 
+콜백함수에 누산기(accumulator) 옵션을 지원합니다. 
 ``` elixir
 iex> Enum.reduce([1, 2, 3], fn(x, acc) -> x + acc end) 
 6 # 1 + 2 + 3
@@ -73,25 +73,18 @@ iex> Enum.reduce(["meet ","to ","Nice "], "you", fn(x,acc)-> x <> acc end)
 ```
 
 ## sort
-`sort(enumerable)`, `sort(enumerable, fun)` Collection의 아이템을 정렬할 수 있습니다.
+Collection의 아이템을 정렬할 수 있습니다.
 ``` elixir
 # ASCENDING(default)
 iex> Enum.sort([4, 5, 2, 1, 3])
 [1, 2, 3, 4, 5]
-iex> Enum.sort([%{:key => 2}, %{:key => 1}])
-[%{key: 1}, %{key: 2}]
 
 # DESCENDING(option)
 iex> Enum.sort([2, 3, 1], :desc)
 [3, 2, 1]
-iex> Enum.sort([%{:key => 2}, %{:key => 1}], :desc)
-[%{key: 2}, %{key: 1}]
 
 # ORDER: number < atom < list < bitstring
 iex> Enum.sort(["string", :atom, 1, -1, [2, 3]])
 [-1, 1, :atom, [2, 3], "string"]
 
-# WITH FUNCTION
-iex> Enum.sort([%{:key => 1}, %{:key => 2}], fn(x, y) -> x[:key] > y[:key] end)
-[%{key: 2}, %{key: 1}]
 ```

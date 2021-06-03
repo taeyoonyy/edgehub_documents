@@ -5,9 +5,9 @@
   - <p>설명</p>
 </div>
 
-<div class="toc-title">Table of Contents</div>
-
-[[toc]]
+## Table of Contents
+- [Bitstring](#bitstring)
+- [Binary](#binary)
 
 ## Bitstring
 Bitstring은 Elixir의 기본 데이터 유형으로 `<< >>` 구문으로 표시합니다.

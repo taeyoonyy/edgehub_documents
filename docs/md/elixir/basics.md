@@ -5,9 +5,15 @@
   - <p>Virtual > Logic</p>
 </div>
 
-<div class="toc-title">Table of Contents</div>
-
-[[toc]]
+## Table of Contents
+- [Arithmetic](#arithmetic)
+- [Bit Operations](#bit-operations)
+- [Rounding Numbers](#rounding-numbers)
+- [Min, Max, ABS](#min-max-abs)
+- [Boolean](#boolean)
+- [Comparison](#comparison)
+- [String](#string)
+- [Pipe Operator](#pipe-operator)
 
 ## Arithmetic
 `+`, `-`, `*`, `/`와 같은 산술 연산자를 지원합니다.

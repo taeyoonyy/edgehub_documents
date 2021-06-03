@@ -27,7 +27,3 @@ CAUTION은 주의사항
 ::: danger WARNING
 WARNING은 거의 사용하지 않는.
 :::
-
-<footer>
-CC-BY-NC-ND Licensed | Copyright © 2021-present Taeyoon Yu
-</footer>

@@ -204,7 +204,7 @@ iex> !nil
 true
 ```
 ::: warning CAUTION
-`or`, `and`, `not`의 좌측에는 boolean type이 위치해야 합니다.
+`or`, `and`, `not`의 왼쪽에는 boolean type이 위치해야 합니다.
 ``` elixir
 iex> true and 5
 5

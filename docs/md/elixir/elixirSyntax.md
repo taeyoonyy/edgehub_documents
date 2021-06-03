@@ -9,7 +9,7 @@ Elixir Syntax의 자세한 내용은 아래의 URL을 참고바랍니다.
 ### Elixir Guide (Elixir School)
 <https://elixirschool.com/en/>
 
-::: tip NOTE
+::: tip <img class="my-icon" src="../../img/icons/note.svg">NOTE
 IEX => 설명 추가
 ``` elixir
 iex>

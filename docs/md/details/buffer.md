@@ -19,7 +19,7 @@ Interactor의 IP가 127.0.0.1이고, HTTP Server의 Port가 2290으로 설정된
 #### Buffer에 포함된 모든 데이터 읽기
 Path 뒤에 .buffer를 붙이면 Buffer의 모든 데이터를 읽을 수 있습니다. Buffer가 3로 설정된 경우 3개의 Buffer 데이터가 JSON 배열로 출력됩니다.  
 http://127.0.0.1:2290/aaa/__.buffer__  
-```
+``` json
 [
   {
     "value_string": "3832",
@@ -72,7 +72,7 @@ http://127.0.0.1:2290/aaa/__.buffer__
 #### Buffer에 포함된 특정 데이터 읽기
 Path 뒤에 .숫자 붙이면 Buffer의 특정 위치의 데이터를 읽을 수 있습니다. 마지막에 수집된 데이터가 0이고, 값이 증가할때 마다 이전 인터벌에 수집된 Buffer를 가르킵니다. (즉, Buffer가 3으로 설정되었을 때 .2가 Buffer에 있는 가장 오래된 데이터)  
 http://127.0.0.1:2290/aaa/__.0__  
-```
+``` json
 {
   "value_string": "3832",
   "value": 3832,
@@ -98,7 +98,7 @@ Tag reference 마지막에 , buffer를 입력하면 Buffer의 모든 데이터�
 __Buffer 전체 데이터 수집 설정 예시__  
 <img src="../../img/details/buffer_tag1.png">  
 __Buffer 전체 데이터 수집 결과 예시__  
-```
+``` elixir
 [
   %{
     "binary" => <<19, 163>>,

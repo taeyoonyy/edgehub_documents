@@ -80,7 +80,7 @@ end
 # result
 "match!"
 ```
-::: warning CAUTION
+::: warning WARNING
 일치하는 case가 없을 시 `CaseClauseError` 에러가 발생하므로 else(`_`)를 고려해야 합니다.
 :::
 
@@ -111,6 +111,6 @@ end
 # result
 "Catch all"
 ```
-::: warning CAUTION
+::: warning WARNING
 일치하는 condition이 없을 시 `CondClauseError` 에러가 발생하므로 유의해야 합니다.
 :::

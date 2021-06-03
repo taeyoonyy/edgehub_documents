@@ -79,7 +79,7 @@ iex> 1 >>> 2
 iex> bsr(1, 2)
 0
 ```
-::: warning CAUTION
+::: warning WARNING
 Bit Operations은 정수만 연산 가능합니다.
 :::
 
@@ -207,7 +207,7 @@ false
 iex> !nil
 true
 ```
-::: warning CAUTION
+::: warning WARNING
 `or`, `and`, `not`의 좌측에는 boolean type이 위치해야 합니다.
 ``` elixir
 iex> true and 5

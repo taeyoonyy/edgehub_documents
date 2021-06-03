@@ -20,10 +20,10 @@ lang: en-US
 NOTICE는 general note
 :::
 
-::: warning CAUTION
-CAUTION은 주의사항
+::: warning WARNING
+WARNING은 주의사항
 :::
 
-::: danger WARNING
+::: danger ALERT
 WARNING은 거의 사용하지 않는.
 :::

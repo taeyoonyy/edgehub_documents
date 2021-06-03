@@ -1,5 +1,5 @@
 module.exports = {
-  title: 'Docs',
+  title: 'EdgeHub-i | Interactor Documents',
   // url: 'https://127.0.0.1:1291',
   themeConfig: {
     // logo: '/headerlogo.svg',

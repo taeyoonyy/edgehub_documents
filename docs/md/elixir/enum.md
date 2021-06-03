@@ -81,7 +81,7 @@ iex> Enum.reduce(["meet ","to ","Nice "], "you", fn(x,acc)-> x <> acc end)
 # ASCENDING(default)
 iex> Enum.sort([4, 5, 2, 1, 3])
 [1, 2, 3, 4, 5]
-iex> Enum.sort([%{:key => 2}, %{:key => 1}])
+iex> Enum.sort([Map.new() |> Map.put(:key, 2), Map.new() |> Map.put(:key, 1)])
 [%{key: 1}, %{key: 2}]
 
 # ORDER: number < atom < list < bitstring
@@ -89,6 +89,6 @@ iex> Enum.sort(["string", :atom, 1, -1, [2, 3]])
 [-1, 1, :atom, [2, 3], "string"]
 
 # WITH FUNCTION
-iex> Enum.sort([%{:key => 1}, %{:key => 2}], fn(x, y) -> x[:key] > y[:key] end)
+iex> Enum.sort([Map.new() |> Map.put(:key, 1), Map.new() |> Map.put(:key, 2)], fn(x, y) -> x[:key] > y[:key] end)
 [%{key: 2}, %{key: 1}]
 ```

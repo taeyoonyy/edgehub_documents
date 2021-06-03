@@ -52,15 +52,123 @@ img {
   content: "CC-BY-NC-ND Licensed | Copyright © 2021-present Taeyoon Yu";
 }
 
-.page .toc-title {
-  margin-top: 36px;
-  padding-left: 36px;
-  padding-bottom: 5px;
-  color: #2c3e50;
-  font-size: 26.4px;
-  font-weight: bold;
-  border-bottom: 1px solid #eaecef;
-  background-repeat: no-repeat;
-  background-position: center left;
-  background-size: 24px;
+.page {
+  .toc-title {
+    margin-top: 36px;
+    padding-left: 36px;
+    padding-bottom: 5px;
+    color: #2c3e50;
+    font-size: 26.4px;
+    font-weight: bold;
+    border-bottom: 1px solid #eaecef;
+    background-repeat: no-repeat;
+    background-position: center left;
+    background-size: 24px;
+  }
+
+  pre {
+    background-color: #3C3A3A !important;
+  }
+
+  ul {
+    margin-left: 32px;
+    padding-left: 0px;
+
+    li {
+      margin-bottom: 0px !important;
+
+      a {
+        font-weight: 400;
+      }
+    }
+  }
+
+  h1 {
+    font-weight: bold;
+    font-size: 48px;
+  }
+
+  h2 {
+    font-weight: bold;
+
+    .header-anchor {
+      float: none;
+      opacity: 1;
+      padding-left: 16px;
+      padding-right: 0px;
+      color: #2c3e50;
+    }
+  }
+
+  h3 {
+    font-weight: bold;
+  }
+
+  code {
+    font-weight: bold;
+    color: rgba(red, 0.7);
+  }
+
+  .custom-block {
+    padding-top: 20px;
+    border-radius: 4px;
+  }
+
+  .custom-block-title,
+  .info-title {
+    margin-bottom: 8px;
+    padding-left: 36px;
+    background-repeat: no-repeat;
+  }
+
+  .tip {
+    .custom-block-title {
+      background-size: 24px;
+    }
+  }
+
+  .warning {
+    .custom-block-title {
+    }
+  }
+
+  .danger {
+    .custom-block-title {
+      background-size: 24px;
+      background-position: center left;
+    }
+  }
+
+  .info {
+    background-color: #f2fafd;
+    color: #6b5900;
+    border-radius: 4px;
+    border-left: 0.5rem solid #2a98b9;
+    padding: 0.1rem 1.5rem;
+    margin: 1rem 0;
+    padding-top: 20px;
+
+    .info-title {
+      color: #2c3e50;
+      font-weight: bold;
+      background-size: 24px;
+      padding-bottom: 4px;
+    }
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+
+  .page-nav {
+    max-width: 1000px;
+  }
+
+  table {
+    thead {
+      tr {
+        background-color: #ebf0f5;
+      }
+    }
+  }
 }

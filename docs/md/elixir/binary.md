@@ -1,12 +1,8 @@
 # Binary
-이 페이지는 Elixir의 BitString과 Binary에 대해 설명합니다.
+이 페이지는 ~~~~~~을 설명합니다.
 <div class="info">
   <div class="info-title">WHERE TO USE</div>
-  - <p>Device, Database, Virtual > Tags > <b>Transform</b></p>
-  - <p>Device, Database, Virtual > Tags > <b>Load Condition</b></p>
-  - <p>Device, Database, Virtual, Sync > Actions > <b>Condition</b></p>
-  - <p>Device, Database, Virtual, Sync > Actions > <b>Logic</b></p>
-  - <p>Virtual > Tags > <b>Logic</b></p>
+  - <p>설명</p>
 </div>
 
 <div class="toc-title">Table of Contents</div>

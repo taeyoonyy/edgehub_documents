@@ -63,10 +63,7 @@ module.exports = {
         children: [
           './md/elixir/elixirSyntax',
           './md/elixir/basics',
-          './md/elixir/collections',
-          './md/elixir/enum',
           './md/elixir/controlStructures',
-          './md/elixir/functions',
           './md/elixir/binary',
           './md/elixir/etc'
         ]

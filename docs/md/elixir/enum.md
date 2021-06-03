@@ -84,12 +84,6 @@ iex> Enum.sort([4, 5, 2, 1, 3])
 iex> Enum.sort([%{:key => 2}, %{:key => 1}])
 [%{key: 1}, %{key: 2}]
 
-# DESCENDING(option)
-iex> Enum.sort([2, 3, 1], :desc)
-[3, 2, 1]
-iex> Enum.sort([%{:key => 2}, %{:key => 1}], :desc)
-[%{key: 2}, %{key: 1}]
-
 # ORDER: number < atom < list < bitstring
 iex> Enum.sort(["string", :atom, 1, -1, [2, 3]])
 [-1, 1, :atom, [2, 3], "string"]

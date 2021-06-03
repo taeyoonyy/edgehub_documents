@@ -28,15 +28,24 @@ iex> tl([1, 2, 3, 4, 5])
 [2, 3, 4, 5]
 ```
 ## Map
-Map은 key와 value로 이루어진 store로 `%{}`와 함께 정의됩니다.  
+Elixir에서 Map은 key와 value로 이루어진 store로 `%{}`와 함께 정의됩니다.  
 key는 중복이 불가하며, key와 value는 모든 데이터타입을 허용합니다.
 ::: warning <p class="custom-block-title"><img src="../../img/icon/warning.svg">WARNING</p>
-Value Type이 Object인 경우 값은 Map으로 출력됩니다.  
-단, 사용자가 직접 Map을 입력할 수 없습니다(Tag Reference 외에 `{}` 사용불가).
+Interactor에서는 Tag Reference 외에 `{}` 사용이 불가하므로, `%{}`이 아닌 다음과 같은 방법으로 map을 정의할 수 있습니다. 
+``` elixir
+# new_map = %{1 => 1}
+new_map = Map.new() |> Map.put(1, 1)
+```
 :::
 ``` elixir
 # NUMBER
 iex> map_num = %{1 => 1, 2 => 2}
+%{1 => 1, 2 => 2}
+iex> map_num[1]
+1
+
+# NUMBER with Interactor
+iex> map_num = Map.new() |> Map.put(1, 1) |>  Map.put(2, 2)
 %{1 => 1, 2 => 2}
 iex> map_num[1]
 1
@@ -47,8 +56,21 @@ iex> map_str = %{"key1" => "value1", "key2" => "value2"}
 iex> map_str["key1"]
 "value1"
 
+
+# STRING with Interactor
+iex> map_str = Map.new() |> Map.put("key1", "value1") |>  Map.put("key2", "value2")
+%{"key1" => "value1", "key2" => "value2"}
+iex> map_str["key1"]
+"value1"
+
 # ATOM
 iex> map_atom = %{:key1 => :value1, :key2 => :value2}
+%{key1: :value1, key2: :value2}
+iex> map_atom[:key1]
+:value1
+
+# ATOM with Interactor
+iex> map_atom = Map.new() |> Map.put(:key1, :value1) |>  Map.put(:key2 , :value2)
 %{key1: :value1, key2: :value2}
 iex> map_atom[:key1]
 :value1

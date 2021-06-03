@@ -1,5 +1,8 @@
 # Basics
 이 페이지는 Elixir의 기본 연산에 대해 설명합니다.
+::: danger CHECK
+this is danger
+::: 
 <div class="info">
   <div class="info-title">WHERE TO USE</div>
   - <p>Virtual > Logic</p>
@@ -12,7 +15,8 @@
 - [Min, Max, ABS](#min-max-abs)
 - [Boolean](#boolean)
 - [Comparison](#comparison)
-- [String](#string)
+- [String Interpolation](#string-interpolation)
+- [String Concatenation](#string-concatenation)
 - [Pipe Operator](#pipe-operator)
 
 
@@ -267,38 +271,17 @@ true
 number < atom < reference < function < port < pid < tuple < map < list < bitstring
 ```
 :::
-## String
-- ***Length***
-``` elixir
-iex> String.length("elixir")
-6
-```
-- ***UpperCase, DownCase***
-``` elixir
-iex> String.upcase("hello")
-"HELLO" 
-iex> String.downcase("HELLO")
-"hello"
-```
-- ***Capitalize***
-``` elixir
-iex> String.capitalize("capital")
-"Capital"
-```
-- ***Split***
-``` elixir
-iex> String.split("Hello World")
-["Hello", "World"]
-iex> String.split("Hello,World",",")
-["Hello", "World"]
-```
-- ***Interpolation***: `#{}`는 변수를 String으로 반환합니다.
+
+## String Interpolation
+`#{}`는 변수를 String으로 반환합니다.
 ``` elixir
 iex> name = "World"
 iex> "Hello #{name}"
 "Hello World"
 ```
-- ***Concatenation***: `<>`는 String을 결합하여 반환합니다.
+
+## String Concatenation
+`<>`는 String을 결합하여 반환합니다.
 ``` elixir
 iex> "Nice " <> "to " <> "meet " <> "you" 
 "Nice to meet you"

@@ -15,22 +15,23 @@
 - [String](#string)
 - [Pipe Operator](#pipe-operator)
 
+
 ## Arithmetic
 `+`, `-`, `*`, `/`와 같은 산술 연산자를 지원합니다.
 ``` elixir
-# ADDITION
+# ADD
 iex> 1 + 2
 3
 
-# SUBTRACTION
+# SUBSTRACTION
 iex> 1 - 2
 -1
 
-# MULPLICATION
+# MULPLE
 iex> 1 * 2
 2
 
-# DIVISION
+# DIVIDE
 iex> 1 / 2 # '/'의 연산 결과는 Float타입으로 반환됩니다.
 0.5
 
@@ -109,7 +110,7 @@ iex> floor(-5.1)
 ```
 - ***Float***
 ``` elixir
-# ROUND OFF 
+# ROUND OFF
 iex> Float.round(5.55, 1)
 5.5
 iex> Float.round(5.56, 1)

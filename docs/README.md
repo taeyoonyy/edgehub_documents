@@ -27,3 +27,5 @@ lang: en-US
 ::: danger <p class="custom-block-title"><img src="danger.svg">ALERT</p>
 경고사항에 대해 설명합니다.
 :::
+
+<div class="copyright">CC-BY-NC-ND Licensed | Copyright © 2021-present Taeyoon Yu</div>

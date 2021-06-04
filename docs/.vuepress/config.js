@@ -72,8 +72,5 @@ module.exports = {
         ]
       }
     ]
-  },
-  sass: {
-    data: '@import "@theme/styles/style.scss"'
   }
 }

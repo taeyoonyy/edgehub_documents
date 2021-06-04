@@ -1,5 +1,5 @@
 # Account
-이 페이지는 Admin Account 생성, Login 및 Account 추가를 설명합니다.
+이 페이지는 <span>Edgegub-i | Interactor Web Application(이하 Interactor)</span>의 Admin Account 생성, Login 및 Account 추가를 설명합니다.
 
 <div class="toc-title"><img src="../../img/icon/list.svg">Table of Contents</div>
 

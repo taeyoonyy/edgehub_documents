@@ -50,7 +50,7 @@ Device와 통신을 위한 프로토콜을 선택합니다.
 
 #### 5. Connectoin Info
 선택한 Protocol 사용에 필요한 접속 정보를 입력합니다.   
-Protocol마다 필요한 정보가 다르며, 자세한 내용은 Protocol 설명 페이지를 참고해 주세요.  
+Protocol마다 필요한 정보가 다르며, 자세한 내용은 Protocol 설명 페이지를 참고 바랍니다.  
 
 ### Tags Page
 기기의 데이터를 수집하기 위한 세부 정보를 입력하는 페이지 입니다.  

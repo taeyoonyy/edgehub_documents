@@ -1,5 +1,5 @@
 # Web Page 
-이 페이지는 Edgegub-i | Interactor web (이하 Interactor)의 사용 방법을 설명합니다.
+이 페이지는 <u>Edgegub-i | Interactor Web Application(이하 Interactor)</u>의 사용 방법을 설명합니다.
 
 <div class="toc-title"><img src="../../img/icon/list.svg">Table of Contents</div>
 
@@ -28,7 +28,7 @@ Top Navigation의 왼쪽에 출력되는 Account ID를 클릭하여, 나오는 �
 | 2 | _License_ | Interactor에서 제공하는 License, Expiration Date 정보 입니다.<br/>Maintenance Service Information, Maintenance Service Expiration Date는 필요한 경우 사용자가 직접 입력하여 사용합니다.|
 | 3 | _HW Information_ | Interactor가 설치된 HW와 SW에 대한 전반적인 정보를 제공합니다.<br/>Installed Location과 Production Code는 필요한 경우 사용자가 직접 입력하여 사용합니다.|
 | 4 | _Engineer &<br/>Inspector<br/>Information_|Interactor를 사용하는 관리자 정보입니다. 필요한 경우 사용자가 직접 입력하여 사용합니다.|
-| 5 | _Account_| Login에 사용되는 계정 정보입니다. `+` 버튼을 클릭하여 계정을 추가할 수 있습니다.<br/>자세한 내용은 Account 페이지를 참고해 주세요.|
+| 5 | _Account_| Login에 사용되는 계정 정보입니다. `+` 버튼을 클릭하여 계정을 추가할 수 있습니다.<br/>자세한 내용은 Account 페이지를 참고 바랍니다.|
 
 ## Group
 Device Entity의 Group 정보를 출력하는 페이지 입니다.  

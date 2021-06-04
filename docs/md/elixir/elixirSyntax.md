@@ -22,5 +22,5 @@ iex> 2 + 3 # 입력값
 :::
 
 ::: warning <p class="custom-block-title"><img src="../../img/icon/warning.svg">WARNING</p>
-Interactor에서는 Tag Reference 외에 중괄호`{}` 사용이 어렵습니다. 
+Interactor에서는 Tag Reference 외에 중괄호`{}` 사용이 불가합니다. 
 :::

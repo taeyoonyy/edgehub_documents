@@ -2,7 +2,7 @@
 Virtual를 통해 다른 Entity의 Tag/Call을 불러와 가공하거나 [Elixir Syntax](../elixir/elixirSyntax.md)를 이용해 다른 Entity에서 사용할 수 있는 Tag를 생성할 수 있습니다.
 
 ::: tip <p class="custom-block-title"><img src="../../img/icon/tip.svg">NOTICE</p>
-Tag 생성방법은 External Entity(Device, Server, Database)와 대부분 동일하지만, Tag Information에서 실제 Entity의 정보가 아닌 `Logic`을 이용해 값을 입력해야 합니다.  
+Virtual Tag를 만드는 것은 External Entity(Device, Server, Database)와 대부분 동일하지만, Tag의 Connection information 또는 Tag information 같이 대상이 되는 Entity의 정보가 입력하는 것과 다르게 `Logic` 에 원하는 값을 직접 입력하여 만듭니다.
 :::
 
 <div class="toc-title"><img src="../../img/icon/list.svg">Table of Contents</div>
@@ -30,14 +30,14 @@ Tag 생성방법은 External Entity(Device, Server, Database)와 대부분 동�
   |2 | 1번에서 선택한 Tag나 Call의 Reference를 생성하여 3번에 추가합니다. |
   |3 | Elixir문법을 이용하여 원하는 값을 생성하거나 가공할 수 있습니다.|
 
-  ##### :mag_right: 예시1) 특정 상수를 입력하여 변수로 사용
+  ##### :mag_right: 예시1) 고정 데이터 (Staitc) 입력
 
   <img src="../../img/internalEntity/logic-exam1-1.png">
 
-  위와 같이 Virtual Tag를 생성하고 `Commit`할 경우 결과는 다음과 같습니다.
+  위와 같이 Logic을 입력하여 Virtual Tag를 생성하고 `Commit`할 경우 결과는 다음과 같습니다.
   <img src="../../img/internalEntity/logic-exam1-2.png">
 
-  ##### <div id="exam1"> :mag_right: 예시2) 수집된 온도(℃)를 화씨(°F)로 변환하고 싶은 경우</div>
+  ##### <div id="exam1"> :mag_right: 예시2) 다른 Tag의 데이터 가공 (수집된 온도(℃)를 화씨(°F)로 변환)</div>
 
   <img src="../../img/internalEntity/logic-exam2-1.png">
 
@@ -53,36 +53,36 @@ Tag 생성방법은 External Entity(Device, Server, Database)와 대부분 동�
 - **Value Type**: Logic을 통해 가공한 데이터의 Value Type을 설정합니다. 
 
 #### :black_medium_square: Condition
-- **Interval Value**: Tag Value를 update하는 **시간간격**을 입력합니다.
-- **Interval Unit**: Interval Value에서 입력한 **시간단위**를 설정합니다.
-- **Transform**: Tag Value를 Interactor로 가져오기 전 **전처리**할 수 있습니다.
- <!-- ##### :mag_right: 예시) 수집된 온도(℃)를 바로 화씨(°F)로 변환하고 싶은 경우
-  ( v |> :binary.decode_unsigned() ) * 9/5 + 32 -->
-- **Load Condition**:
-- **History**: 
-- **Buffer**: Update 되기 전의 Value를 일시적으로 저장할 수 있습니다. 
-
+- **Interval Value**: Logic을 실행하여 값을 만드는 **시간 간격**
+- **Interval Unit**: Interval Value에서 입력한 시간의 **단위**
+- **Transform** (Option): Logic에서 생성된 값에 추가적인 변환이 필요할 때 사용
+- **Load Condition** (Option): Tag의 값을 Internal Database에 저장하기 위한 조건 설정 (History가 enable인 경우만 사용)
+- **History** : Internal Dabase에 Tag 값 저장여부 설정
+- **Buffer**: Tag의 값을 임시로 저장하기 위한 버퍼 크기 설정
 #### :black_medium_square: Property
-- **Category**: 
-- **Comment**: Virtual Tag에 대한 설명 등과 같은 Meta data를 저장할 수 있습니다. 
+- **Category** (Option): 동일한 성질을 가진 Tag의 분류가 필요할 때 사용자가 직접 입력
+- **Comment** (Option): Tag의 추가적인 설명이 필요할 때 사용자가 직접 입력
 
 #### :black_medium_square: Data
-- **Type**: Display할 Value의 Type을 설정합니다.  
-- **Value**: Tag의 Value 값을 Display합니다.
-- **Byte Size**: Tag Value의 Byte 크기입니다.
+- **Type**: Data - Value에 출력되는 데이터의 종류 설정 (Raw, Binary, Value 중 선택)
+- **Value**: 마지막으로 실행된 Tag 값 (Type 설정 적용)
+- **Byte Size**: 마지막으로 실행된 Tag Value의 Byte 길이
 
 
 ## Virtual Actions
 Tags Tab에서 생성한 Tag에 추가적인 Action을 설정할 수 있습니다. 설정된 Action은 해당 Tag가 실행되는 시점마다 발생합니다.
 
 #### :black_medium_square: Action ID
-- **Tag**: Action을 실행할 Tag를 선택합니다.
-- **Condition**: Action이 실행될 조건을 입력합니다.
+- **Tag**: Action 실행의 대상이 되는 Tag 선택 (선택된 Tag가 실행 될 때 해당 Action 실행)
+- **Condition**: Action이 발생 여부를 결정하는 조건
 
 ::: tip <p class="custom-block-title"><img src="../../img/icon/tip.svg">NOTICE</p>
 - Condition의 결과는 True 또는 False여야 하며, 결과가 `True일 경우` Action이 실행됩니다.
-- Condtion을 입력하는 창에는 좌변에 입력되어야 할 값을 지원하므로, 아래와 같이 좌변을 생략하여 조건을 입력할 수 있습니다.
+- 선택한 Tag의 값이 좌변의 첫 번째 항이 됩니다. 아래와 같이 비교연산자를 바로 사용하거나, 추가적인 산술연산을 할 수 있습니다.
 ``` elixir
+
+# 아무것도 입력하지 않는 경우 항상 True
+
 # Tag의 값이 1인 경우 True
 === 1 
 
@@ -119,20 +119,22 @@ Tags Tab에서 생성한 Tag에 추가적인 Action을 설정할 수 있습니�
 :::
 
 #### :black_medium_square: Action Information
-- **Category**: Tag나 Call이 포함된 Category를 선택합니다.
-- **Group**: Category가 Device인 경우 Tag가 포함된 Group을 선택합니다.
-- **Entity**: Tag나 Call이 포함된 Entity를 선택합니다.
-- **Call/Tag**: Action에 사용될 Tag나 Call을 선택합니다.
-- **Value**: Action이 Event, Log인 경우 `""` 안에 원하는 message를 입력합니다. Action이 Tag인 경우 [Elixir Syntax](../elixir/elixirSyntax.md)를 이용하여 선택한 Tag의 값을 조작할 수 있습니다.
+- **Category**: Action 실행의 대상이 되는 Tag 또는 Call의 Category 선택
+- **Group**: Action 실행의 대상이 되는 Group 선택 (Category가 Device인 경우만 Group 선택)
+- **Entity**: Action 실행의 대상이 되는 Entity 선택
+- **Call/Tag**: Action 실행의 대상이 되는 Tag ID 또는 Call ID 선택
+- **Value**: Action 실행 시 사용되는 값 입력 (Action Type에 따라 입력되는 내용 다름)  
+  - Event / Log: `""` 안에 원하는 message를 입력  
+  - Tag: [Elixir Syntax](../elixir/elixirSyntax.md)를 이용하여 대싱아 되는 Tag의 값 변경 또는 Tag가 가르키는 Device에 쓰기 수행
 
-##### :mag_right: 예시) <a href="#exam1">위의 예시</a>에서 만든 화씨 Tag의 값이 80이 넘을 경우 Log 기록
+##### :mag_right: 예시) <a href="#exam1">다른 Tag의 데이터 가공</a> 예시 에서 만든 화씨 Tag의 값이 80이 넘을 경우 Log 기록
 
 <img src="../../img/internalEntity/action-value.png">
 
 #### :black_medium_square: Property
-- **Comment**: : Virtual Action에 대한 설명 등과 같은 Meta data를 저장할 수 있습니다. 
+- **Comment** (Option): Action의 추가적인 설명이 필요할 때 사용자가 직접 입력
 
 #### :black_medium_square: Data
-- **Type**:
-- **Value**:
-- **Byte Size**:
+- **Type**: Data - Value에 출력되는 데이터의 종류 설정 (Raw, Binary, Value 중 선택)
+- **Value**: 마지막으로 실행된 Action 값 (Type 설정 적용)
+- **Byte Size**:  마지막으로 실행된 Action 값의 Byte 길이

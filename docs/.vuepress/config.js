@@ -1,4 +1,7 @@
 module.exports = {
+  head: [
+    ['link', { rel: 'icon', href: 'favicon.ico' }]
+  ],
   title: 'Docs',
   // url: 'https://127.0.0.1:1291',
   themeConfig: {

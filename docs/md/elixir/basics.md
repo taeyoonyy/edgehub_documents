@@ -76,7 +76,7 @@ iex> bsr(1, 2)
 0
 ```
 ::: warning <p class="custom-block-title"><img src="../../img/icon/warning.svg">WARNING</p>
-가능합니다.
+Bit Operations은 정수만 연산 가능합니다.
 :::
 
 ## Rounding Numbers

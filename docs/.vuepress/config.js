@@ -43,7 +43,8 @@ module.exports = {
         title: 'Internal Entity',
         sidebarDepth: 1,
         children: [
-          './md/internalEntity/internalEntity'
+          './md/internalEntity/internalEntity',
+          './md/internalEntity/virtual'
         ]
       },
       {

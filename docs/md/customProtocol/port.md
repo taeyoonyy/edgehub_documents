@@ -1,5 +1,5 @@
 # Port
-이 페이지는 <u>Edgegub-i | Interactor Web Application(이하 Interactor)</u>의 `Custom Protocol`의 사용법을 설명합니다.
+이 페이지는 <u>Edgegub-i | Interactor Web Application(이하 Interactor)</u>의 `Custom Protocol`을 이용한 `Port`의 사용법을 설명합니다.
 
 <div class="toc-title"><img src="../../img/icon/list.svg">Table of Contents</div>
 
@@ -20,7 +20,6 @@ C:/Python39/python.exe
 ``` bash
 python
 ```
-
 
 #### :black_medium_square: Arguments
 #### :black_medium_square: Use Stdio

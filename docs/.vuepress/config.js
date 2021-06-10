@@ -1,11 +1,11 @@
 module.exports = {
   head: [
-    ['link', { rel: 'icon', href: '/favicon.ico' }]
+    ['link', { rel: 'shortcut icon', href: 'favicon.ico' }]
   ],
-  title: 'Docs',
+  title: 'EDGE Hub i | Interactor  Docs',
   // url: 'https://127.0.0.1:1291',
   themeConfig: {
-    logo: 'headerlogo-interactor.svg',
+    // logo: 'headerlogo-interactor.svg',
     sidebar: [
       '/',
       {
@@ -40,6 +40,14 @@ module.exports = {
         sidebarDepth: 1,
         children: [
           './md/database/databaseProtocol'
+        ]
+      },
+      {
+        title: 'Custom Protocol',
+        sidebarDepth: 1,
+        children: [
+          './md/customProtocol/customProtocol',
+          './md/customProtocol/port'
         ]
       },
       {

@@ -6,13 +6,63 @@ HTTP 및 HTTPS(이하 HTTPS 생략) 클라이언트의 요청에 응답할 수 �
 [[toc]]
 
 ## Client URL 사용 방법
-다음과 같은 URL로 데이터를 요청할 수 있습니다.  
+다음과 같은 URL 형식을 통해 데이터를 가져올 수 있습니다. 
+``` http
+http://{Interactor IP 주소}:{HTTP 생성 시 입력한 Port}/{path}
+```
+
+##### :mag_right: 예시) Interactor의 모든 Tag 정보를 가져오고 싶은 경우
+- URL 입력
+```  http
+http://127.0.0.1:2290/data/tag
+```
+- 수집 데이터
+``` json
+{
+  "device": {
+    "Port": {
+      "elixir": {
+        "tag1": {
+          "value_string": "\"hello\"",
+          "value": "hello",
+          "timestamp": 1623394069668,
+          "raw_string": "0x68656C6C6F",
+          "raw": "hello",
+          "binary_string": "0x68656C6C6F",
+          "binary": "hello"
+        }
+      }
+    }
+  },
+...
+}
+```
 ::: tip  <p class="custom-block-title"><img src="../../img/icon/tip.svg">NOTICE</p>
-##### :arrow_forward: URL 형식
-http://`Interactor IP 주소`:`HTTP 생성 시 입력한 Port`/custom/`사용자가 입력한 path`  
-<div class="spacer"/>
-:mag_right: 예시) http://127.0.0.1:2290/custom/tag1
+`json`의 key값을 `path`로 사용하여 특정 데이터를 가져올 수 있습니다(단, TagID까지만 접근가능).
+
+##### :mag_right: 예시) `http://127.0.0.1:2290/data/tag/device/Port`
+``` json
+{
+  "elixir": {
+    "tag1": {
+      "value_string": "\"hello\"",
+      "value": "hello",
+      "timestamp": 1623394325673,
+      "raw_string": "0x68656C6C6F",
+      "raw": "hello",
+      "binary_string": "0x68656C6C6F",
+      "binary": "hello"
+    }
+  }
+}
+```
+
 :::
+
+##### :mag_right: 예시) Server의 Tags에 있는 `tag1` 값을 가져오고 싶은 경우 
+```  http
+http://127.0.0.1:2290/custom/tag1
+```
 
 
 ## Response 구조
@@ -70,13 +120,13 @@ HTTP의 엑세스 제어와 인증을 위해 **"Basic"** 인증을 설정할 수
 HTTP Client에서 요청할 타겟 `Tag`와 `path`를 설정합니다.  
 
 #### :black_medium_square: Path
-URL에서 `cumsom/` 뒤에 입력되는 Path입니다. Path는 영문자와 점(`.`) 을 사용하여 설정할 수 있습니다. 
+URL에서 `http://Interactor IP 주소:HTTP 생성 시 입력한 Port/custom/` 뒤에 입력되는 Path입니다. Path는 영문자와 점(`.`) 을 사용하여 설정할 수 있습니다. 
 
 #### :black_medium_square: 단일 Path
 점(`.`) 없이 영문자 또는 숫자를 입력하여 Path를 만들면, 하나의 Tag 값을 가르키는 Path가 됩니다.  
 <img src="../../img/server/path1.png" width="800">  
 
-##### :mag_right: 예시) tag1의 데이터를 수집하기 위해 `/custom/aaa` 를 사용한 결과
+##### :mag_right: 예시) tag1의 데이터를 수집하기 위해 `http://127.0.0.1:2290/custom/aaa` 를 사용한 결과
 ``` json
 {
   "value_string": "0x00",
@@ -92,7 +142,7 @@ URL에서 `cumsom/` 뒤에 입력되는 Path입니다. Path는 영문자와 점(
 점(`.`)을 사용하여 Path를 만들면 두 개 이상의 Tag 값을 가지는 Path가 됩니다.  
 <img src="../../img/server/path2.png" width="800">  
 
-##### :mag_right: 예시) `/cusom/aaa`를 사용한 결과  
+##### :mag_right: 예시) `http://127.0.0.1:2290/custom/aaa`를 사용한 결과  
 
 ``` json
 {

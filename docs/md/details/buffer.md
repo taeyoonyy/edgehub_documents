@@ -9,7 +9,7 @@ Interactor의 Tag는 기본적으로 **마지막에 수집된 또는 생성된 �
 Buffer는 `Device`, `Database` `Virtual`의 Tags에서 설정할 수 있습니다. **최소 1 부터 최대 1000**까지 설정 가능합니다.
 
 ::: warning <p class="custom-block-title"><img src="../../img/icon/warning.svg">WARNING</p>
-많은 Tag가 큰 숫자의 Buffer를 가지면 Interactor를 사용하는 PC 및 Interactor의 성능에 영향을 줄 수 있습니다.
+많은 Tag가 큰 숫자의 Buffer를 가지면 Interactor 및 Interactor를 사용하는 PC의 성능에 영향을 줄 수 있습니다.
 :::
 
 
@@ -24,7 +24,7 @@ Buffer에 포함된 모든 데이터를 한번에 읽는것과 특정 순서의 
 
 #### :black_medium_square: Buffer에 포함된 모든 데이터 읽기
 Path 뒤에 `.buffer`를 붙이면 Buffer의 모든 데이터를 읽을 수 있습니다. Buffer가 3로 설정된 경우 3개의 Buffer 데이터가 `JSON 배열`로 출력됩니다.  
-##### :mag_right: 예시) `http://127.0.0.1:2290/aaa/__.buffer__`
+##### :mag_right: 예시) `http://127.0.0.1:2290/aaa/.buffer`
 ``` json
 [
   {
@@ -77,7 +77,7 @@ Path 뒤에 `.buffer`를 붙이면 Buffer의 모든 데이터를 읽을 수 있�
 
 #### :black_medium_square: Buffer에 포함된 특정 데이터 읽기
 Path 뒤에 .숫자 붙이면 Buffer의 특정 위치의 데이터를 읽을 수 있습니다. 마지막에 수집된 데이터가 `0`이고, 값이 증가할때 마다 이전 인터벌에 수집된 Buffer를 가르킵니다. (즉, Buffer가 3으로 설정되었을 때 .2가 Buffer에 있는 가장 오래된 데이터)  
-##### :mag_right: 예시) `http://127.0.0.1:2290/aaa/__.0__` 
+##### :mag_right: 예시) `http://127.0.0.1:2290/aaa/.0` 
 ``` json
 {
   "value_string": "3832",

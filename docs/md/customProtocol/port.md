@@ -1,5 +1,5 @@
 # Port
-이 페이지는 <u>Edgegub-i | Interactor Web Application(이하 Interactor)</u>의 `Custom Protocol`을 이용한 `Port`의 사용법을 설명합니다.
+이 페이지는 <u>Edgegub-i | Interactor Web Application(이하 Interactor)</u>의 `Custom Protocol`을 이용한 `Port` 사용법을 설명합니다.
 
 <div class="toc-title"><img src="../../img/icon/list.svg">Table of Contents</div>
 
@@ -15,17 +15,21 @@ Executable에는 실행 파일(`.exe`)의 <u>path</u> 또는 <u>명령어</u>를
 ``` bash
 C:\Python39\python.exe
 ```
+<img src="../../img/customProtocol/port-1.png">
 
 - 환경변수가 설정되어 있는 경우 아래와 같이 실행파일의 이름을 입력합니다.
 ``` bash
 python
 ```
+<img src="../../img/customProtocol/port-2.png">
 
 #### :black_medium_square: Arguments
 Arguments에는 실행파일을 통해 실행하고자 하는 <a href="#elixir_port">**파일**</a>의 path를 입력합니다.
 ``` bash
 C:\workspace\test_python.py
 ```
+<img src="../../img/customProtocol/port-3.png">
+
 
 #### :black_medium_square: Use Stdio
 Select box에서 `Standard Input/Output`의 사용여부를 선택할 수 있습니다.
@@ -33,7 +37,12 @@ Select box에서 `Standard Input/Output`의 사용여부를 선택할 수 있습
 - **No(미사용)**: 표준입출력을 사용하지 않고 port만 실행합니다(Tag 사용불가).
 
 #### :black_medium_square: Packet
-송수신할 데이터의 Length를 실어 보낼 Header의 길이를 지정합니다. 설정한 Header를 통해 데이터의 Length를 확인하고, 그 Length만큼 데이터를 읽거나 씁니다(**N = Data Length**).  
+송수신할 데이터의 Length를 실어 보낼 Header의 Byte 길이를 지정합니다. 설정한 Header를 통해 데이터의 Length를 확인하고, 그 Length만큼 데이터를 읽거나 씁니다(**N = Data Length**).  
+
+::: tip <p class="custom-block-title"><img src="../../img/icon/tip.svg">NOTICE</p>
+1 Byte는 8 bit이며, 8 bit는 binary로 255까지 표현할 수 있습니다.
+:::
+
 | Packet | Header | 예) N = 255 | 예) N = 256 | 예) N = 16777216 |
 | :-: | -:| -: | -: | -: |
 | 0 | - | - | - | - |
@@ -100,7 +109,7 @@ Select box에서 `Standard Input/Output`의 사용여부를 선택할 수 있습
 }
 ```
 
-<div id="elixir_port"><h5>🔎 예시) Elixir 코드 예제</h5></div>
+<div id="elixir_port"><h5>🔎 예시) <code>.exe</code>파일을 통해 실행되는 Elixir 코드 예제</h5></div>
 
 ``` elixir
 defmodule PortWithElixir do

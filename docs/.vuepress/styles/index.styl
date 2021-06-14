@@ -81,7 +81,7 @@
   .toc-title {
     margin-top: 36px;
     padding-bottom: 5px;
-    color: #2c3e50;
+    color: $main-gray;
     font-size: 26.4px;
     font-weight: bold;
     border-bottom: 1px solid #eaecef;
@@ -107,6 +107,23 @@
       a {
         font-weight: 400;
       }
+      ul {
+        margin-left: 0;
+        li {
+          list-style: none;
+        }
+        li:before{
+          content: '';
+          display: inline-block;
+          width: 5px;
+          height: 5px;
+          margin: -2px 12px auto auto;
+          vertical-align: middle;
+          border-right: 2px solid $main-gray;
+          border-top: 2px solid $main-gray;
+          transform: rotate(45deg)
+        }
+      }
     }
   }
 
@@ -123,7 +140,7 @@
       opacity: 1;
       padding-left: 16px;
       padding-right: 0px;
-      color: #2c3e50;
+      color: $main-gray;
     }
   }
 

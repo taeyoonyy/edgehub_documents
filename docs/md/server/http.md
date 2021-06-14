@@ -19,10 +19,10 @@ http://127.0.0.1:2290/data/tag
 - 수집 데이터
 ``` json
 {
-  "device": {
-    "Port": {
-      "elixir": {
-        "tag1": {
+  "device": { // category
+    "Port": { // Device group name
+      "elixir": { // Device entity name
+        "tag1": { // tag ID
           "value_string": "\"hello\"",
           "value": "hello",
           "timestamp": 1623394069668,
@@ -34,7 +34,9 @@ http://127.0.0.1:2290/data/tag
       }
     }
   },
-...
+  .
+  .
+  .
 }
 ```
 ::: tip  <p class="custom-block-title"><img src="../../img/icon/tip.svg">NOTICE</p>
@@ -43,8 +45,8 @@ http://127.0.0.1:2290/data/tag
 ##### :mag_right: 예시) `http://127.0.0.1:2290/data/tag/device/Port`
 ``` json
 {
-  "elixir": {
-    "tag1": {
+  "elixir": { // entity name
+    "tag1": { // tag ID
       "value_string": "\"hello\"",
       "value": "hello",
       "timestamp": 1623394325673,
@@ -56,14 +58,27 @@ http://127.0.0.1:2290/data/tag
   }
 }
 ```
-
 :::
 
 ##### :mag_right: 예시) Server의 Tags에 있는 `tag1` 값을 가져오고 싶은 경우 
+- URL 입력
 ```  http
 http://127.0.0.1:2290/custom/tag1
 ```
+- 수집 데이터
 
+``` json
+{
+  "value_string": "\"hello world\"",
+  "value": "hello world",
+  "timestamp": 1623631440264,
+  "raw_string": "0x68656C6C6F20776F726C64",
+  "raw": "hello world",
+  "binary_string": "0x68656C6C6F20776F726C64",
+  "binary": "hello world"
+}
+```
+:bulb: **Custom path**에 대한 내용은 아래의 [Tag Information](#tag-information)을 참고해 주십시오.
 
 ## Response 구조
 #### :black_medium_square: 정상적인 Path 사용

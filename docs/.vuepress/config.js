@@ -9,60 +9,28 @@ module.exports = {
     sidebar: [
       '/',
       {
-        title: 'Interactor',
+        title: 'Getting Started',
         sidebarDepth: 1,
         children: [
-          './md/interactor/web',
-          './md/interactor/account',
-          './md/interactor/entity'
+          './md/gettingStarted/installation',
+          './md/gettingStarted/guide',
+          './md/gettingStarted/account',
+          './md/gettingStarted/webPage',
+          './md/gettingStarted/entity'
         ]
       },
       {
-        title: 'Device Protocol',
+        title: 'General',
         sidebarDepth: 1,
         children: [
-          './md/device/deviceProtocol',
-          './md/device/melsecE',
-          './md/device/modbusTcp',
-          './md/device/fenet'
-        ]
-      },
-      {
-        title: 'Server Protocol',
-        sidebarDepth: 1,
-        children: [
-          './md/server/serverProtocol',
-          './md/server/http',
-        ]
-      },
-      {
-        title: 'Database Protocol',
-        sidebarDepth: 1,
-        children: [
-          './md/database/databaseProtocol'
-        ]
-      },
-      {
-        title: 'Custom Protocol',
-        sidebarDepth: 1,
-        children: [
-          './md/customProtocol/customProtocol',
-          './md/customProtocol/port'
-        ]
-      },
-      {
-        title: 'Internal Entity',
-        sidebarDepth: 1,
-        children: [
-          './md/internalEntity/internalEntity',
-          './md/internalEntity/virtual'
+          './md/general/tags',
+          './md/general/actions'
         ]
       },
       {
         title: 'Details',
         sidebarDepth: 1,
         children: [
-          './md/details/details',
           './md/details/dataType',
           './md/details/valueType',
           './md/details/transform',
@@ -70,19 +38,67 @@ module.exports = {
         ]
       },
       {
+        title: 'Device',
+        sidebarDepth: 1,
+        children: [
+          './md/device/melsecE',
+          './md/device/modbusTcp',
+          './md/device/fenet'
+        ]
+      },
+      {
+        title: 'Server',
+        sidebarDepth: 1,
+        children: [
+          './md/server/http'
+        ]
+      },
+      {
+        title: 'Database',
+        sidebarDepth: 1,
+        children: [
+        ]
+      },
+      {
+        title: 'Virtual',
+        sidebarDepth: 1,
+        children: [
+          './md/virtual/virtual'
+        ]
+      },
+      {
+        title: 'Sync',
+        sidebarDepth: 1,
+        children: [
+        ]
+      },
+      {
+        title: 'Function',
+        sidebarDepth: 1,
+        children: [
+        ]
+      },
+      {
+        title: 'Custom Protocol',
+        sidebarDepth: 1,
+        children: [
+          './md/customProtocol/port'
+        ]
+      },
+      {
         title: 'Elixir Syntax',
         sidebarDepth: 1,
         children: [
-          './md/elixir/elixirSyntax',
-          './md/elixir/basics',
-          './md/elixir/collections',
-          './md/elixir/enum',
-          './md/elixir/controlStructures',
-          './md/elixir/functions',
-          './md/elixir/binary',
-          './md/elixir/etc'
+          './md/elixirSyntax/elixirSyntax',
+          './md/elixirSyntax/basics',
+          './md/elixirSyntax/collections',
+          './md/elixirSyntax/enum',
+          './md/elixirSyntax/controlStructures',
+          './md/elixirSyntax/functions',
+          './md/elixirSyntax/binary',
+          './md/elixirSyntax/etc'
         ]
-      }
+      },
     ]
   }
 }

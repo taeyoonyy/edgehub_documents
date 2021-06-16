@@ -2,18 +2,23 @@ module.exports = {
   head: [
     ['link', { rel: 'shortcut icon', href: 'favicon.ico' }]
   ],
-  title: ' EdgeHub-i | Interactor  Docs',
+  title: 'Interacter',
   // url: 'https://127.0.0.1:1291',
   themeConfig: {
     // logo: 'headerlogo-interactor.svg',
     sidebar: [
-      '/',
+     {
+        title: 'Introduction',
+        sidebarDepth: 1,
+        children: [
+          './md/introduction/guide'
+        ]
+      },
       {
         title: 'Getting Started',
         sidebarDepth: 1,
         children: [
           './md/gettingStarted/installation',
-          './md/gettingStarted/guide',
           './md/gettingStarted/account',
           './md/gettingStarted/webPage',
           './md/gettingStarted/entity'
@@ -43,7 +48,8 @@ module.exports = {
         children: [
           './md/device/melsecE',
           './md/device/modbusTcp',
-          './md/device/fenet'
+          './md/device/fenet',
+          './md/device/port'
         ]
       },
       {
@@ -79,10 +85,9 @@ module.exports = {
         ]
       },
       {
-        title: 'Custom Protocol',
+        title: 'Protocol',
         sidebarDepth: 1,
         children: [
-          './md/customProtocol/port'
         ]
       },
       {

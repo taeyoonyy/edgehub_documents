@@ -1,22 +1,12 @@
 ---
-title: Introduction
-lang: en-US
+home: true
 ---
 
-![img](./img/loginlogo-interactor.svg)  
+<div class="home-container">
+  <img src="./img/invalid-name.svg" alt="interactor-logo">
+  <button onclick="location.href='md/introduction/guide'">Quick Started</button>
 
-이 문서는 <u>Edgegub-i | Interactor Web Application</u>(이하 <u>Interactor</u>)의 사용을 돕기 위해서 작성되었습니다.
-
-## Why Interactor?
-
-.  
-.  
-.  
-
-
-## About
-
-- Last Updated: 05/27/2021
-- Version 0.1.0
-
-<div class="copyright">CC-BY-NC-ND Licensed | Copyright © 2021-present Taeyoon Yu</div>
+  ---
+  
+  <div class="copyright">CC-BY-NC-ND Licensed | Copyright © 2021-present Taeyoon Yu</div>
+</div>

@@ -49,7 +49,7 @@ cmd와 같이 Argument로 입출력 방향 지정(I/O Redirection)을 할 수 �
 
 #### :black_medium_square: Use Stdio
 Interactor와 외부프로그램의 데이터 송수신 방법을 선택합니다.
-(현재 표준 입력과 표준 출력을 사용하는 Yes 모드만 사용 가능합니다.)
+(현재 Yes 모드만 사용 가능합니다.)
 - **Yes**: 표준 입력(stdin, file descriptors 0), 표준 출력(stdout, file descriptors 1) 사용
 - **No**: File descriptors 3, file descriptors 4 사용
 

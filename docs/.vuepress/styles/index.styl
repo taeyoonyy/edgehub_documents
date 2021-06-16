@@ -11,12 +11,62 @@
   }
 
   .site-name {
-    color: white !important;
+    color: $green !important;
+  }
+  .site-name::before {
+    content: "Edgehub-i";
+    color: $blue;
+    margin-right: 16px;
+    border-right: 2px solid $gray;
+    padding-right: 16px;
+  }
+
+  .site-name::after {
+    content: "Docs";
+    color: white;
+    margin-left: 16px;
   }
 
   .links{
     background-color: transparent !important;
 
+  }
+}
+.hero {
+  display: none;
+}
+
+.home {
+  height: calc(100vh - 58px);
+  .theme-default-content{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.home-container {
+  padding-bottom: 58px;
+  img {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 54px;
+  }
+
+  button {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 92px;
+    color: #fff;
+    font-size: 1.2rem;
+    background-color: $blue;
+    padding: .8rem 1.6rem;
+    border-radius: 4px;
+    transition: background-color .1s ease;
+    box-sizing: border-box;
+    border-color: rgba($gray, 0.1);
+    cursor: pointer;
   }
 }
 
@@ -49,15 +99,60 @@
   }
 }
 
+@media (min-width: 1200px) {
+
+  .sidebar-sub-headers::before {
+    content: 'Contents';
+    font-size: 18px;
+    font-weight: bold;
+    color: $main-gray;
+    position: fixed;
+    margin-top: -36px;
+  }
+
+  .sidebar-sub-headers {
+    position: fixed;
+    right: 0;
+    top: 58px;
+    width: 252px;
+    height: 100%;
+    padding-top: 52px !important;
+  }
+
+  .sidebar-sub-header {
+    margin-left: 16px;
+
+    .sidebar-link {
+      padding-left: 8px !important;
+      border-left: 2px solid rgba($main-gray, 0.1) !important;
+    }
+
+    .active:before{
+        content: '';
+        display: inline-block;
+        width: 5px;
+        height: 5px;
+        margin: -2px 12px auto auto;
+        vertical-align: middle;
+        border-right: 2px solid $blue;
+        border-top: 2px solid $blue;
+        transform: rotate(45deg)
+      }
+  }
+
+  .page {
+    .theme-default-content, .page-nav {
+      padding-right: calc(40px + 252px) !important;
+    }
+  }
+}
+
 .copyright {
   text-align: center;
-  padding-top: 50px;
-  margin-bottom: -50px;
 }
 
 .page {
-  .theme-default-content:not(.custom) {
-    max-width: 1000px;
+  .theme-default-content {
     a {
       font-weight: 400;
       color: $green;
@@ -223,10 +318,6 @@
     ul{
       margin-bottom: 0;
     }
-  }
-
-  .page-nav {
-    max-width: 1000px;
   }
 
   table {

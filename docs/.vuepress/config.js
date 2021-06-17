@@ -7,13 +7,14 @@ module.exports = {
   themeConfig: {
     // logo: 'headerlogo-interactor.svg',
     sidebar: [
-    {
-        title: 'Introduction',
-        sidebarDepth: 1,
-        children: [
-          './md/introduction/guide'
-        ]
-      },
+      './md/introduction/intro',
+      // {
+      //   title: 'Introduction',
+      //   sidebarDepth: 1,
+      //   children: [
+      //     './md/introduction/intro'
+      //   ]
+      // },
       {
         title: 'Getting Started',
         sidebarDepth: 1,

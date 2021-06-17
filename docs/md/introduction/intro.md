@@ -1,11 +1,8 @@
-# Guide
+# Introduction
 
 이 문서는 <u>Edgegub-i | Interactor Web Application</u>(이하 <u>Interactor</u>)의 사용을 돕기 위해서 작성되었습니다.
 
-## About
-
-- Last Updated: 05/27/2021
-- Version 0.1.0
+## Guide
 
 <div class="info">
   <div class="info-title"><img src="../../img/icon/info.svg">WHERE TO USE</div>
@@ -23,3 +20,9 @@
 ::: danger <p class="custom-block-title"><img src="../../img/icon/danger.svg">ALERT</p>
 경고사항에 대해 설명합니다.
 :::
+
+
+## About
+
+- Last Updated: 05/27/2021
+- Version 0.1.0

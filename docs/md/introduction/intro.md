@@ -1,6 +1,6 @@
 # Introduction
 
-이 문서는 <u>Edgegub-i | Interactor Web Application</u>(이하 <u>Interactor</u>)의 사용을 돕기 위해서 작성되었습니다.
+이 문서는 <u>Edgehub-i | Interactor Web Application</u>(이하 <u>Interactor</u>)의 사용을 돕기 위해서 작성되었습니다.
 
 ## Guide
 

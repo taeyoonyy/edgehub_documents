@@ -12,17 +12,14 @@
 
   .site-name {
     color: $blue !important;
-
-    @media (min-width: 1200px){
-      margin-left: 36px;
-    }
+    padding-left: 8px;
   }
 
   .site-name::before {
     content: "EDGE  ";
     color: white;
     position: absolute;
-    left: -12px;
+    left: -4px;
     background-color: $gray;
     padding-right: 8px;
   }
@@ -43,9 +40,9 @@
     content: "｜"
     position: fixed;
     top: 10px;
-    left: 158px;
+    left: 130px;
     color: $lightgray;
-    z-index: 50;
+    z-index: 5;
     font-weight: bold;
   }
 
@@ -154,7 +151,7 @@
 @media (max-width: 719px) {
   .site-name {
     text-overflow: clip !important;
-    padding-left: 12px;
+    padding-left: 12px !important;
   }
 
   .site-name::before {

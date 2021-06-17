@@ -37,7 +37,7 @@ Interactor에서는 아래 7가지 프로토콜을 사용하는 기기들을 연
 Interactor에서 Server는 **Server역할**을 하여 외부 Client의 요청에 응답할 수 있는 Entity 입니다.  
 ### Server Protocol List :memo:
 | Type | Description | Protocol | 
-| :-: | :- | :- |
+| :- | :- | :- |
 | _Tag를 사용하는 Server_ | Device, Database, Virtual, Sync에서 생성한 Tag의 데이터를 전달할 수 있습니다. | <ul><li>OPC UA</li><li>Modbus TCP</li><li>HTTPS</li><li>HTTP</li></ul> |
 | _API를 사용하는 Server_ | Orchestrator 와 Insight 같은 EdgeHub 제품군을 위한 Server 입니다.<br/>Tag 설정 없이 정의된 API를 사용하여 Interactor의 데이터를 수집하거나<br/> 제어할 수 있습니다. | <ul><li>API SERVER</li></ul> |
 

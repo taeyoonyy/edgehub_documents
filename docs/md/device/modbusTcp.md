@@ -20,7 +20,7 @@ Connection Information은 타겟 디바이스와 통신하기 위해 모든 데�
 Tag 단위로 타겟 디바이스의 데이터를 읽기 위해서 필요한 설정 데이터 입니다.  
 
 | Info | Description |
-| :-: | :- |
+| :- | :- |
 | _Function Code_ | Modbus 프로토콜에서 제공하는 명령어 코드 입니다. Function Code에 따라 데이터 형태와 Modbus에서 가르키는 메모리 영역이 다릅니다.<ul><li>__Coil (0x)__: Function Code 01, Read Coil (Bit)</li><li>__Discrete Input (1x)__: Function Code 02, Read Discreate Input (Bit)</li><li>__Input Regiester (3x)__: Function Code 04, Read Input Register (Word)</li><li>__Holding Register (4x)__: Function Code 03, Read Holding Register (Word)</li></ul> |
 | _Address_ | 타겟 데이터의 시작 주소입니다.<br/>Modbus 프로토콜에서 지원하는 주소 범위인 0부터 65535까지 사용할 수 있습니다. |
 | _Length_ | 타겟 데이터의 시작 주소 부터의 데이터 길이 입니다.<br/>Modbus 프로토콜에서 지원하는 데이터 길이인 1부터 최대 125까지 사용할 수 있습니다. |

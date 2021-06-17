@@ -13,7 +13,7 @@ MELSEC ETHERNET 프로토콜을 사용하여 `Mitsubishi` PLC 중 MC프로토콜
 (`Max Block Size`는 `Action` 사용 시 적용이 제외 됩니다.)
 ### PLC 설정 정보 (PLC 확인 필요)
 | Key | Description |
-| :-: | :- |
+| :- | :- |
 | _Address_ | PLC 아이피 주소 | 
 | _Port_ | PLC 포트 번호 |
 | _Network Number_ | Network 번호 (PLC를 경유하여 다른 PLC에 엑세스 하는 경우가 아닐때는 0x00 사용)
@@ -25,7 +25,7 @@ MELSEC ETHERNET 프로토콜을 사용하여 `Mitsubishi` PLC 중 MC프로토콜
 
 ### 효율적인 통신을 위한 Interactor 설정 정보
 | Key | Description |
-| :-: | :- |
+| :- | :- |
 | _Max Block Size_ | 한번에 수집할 데이터의 최대 길이 설정 |
 
 <div class="spacer-sm"/>
@@ -39,7 +39,7 @@ MELSEC ETHERNET 프로토콜을 사용하여 `Mitsubishi` PLC 중 MC프로토콜
 ###### 자세한 내용은 **Mitsubishi PLC 사용 설명서**를 참고 바랍니다.
 
 | Info | Description |
-| :-: | :- |
+| :- | :- |
 | _Start Address_ | 디바이스 메모리의 디바이스 코드와 디바이스 주소를 조합하여 Interactor에서 대상 데이터의 위치를 설정합니다. | 
 | _Length_ | `Start Address`에서 선택한 대상부터 원하는 데이터의 길이를 설정합니다. 워드(Word) 디바이스는 단위가 워드가 되고, 비트(Bit) 디바이스는 단위가 비트가 됩니다. |
 
@@ -50,7 +50,7 @@ MELSEC ETHERNET 프로토콜을 사용하여 `Mitsubishi` PLC 중 MC프로토콜
 ### Data
 
 | Info | Description |
-| :-: | :- |
+| :- | :- |
 | _Value_ | `Start Address`와 `Length`의 설정값을 사용한 데이터 요청에 대해 정상적인 응답을 받았을 때 수집된 데이터가 출력됩니다. 수신 실패나, 비정상적인 응답을 받은 경우는 출력하지 않습니다.  |
 
 ##### 예시) `Start Address` 사용 (위치: `Tags` / `Tag Information` / `Start Address`)

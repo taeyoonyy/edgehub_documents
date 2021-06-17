@@ -22,7 +22,7 @@ Admin account으로 접속 후 화면 우측 상단의 관리자 아이디 클�
 ::: tip <p class="custom-block-title"><img src="../../img/icon/tip.svg">NOTICE</p>
 Account에 대한 Authority는 다음과 같습니다. 
 | Authority | Description |
-| :-: |:- |
+| :- |:- |
 | _Admin_ | Interactor의 모든 기능 사용 가능 |
 | _RWC_ | Account 생성을 제외한 모든 기능 사용 가능(Read, Write, Commit)| 
 | _RW_ | Read와 Write 사용 가능 |

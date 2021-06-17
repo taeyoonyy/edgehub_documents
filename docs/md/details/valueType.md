@@ -2,9 +2,9 @@
 Interactor에서 수집 또는 생성된 `Raw Type`의 데이터는 **15개의 값 타입(Value Type)** 을 적용하여 Value Type의 값을 가질 수 있습니다.
 ![img](../../img/details/valuetype.png)
 | Data Type | Description |
-| :-: | :- |
+| :- | :- |
 | Value Type | Tag의 Raw 데이터에 적용 할 Value Type 설정합니다. |
-| Data Type | Tag의 값을 어떤 Type으로 볼 것인지 선택하고, 선택에 따라 Data Value가 변경해야 합니다. |
+| Data Type | Tag의 값을 어떤 Type으로 볼 것인지 선택하고,<br/>선택에 따라 Data Value가 변경해야 합니다. |
 | Byte Size | Tag의 Raw 값의 Byte 사이즈 |
 
 ::: tip <p class="custom-block-title"><img src="../../img/icon/tip.svg">NOTICE</p>

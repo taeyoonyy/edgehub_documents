@@ -10,10 +10,6 @@ FENET 프로토콜을 선택하여 `LS-ELECTRIC의 Fenet 프로토콜`을 사용
 * XGB
 :::
 
-<div class="toc-title"><img src="../../img/icon/list.svg">Table of Contents</div>
-
-[[toc]]
-
 ## Connection Information
 Connection Information은 타겟 디바이스와 통신하기 위해 **모든 데이터에 공통으로 적용되는 설정 값**입니다.
 ### PLC에서 확인이 필요한 PLC의 설정 값

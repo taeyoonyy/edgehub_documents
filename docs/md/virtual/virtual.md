@@ -5,10 +5,6 @@ Virtual를 통해 다른 Entity의 Tag/Call을 불러와 가공하거나 [Elixir
 Virtual Tag를 만드는 것은 External Entity(Device, Server, Database)와 대부분 동일하지만, Tag의 Connection information 또는 Tag information 같이 대상이 되는 Entity의 정보가 입력하는 것과 다르게 `Logic` 에 원하는 값을 직접 입력하여 만듭니다.
 :::
 
-<div class="toc-title"><img src="../../img/icon/list.svg">Table of Contents</div>
-
-[[toc]]
-
 ## Virtual Tags
 외부 디바이스와 통신이 아닌 Interactor 내부에서 값을 생성하고, 다른 Entity에서 사용할 수 있는 Tag를 만듭니다. 생성된 Virtual Tag는 다른 Entity에서 `{Tag reference}`로 사용할 수 있습니다.
 

@@ -1,10 +1,6 @@
 # HTTP & HTTPS
 HTTP 및 HTTPS(이하 HTTPS 생략) 클라이언트의 요청에 응답할 수 있는 `HTTP 서버`를 만들 수 있습니다. 클라이언트는 **Get Method**를 사용하여 Tag 데이터를 수집할 수 있습니다.
 
-<div class="toc-title"><img src="../../img/icon/list.svg">Table of Contents</div>
-
-[[toc]]
-
 ## Client URL 사용 방법
 다음과 같은 URL 형식을 통해 데이터를 가져올 수 있습니다. 
 ``` http

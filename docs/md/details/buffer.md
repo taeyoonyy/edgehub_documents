@@ -1,10 +1,6 @@
 # Buffer
 Interactor의 Tag는 기본적으로 **마지막에 수집된 또는 생성된 데이터**를 가지고 있습니다. 하지만 마지막 데이터 이전에 수집된 데이터가 필요한 경우 Buffer를 사용하여 데이터를 읽을 수 있습니다. Interactor는 설정된 **Buffer 크기 만큼 이전 데이터를 휘발성 데이터**로 가지게 됩니다.  
 
-<div class="toc-title"><img src="../../img/icon/list.svg">Table of Contents</div>
-
-[[toc]]
-
 ## Buffer 설정
 Buffer는 `Device`, `Database` `Virtual`의 Tags에서 설정할 수 있습니다. **최소 1 부터 최대 1000**까지 설정 가능합니다.
 

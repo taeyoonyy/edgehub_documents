@@ -3,10 +3,6 @@ Modbus TCP 프로토콜을 선택하여 `Modbus TCP` 프로토콜을 사용하�
 데이터를 읽을 때 **Function Code 01(Coil Status), 02(Input Status), 0x03(Holding Register), 04(Input Register)** 를 사용합니다.  
 데이터를 쓸 때 **Function Code 15(Write Coils), 16(Write Registers)** 를 사용합니다. Interactor에서는 Register 타잎 (40001, 30001, ...) 아닌 Function Code와 Address를 구분하여 사용합니다.  
 
-<div class="toc-title"><img src="../../img/icon/list.svg">Table of Contents</div>
-
-[[toc]]
-
 ## Connection
 Connection Information은 타겟 디바이스와 통신하기 위해 모든 데이터에 공통으로 적용되는 설정 값 입니다.
 ### 디바이스에서 확인이 필요한 디바이스의 설정 값

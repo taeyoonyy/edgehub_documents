@@ -1,10 +1,6 @@
 # Transform
 수집된 데이터를 Tag에 값을 맵핑하기 전 **전처리(pre-processing)**를 위해 사용합니다. 각 Component의 Tags Table 의Condition column에서 입력할 수 있습니다. 사용 방법은 다음과 같습니다.  
 
-<div class="toc-title"><img src="../../img/icon/list.svg">Table of Contents</div>
-
-[[toc]]
-
 ## 1. Predefined Function 사용  
 <img src="../../img/details/transform_modal.png" width="500">
 

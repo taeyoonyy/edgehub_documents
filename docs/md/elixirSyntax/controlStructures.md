@@ -9,10 +9,6 @@
   - <p>Virtual > Tags > <b>Logic</b></p>
 </div>
 
-<div class="toc-title"><img src="../../img/icon/list.svg">Table of Contents</div>
-
-[[toc]]
-
 ## if
 if 뒤에 오는 조건에 따라 결과값을 반환합니다.
 ``` elixir

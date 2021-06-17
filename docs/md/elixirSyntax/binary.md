@@ -9,10 +9,6 @@
   - <p>Virtual > Tags > <b>Logic</b></p>
 </div>
 
-<div class="toc-title"><img src="../../img/icon/list.svg">Table of Contents</div>
-
-[[toc]]
-
 ## Bitstring
 Bitstring은 Elixir의 기본 데이터 유형으로 `<< >>` 구문으로 표시합니다.
 ``` elixir

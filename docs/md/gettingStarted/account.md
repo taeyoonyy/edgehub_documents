@@ -1,10 +1,6 @@
 # Account
 이 페이지는 <u>Edgegub-i | Interactor Web Application(이하 Interactor)</u>의 Admin Account 생성, Login 및 Account 추가를 설명합니다.
 
-<div class="toc-title"><img src="../../img/icon/list.svg">Table of Contents</div>
-
-[[toc]]
-
 ## Admin Account
 EdgeHub-i 를 설치하고 http://localhost:1290에 처음 접속하면 아래와 같은 Admin account 생성 화면을 확인할 수 있습니다.  
 ![img](../../img/account/firstuser.png)

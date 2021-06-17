@@ -9,10 +9,6 @@
   - <p>Virtual > Tags > <b>Logic</b></p>
 </div>
 
-<div class="toc-title"><img src="../../img/icon/list.svg">Table of Contents</div>
-
-[[toc]]
-
 ## Arithmetic
 `+`, `-`, `*`, `/`와 같은 산술 연산자를 지원합니다.
 ``` elixir

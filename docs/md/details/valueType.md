@@ -11,10 +11,6 @@ Interactor에서 수집 또는 생성된 `Raw Type`의 데이터는 **15개의 �
 **1️⃣ Value Type**으로 적용된 값은 **2️⃣ Data Type**이 `Value`일 때, **3️⃣ Data Value**에 출력됩니다.
 :::
 
-<div class="toc-title"><img src="../../img/icon/list.svg">Table of Contents</div>
-
-[[toc]]
-
 ## 1. Signed Integer
 **부호가 있는 정수형** 타입 입니다.
 

@@ -1,10 +1,6 @@
 # Port
 Interactor는 외부 프로그램과 연결을 위해 `Port` 기능을 제공 합니다. `Port`는 표준 스트림을 이용하여 외부 프로그램과 데이터를 주고 받을 수 있습니다. `Connection Information`에서 외부 프로그램과의 연결을 위한 설정을 하고, `Tag Information`에서 전송 할 데이터를 설정합니다. 외부 프로그램의 응답은 `Tag Information`에서 설정한 Value Type에 따라 값을 가지며 Data - Value에서 값을 확인하거나, 다른 Tag 사용 방법과 동일하게 Tag reference를 이용하여 다른 Entity에서 사용할 수 있습니다.
 
-<!-- <div class="toc-title"><img src="../../img/icon/list.svg">Table of Contents</div>
-
-[[toc]] -->
-
 ## Connection Information
 Interactor와 외부 프로그램을 연결하기 위한 설정 입니다.
 

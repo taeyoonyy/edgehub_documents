@@ -8,11 +8,6 @@ MELSEC ETHERNET 프로토콜을 사용하여 `Mitsubishi` PLC 중 MC프로토콜
 * **E**: Q시리즈 E71
 :::
 
-<!-- <div class="toc-title"><img src="../../img/icon/list.svg">Table of Contents</div>
-
-[[toc]] -->
-
-
 ## Connection Information
 `Connection Information`은 타겟 디바이스와 통신하기 위해 해당 `Entity`의 **데이터 수집에 공통으로 적용되는 설정 값**입니다.  
 (`Max Block Size`는 `Action` 사용 시 적용이 제외 됩니다.)

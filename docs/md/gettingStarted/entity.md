@@ -6,11 +6,6 @@ Interactor에 등록되는 Entity는 크게 두 가지로 분류할 수 있습�
 * **Internal Entity**: Interactor에서 제공하는 기능으로 데이터 수집 후 추가적인 데이터 가공을 위한 Entity **(Virtual, Sync, Function)**
 :::
 
-<div class="toc-title"><img src="../../img/icon/list.svg">Table of Contents</div>
-
-[[toc]]
-
-
 ## Entity 추가
 좌측 네비게이션의 `+`, `🗑` 버튼을 이용하여 Entity를 추가하거나 삭제할 수 있습니다.  
 ![img](../../img/entity/add.png)

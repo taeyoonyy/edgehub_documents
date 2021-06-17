@@ -1,15 +1,10 @@
 # Entity
-이 페이지는 <u>Edgegub-i | Interactor Web Application(이하 Interactor)</u>에서의 Entity 등록 및 사용 방법을 설명합니다.
+이 페이지는 <u>Interactor</u>의 Entity 등록 및 사용 방법을 설명합니다.
 ::: tip <p class="custom-block-title"><img src="../../img/icon/tip.svg">NOTICE</p>
 Interactor에 등록되는 Entity는 크게 두 가지로 분류할 수 있습니다.
 * **External Entity**: 외부 디바이스 또는 SW와 연결되는 Entity **(Device, Server, Database)**
 * **Internal Entity**: Interactor에서 제공하는 기능으로 데이터 수집 후 추가적인 데이터 가공을 위한 Entity **(Virtual, Sync, Function)**
 :::
-
-<div class="toc-title"><img src="../../img/icon/list.svg">Table of Contents</div>
-
-[[toc]]
-
 
 ## Entity 추가
 좌측 네비게이션의 `+`, `🗑` 버튼을 이용하여 Entity를 추가하거나 삭제할 수 있습니다.  
@@ -27,7 +22,7 @@ Interactor에 등록되는 Entity는 크게 두 가지로 분류할 수 있습�
 Device는 **PLC(Programmable Logic Controller)** 같이 데이터를 가지고 있으며, 통신으로 데이터를 요청하여 응답받을 수 있는 기기들이 대상으로하는 Entity 입니다.  
 Interactor에서는 아래 7가지 프로토콜을 사용하는 기기들을 연결하여 데이터를 쓰거나(Action), 수집(Tag)할 수 있습니다. 
 
-#### :black_medium_square: Device Protocol List :memo:
+### Device Protocol List :memo:
 - OPC UA
 - Modbus TCP
 - Modbus RTU
@@ -40,9 +35,9 @@ Interactor에서는 아래 7가지 프로토콜을 사용하는 기기들을 연
 
 ## Server
 Interactor에서 Server는 **Server역할**을 하여 외부 Client의 요청에 응답할 수 있는 Entity 입니다.  
-#### :black_medium_square: Server Protocol List :memo:
+### Server Protocol List :memo:
 | Type | Description | Protocol | 
-| :-: | :- | :- |
+| :- | :- | :- |
 | _Tag를 사용하는 Server_ | Device, Database, Virtual, Sync에서 생성한 Tag의 데이터를 전달할 수 있습니다. | <ul><li>OPC UA</li><li>Modbus TCP</li><li>HTTPS</li><li>HTTP</li></ul> |
 | _API를 사용하는 Server_ | Orchestrator 와 Insight 같은 EdgeHub 제품군을 위한 Server 입니다.<br/>Tag 설정 없이 정의된 API를 사용하여 Interactor의 데이터를 수집하거나<br/> 제어할 수 있습니다. | <ul><li>API SERVER</li></ul> |
 
@@ -50,7 +45,7 @@ Interactor에서 Server는 **Server역할**을 하여 외부 Client의 요청에
 ## Database
 Interactor는 **Database와 연결**하여 데이터를 쓰거나(Action, Call), 수집(Tag, Call) 할 수 있습니다. MariaDB는 **EdgeHub에서 정의한 schema**를 사용하여 Interactor의 데이터를 저장할 수 있습니다.
 
-#### :black_medium_square: Database List :memo:
+### Database List :memo:
 * MSSQL
 * MariaDB
 * MariaDB EdgeHub (내부 데이터베이스 사용을 위한 서비스)

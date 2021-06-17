@@ -9,11 +9,6 @@
   - <p>Virtual > Tags > <b>Logic</b></p>
 </div>
 
-
-<div class="toc-title"><img src="../../img/icon/list.svg">Table of Contents</div>
-
-[[toc]]
-
 ## Anonymous Functions
 익명함수는 이름이 없는 함수로서 다른 함수에 전달될 목적으로 자주 사용됩니다.  
 `fn 매개변수 -> 함수본문 end`로 정의합니다.

@@ -9,10 +9,6 @@
   - <p>Virtual > Tags > <b>Logic</b></p>
 </div>
 
-<div class="toc-title"><img src="../../img/icon/list.svg">Table of Contents</div>
-
-[[toc]]
-
 ## map
 `Enum.map(enumerable, fun)` 새로운 Collection을 반환합니다.
 ``` elixir

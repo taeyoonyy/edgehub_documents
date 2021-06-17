@@ -1,16 +1,12 @@
 # Web Page 
-이 페이지는 <u>Edgegub-i | Interactor Web Application(이하 Interactor)</u>의 사용 방법을 설명합니다.
-
-<div class="toc-title"><img src="../../img/icon/list.svg">Table of Contents</div>
-
-[[toc]]
+이 페이지는 <u>Interactor  Web Application</u>의 사용 방법을 설명합니다.
 
 ## Web Structure  
 Web 전체적인 구조에 대해서 설명합니다. 아래는 Login 후 출력되는 화면입니다.   
 ![img](../../img/web/web1.png)
 
 | No | Item | Description |
-| :-: |:--:|:- |
+| :-: |:-- |:- |
 | 1 | _Top Navigation Bar (Main)_ | Management와 Protocol의 페이지이동, Online User 정보 그리고 제품 정보를 확인하기 위한 버튼이 있습니다.<ul><li>Management: 데이터 수집과 관련된 모든 설정을 제공하는 페이지</li><li>Protocol: 새로운 프로토콜을 추가할 수 있는 페이지</li><li>Online User: Commit, Edit 정보 및 접속중인 유저 확인 기능</li><li>Setting: System, License, HW, SW Information 정보 출력 및 Account 관리를 할 수 있는 페이지</li></ul> |
 | 2 | _Top Navigation Bar (Sub)_ | File 가져오기 내보내기, Commit 과 Clear, View 모드 전환 그리고 사용 설명서 출력 버튼이 있습니다.<ul><li>File: 설정한 데이터를 Excel과 .edgehub 파일로 내보내거나 가져오기 기능</li><li>Edit: Web에서 설정한 데이터를 수행하기 위한 Commit과 설정 데이터 초기화를 위한 Clear</li><li>View: 추가/수정/삭제 등의 기능을 사용할 수 있는 Edit 모드와 읽기만 가능한 Read 모드 변환</li><li>Help: 온라인 또는 오프라인 사용 설명서</li></ul> |
 | 3 | _Left Navigation Bar_ | Management 페이지 사용을 위해 Entity 추가/삭제, Entity 상태정보, Entity 페이지 이동을 위한 버튼이 있습니다. |
@@ -23,7 +19,7 @@ Top Navigation의 왼쪽에 출력되는 Account ID를 클릭하여, 나오는 �
 <img src="../../img/web/setting.png">
 
 | No | Card | Description |
-| :-: |:--:|:- |
+| :-: |:-- |:- |
 | 1 | _System_ | 사용자가 입력하는 시스템 정보입니다.<br/>System Name의 EdgeHub-i로 초기값이 설정되어 있으며, 설정된 값은 Management의 Left Navigation에 출력 됩니다. |
 | 2 | _License_ | Interactor에서 제공하는 License, Expiration Date 정보 입니다.<br/>Maintenance Service Information, Maintenance Service Expiration Date는 필요한 경우 사용자가 직접 입력하여 사용합니다.|
 | 3 | _HW Information_ | Interactor가 설치된 HW와 SW에 대한 전반적인 정보를 제공합니다.<br/>Installed Location과 Production Code는 필요한 경우 사용자가 직접 입력하여 사용합니다.|
@@ -36,7 +32,7 @@ Management 페이지에서 Left Navitagion의 Group을 클릭하면 해당 페�
 <img src="../../img/web/group.png">
 
 | No | Item | Description |
-| :-: |:--:|:- |
+| :-: |:-- |:- |
 | 1 | _Group Name_ | Entity 생성 시 입력한 Group 이름 입니다. |
 | 2 | _Group ON / OFF Button_ | Group에 속한 모든 Device가 Interactor와 통신을 시작 또는 중지하기 위한 버튼 입니다.<br/>ON 버튼 클릭 시 통신이 중지되어 있는 Device와 통신을 시작하며, OFF 버튼 클릭 시 모든 Device와의 통신을 중지합니다.<br/>버튼은 Device들의 통신 상태를 나타내지 않습니다.<br/> |
 | 3 | _Group Tag Count_ | Group에 속한 모든 Device에 등록된 Tag의 전체 숫자를 출력합니다. |
@@ -52,7 +48,7 @@ Management 페이지의 Left Navigation에서 Entity 클릭 후 Content 화면�
 <img src="../../img/web/information.png">
 
 | No | Item | Description |
-| :-: |:--:|:- |
+| :-: |:-- |:- |
 | 1 | _Name_ | Entity 생성 시 사용자가 입력한 이름입니다. |
 | 2 | _Entity ON / OFF Button_ | Entity와 Edgehub의 통신을 시작하거나 중지하는 버튼입니다.<br/>Inactive는 통신이 중지되어 있는 상태이며, Active는 통신 중 또는 통신 시도 중인 상태 입니다. |
 | 3 | _Detail_ | Entity 관련된 정보를 사용자가 입력하고 확인할 수 있습니다. |
@@ -69,7 +65,7 @@ Management 페이지의 Left Navigation에서 Entity 클릭 후 Content 화면�
 <img src="../../img/web/tags.png">
 
 | No | Item | Description |
-| :-: |:--:|:- |
+| :-: |:-- |:- |
 | 1 | _Button_ | <ul><li>Add: 새로운 Tag를 생성합니다. 모든 필수 입력 항목이 입력되고, 입력항목의 입력 조건을 만족해야 등록이 됩니다.</li><li>Delete: 선택한 Tag를 삭제합니다. 테이블의 체크버튼으로 선택한 Tag들을 삭제 합니다.</li><li>Duplicate: 선택한 Tag를 복제합니다. 새로운 Tag를 생성할 때 기존에 생성된 Tag의 값을 이용하여 빠르게 생성하기 위해 사용합니다.</li><li>Edit: 등록된 Tag를 수정합니다. 모든 필수 입력 항목이 입력되고, 입력항목의 입력 조건을 만족해야 수정됩니다.</li></ul> |
 | 2 | _Tag ID_ | Interactor 내부 또는 외부 Client에서 Interactor의 데이터를 사용하기 위해 설정되는 이름입니다.<br/>생성된 Tag 아이디는 수정할 수 없습니다. |
 | 3 | _Tag Information_ | Tag 수집을 위해 Protocol 마다 다른 입력이 필요한 설정 정보입니다.<br/>Category 와 Protocol에 따라 사용되는 column이 다릅니다. |
@@ -84,7 +80,7 @@ Management 페이지의 Left Navigation에서 Entity 클릭 후 Content 화면�
 <img src="../../img/web/actions.png">
 
 | No | Item | Description |
-| :-: |:--:|:- |
+| :-: |:-- |:- |
 | 1 | _Button_ | Tags 의 Button과 동일합니다. |
 | 2 | _Action ID_ | 어떤 동작을 수행할 것인지 설정합니다.<ul><li>Tag: 어떤 Tag가 수집되었을 때 Action을 수행할 지 대상을 선택합니다. 현재 선택한 Entity 내의 Tag만 선택 가능합니다.</li><li>Condition: Tag가 수집되었을 때 추가적인 수행 조건을 설정하기 원하는 경우 입력합니다.</li><li>Action: 어떤 동작을 수행할 지 선택합니다.</li></ul> |
 | 3 | _Action Information_ | Action을 실행하기 위한 대상 또는 값을 입력합니다. Tag 또는 Call을 선택한 경우 대상을 입력합니다.<br/>Tag, Event 또는 Log를 선택한 경우 Value를 입력합니다. |
@@ -97,7 +93,7 @@ Management 페이지의 Left Navigation에서 Entity 클릭 후 Content 화면�
 <img src="../../img/web/calls.png">
 
 | No | Item | Description |
-| :-: |:--:|:- |
+| :-: |:-- |:- |
 | 1 | _Button_ | Tags 의 Button과 동일합니다. |
 | 2 | _Call ID_ | Interactor 내부에서 Interactor의 데이터를 사용하기 위해 설정되는 이름입니다.<br/>생성된 Call 아이디는 수정할 수 없습니다. |
 | 3 | _Call Information_ | Query 입력을 위한 설정입니다. Protocol에 따라 사용되는 column이 다릅니다. |
@@ -111,7 +107,7 @@ Interactor의 External Entity에서 사용하는 프로토콜을 관리하는 �
 <img src="../../img/web/protocol.png">
 
 | No | Item | Description |
-| :-: |:--:|:- |
+| :-: |:-- |:- |
 | 1 | _Button_ | <ul><li>Add: 새로운 프로토콜(이하 커스텀 프로토콜)을 생성합니다. 이미 등록된 프로토콜과 같은 이름은 사용할 수 없습니다.</li><li>Delete: 추가한 커스텀 프로토콜을 삭제합니다. Bulit-in 프로토콜은 삭제할 수 없습니다.</li><li>Export: 추가한 커스텀 프로토콜을 .json 파일로 출력합니다.</li><li>Import: 출력된 .json 파일의 커스텀 프로토콜을 Interactor에 가져옵니다.</li></ul> |
 | 2 | _Device_ | Device Entity에서 사용할 수 있는 프로토콜 목록입니다. Built-in 프로토콜과 커스텀 프로토콜이 있습니다.<ul><li>Built-in: 프로토콜 이름만 표시 되어 있습니다.</li><li>커스텀 프로토콜 (Editable): 수정 가능한 커스텀 프로토콜 입니다. Device Entity에서는 선택할 수 없습니다.</li><li>커스텀 프로토콜 (Non-editable): Device Entity에서 선택할 수 있는 커스텀 프로토콜 입니다.</li></ul>Built-in 프로토콜 선택 시 Connection Information과 Tag Information을 확인할 수 있습니다.<br/>사용자가 원하는 프로토콜(Custom Protocol)을 추기/삭제/내보내기/가져오기 할 수 있습니다.<br/>Top Navitagion에서 Protocol 버튼을 클릭하면 해당 페이지로 이동합니다. |
 | 3 | _Server_ | Server Entity에서 사용할 수 있는 프로토콜 목록입니다. 모든 프로토콜이 Built-in이며 커스텀 프로토콜 추가는 불가능 합니다. |
@@ -124,7 +120,7 @@ Built-in 프로토콜은 설정된 정보를 보여주고, 커스텀 프로토�
 <img src="../../img/web/protocol_builder.png">
 
 | No | Item | Description |
-| :-: |:--:|:- |
+| :-: |:--|:- |
 | 1 | _Protocol Name_ | 선택한 프로토콜의 이름입니다. |
 | 2 | _Left Navigation_ | Protocol Builder의 Left Navitagion은 Management와 구성이 다릅니다.<ul><li>Protocol Detail: 공통적인 정보를 설정하고 확인.</li><li>Model: 데이터 프레임을 구조를 설정. 추가, 삭제 가능.</li><li>Function: Model에 어떤 데이터를 사용할 것인지 설정. Read Function과 Write Function 고정.</li></ul> |
 | 3 | _Category_ | 선택된 프로토콜의 카테고리 입니다. 커스텀 프로토콜은 Device만 선택 가능합니다. |

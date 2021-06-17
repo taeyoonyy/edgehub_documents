@@ -5,10 +5,6 @@ Virtual를 통해 다른 Entity의 Tag/Call을 불러와 가공하거나 [Elixir
 Virtual Tag를 만드는 것은 External Entity(Device, Server, Database)와 대부분 동일하지만, Tag의 Connection information 또는 Tag information 같이 대상이 되는 Entity의 정보가 입력하는 것과 다르게 `Logic` 에 원하는 값을 직접 입력하여 만듭니다.
 :::
 
-<div class="toc-title"><img src="../../img/icon/list.svg">Table of Contents</div>
-
-[[toc]]
-
 ## Virtual Tags
 외부 디바이스와 통신이 아닌 Interactor 내부에서 값을 생성하고, 다른 Entity에서 사용할 수 있는 Tag를 만듭니다. 생성된 Virtual Tag는 다른 Entity에서 `{Tag reference}`로 사용할 수 있습니다.
 
@@ -16,28 +12,28 @@ Virtual Tag를 만드는 것은 External Entity(Device, Server, Database)와 대
 `Tag Reference`는 `{entity_category, (group_name), entity_name, tag_ID}`로 구성되며, Category가 Device인 경우 `group_name`이 포함됩니다.
 :::
 
-
-#### :black_medium_square: Tag ID
+### Tag ID
 - **Tag**: Virtual Tag를 식별할 수 있는 고유 ID입니다.
 
-#### :black_medium_square: Tag Information
+### Tag Information
 - **Logic**: [Elixir Syntax](../elixir/elixirSyntax.md)를 이용해 새로운 값을 생성하거나 다른 Entity의 Tag/Call 값을 reference하여 이를 가공할 수 있습니다.
 <img src="../../img/internalEntity/logic.png">
-
   |NO|Description|
   |:-:|:-|
   |1 | SelectBox를 통해 다른 Entity의 Tag나 Call을 선택합니다. |
   |2 | 1번에서 선택한 Tag나 Call의 Reference를 생성하여 3번에 추가합니다. |
   |3 | Elixir문법을 이용하여 원하는 값을 생성하거나 가공할 수 있습니다.|
 
-  ##### :mag_right: 예시1) 고정 데이터 (Staitc) 입력
+  <div class="spacer-sm"/>
 
-  <img src="../../img/internalEntity/logic-exam1-1.png">
+  ##### 예시1) 고정 데이터 (Staitc) 입력
+
+  <img src="../../img/internalEntity/logic-exam1-1.png" class="mt-0">
 
   위와 같이 Logic을 입력하여 Virtual Tag를 생성하고 `Commit`할 경우 결과는 다음과 같습니다.
   <img src="../../img/internalEntity/logic-exam1-2.png">
 
-  ##### <div id="exam1"> :mag_right: 예시2) 다른 Tag의 데이터 가공 (수집된 온도(℃)를 화씨(°F)로 변환)</div>
+  ##### <span id="exam1"> 예시2) 다른 Tag의 데이터 가공 (수집된 온도(℃)를 화씨(°F)로 변환)</span>
 
   <img src="../../img/internalEntity/logic-exam2-1.png">
 
@@ -52,18 +48,18 @@ Virtual Tag를 만드는 것은 External Entity(Device, Server, Database)와 대
 
 - **Value Type**: Logic을 통해 가공한 데이터의 Value Type을 설정합니다. 
 
-#### :black_medium_square: Condition
+### Condition
 - **Interval Value**: Logic을 실행하여 값을 만드는 **시간 간격**
 - **Interval Unit**: Interval Value에서 입력한 시간의 **단위**
 - **Transform** (Option): Logic에서 생성된 값에 추가적인 변환이 필요할 때 사용
 - **Load Condition** (Option): Tag의 값을 Internal Database에 저장하기 위한 조건 설정 (History가 enable인 경우만 사용)
 - **History** : Internal Dabase에 Tag 값 저장여부 설정
 - **Buffer**: Tag의 값을 임시로 저장하기 위한 버퍼 크기 설정
-#### :black_medium_square: Property
+### Property
 - **Category** (Option): 동일한 성질을 가진 Tag의 분류가 필요할 때 사용자가 직접 입력
 - **Comment** (Option): Tag의 추가적인 설명이 필요할 때 사용자가 직접 입력
 
-#### :black_medium_square: Data
+### Data
 - **Type**: Data - Value에 출력되는 데이터의 종류 설정 (Raw, Binary, Value 중 선택)
 - **Value**: 마지막으로 실행된 Tag 값 (Type 설정 적용)
 - **Byte Size**: 마지막으로 실행된 Tag Value의 Byte 길이
@@ -72,7 +68,7 @@ Virtual Tag를 만드는 것은 External Entity(Device, Server, Database)와 대
 ## Virtual Actions
 Tags Tab에서 생성한 Tag에 추가적인 Action을 설정할 수 있습니다. 설정된 Action은 해당 Tag가 실행되는 시점마다 발생합니다.
 
-#### :black_medium_square: Action ID
+### Action ID
 - **Tag**: Action 실행의 대상이 되는 Tag 선택 (선택된 Tag가 실행 될 때 해당 Action 실행)
 - **Condition**: Action이 발생 여부를 결정하는 조건
 
@@ -101,7 +97,7 @@ Tags Tab에서 생성한 Tag에 추가적인 Action을 설정할 수 있습니�
 ```
 :::
 
-##### :mag_right: 예시) <a href="#exam1">위의 예시</a>에서 만든 화씨 Tag의 값이 80이 넘을 경우를 조건으로 설정
+##### 예시) <a href="#exam1">위의 예시</a>에서 만든 화씨 Tag의 값이 80이 넘을 경우를 조건으로 설정
 
 <img src="../../img/internalEntity/action-condition.png">
 
@@ -118,7 +114,7 @@ Tags Tab에서 생성한 Tag에 추가적인 Action을 설정할 수 있습니�
 `Tag + Condition + Type`은 Action의 고유 ID가 되므로 중복될 수 없습니다.
 :::
 
-#### :black_medium_square: Action Information
+### Action Information
 - **Category**: Action 실행의 대상이 되는 Tag 또는 Call의 Category 선택
 - **Group**: Action 실행의 대상이 되는 Group 선택 (Category가 Device인 경우만 Group 선택)
 - **Entity**: Action 실행의 대상이 되는 Entity 선택
@@ -127,14 +123,14 @@ Tags Tab에서 생성한 Tag에 추가적인 Action을 설정할 수 있습니�
   - Event / Log: `""` 안에 원하는 message를 입력  
   - Tag: [Elixir Syntax](../elixir/elixirSyntax.md)를 이용하여 대싱아 되는 Tag의 값 변경 또는 Tag가 가르키는 Device에 쓰기 수행
 
-##### :mag_right: 예시) <a href="#exam1">다른 Tag의 데이터 가공</a> 예시 에서 만든 화씨 Tag의 값이 80이 넘을 경우 Log 기록
+##### 예시) <a href="#exam1">다른 Tag의 데이터 가공</a> 예시 에서 만든 화씨 Tag의 값이 80이 넘을 경우 Log 기록
 
 <img src="../../img/internalEntity/action-value.png">
 
-#### :black_medium_square: Property
+### Property
 - **Comment** (Option): Action의 추가적인 설명이 필요할 때 사용자가 직접 입력
 
-#### :black_medium_square: Data
+### Data
 - **Type**: Data - Value에 출력되는 데이터의 종류 설정 (Raw, Binary, Value 중 선택)
 - **Value**: 마지막으로 실행된 Action 값 (Type 설정 적용)
 - **Byte Size**:  마지막으로 실행된 Action 값의 Byte 길이

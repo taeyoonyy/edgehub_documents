@@ -2,18 +2,14 @@
 Interactor에서 수집 또는 생성된 `Raw Type`의 데이터는 **15개의 값 타입(Value Type)** 을 적용하여 Value Type의 값을 가질 수 있습니다.
 ![img](../../img/details/valuetype.png)
 | Data Type | Description |
-| :-: | :- |
+| :- | :- |
 | Value Type | Tag의 Raw 데이터에 적용 할 Value Type 설정합니다. |
-| Data Type | Tag의 값을 어떤 Type으로 볼 것인지 선택하고, 선택에 따라 Data Value가 변경해야 합니다. |
+| Data Type | Tag의 값을 어떤 Type으로 볼 것인지 선택하고,<br/>선택에 따라 Data Value가 변경해야 합니다. |
 | Byte Size | Tag의 Raw 값의 Byte 사이즈 |
 
 ::: tip <p class="custom-block-title"><img src="../../img/icon/tip.svg">NOTICE</p>
 **1️⃣ Value Type**으로 적용된 값은 **2️⃣ Data Type**이 `Value`일 때, **3️⃣ Data Value**에 출력됩니다.
 :::
-
-<div class="toc-title"><img src="../../img/icon/list.svg">Table of Contents</div>
-
-[[toc]]
 
 ## 1. Signed Integer
 **부호가 있는 정수형** 타입 입니다.
@@ -32,15 +28,13 @@ Internal Entity의 Tag에 Float를 사용하면 항상 배정밀도가 적용 �
 :::
 
 
-#### :black_medium_square: 단정밀도 (Float, IEEE754 Single precision 32-bit)
+### 단정밀도 (Float, IEEE754 Single precision 32-bit)
 Tag의 값이 **4바이트**인 경우 단정밀도가 사용됩니다. _예를 들어,_ Binary 값이 0x3F00000의 단정밀도 Decimal 값은 0.5 입니다. 0x3F000000의 값을 가지는 Tag에 Float를 적용하면 Data Value가 0.5로 출력 됩니다.  
-<div class="spacer-sm"/>
-:bulb: **참고**: <https://www.binaryconvert.com/convert_float.html>
+###### **참고**: <https://www.binaryconvert.com/convert_float.html>
 
-#### :black_medium_square: 배정밀도 (Double, IEEE754 Double precision 64-bit)
+### 배정밀도 (Double, IEEE754 Double precision 64-bit)
 Tag의 값이 **8바이트**인 경우 배정밀도가 사용됩니다. _예를 들어,_ Binary 값이 0x3F00000의 단정밀도 Decimal 값은 0.5 입니다. 0x3F000000의 값을 가지는 Tag에 Float를 적용하면 Data Value가 0.5로 출력 됩니다.  
-<div class="spacer-sm"/>
-:bulb: **참고**: <https://www.binaryconvert.com/convert_double.html>
+###### **참고**: <https://www.binaryconvert.com/convert_double.html>
 
 
 ## 4. Binary

@@ -1,5 +1,5 @@
 .navbar {
-  background-color: $darkgray;
+  background-color: $gray;
   border-bottom: 0px;
 
   .sidebar-button {
@@ -11,13 +11,108 @@
   }
 
   .site-name {
-    color: white !important;
+    color: $blue !important;
+  }
+
+  .site-name::before {
+    content: "EDGE  ";
+    color: white;
+    margin-left: 4px;
+  }
+
+  .site-name::after {
+    content: "Interactor";
+    padding-left: 8px;
+    color: $green;
+    margin-left: 8px;
+  }
+
+  .home-link {
+    height: 35px !important;
+    overflow: hiddden;
+  }
+
+  .home-link:before {
+    content: "｜"
+    position: fixed;
+    top: 10px;
+    left: 136px;
+    color: $lightgray;
+    z-index: 50;
+    font-weight: bold;
+  }
+
+  .home-link:after {
+    content: " Docs";
+    color: white;
+    margin-left: 8px;
+    font-size: 20px;
   }
 
   .links{
     background-color: transparent !important;
 
   }
+}
+
+.hero {
+  display: none;
+}
+
+.home {
+  height: calc(100vh - 58px);
+  .theme-default-content{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.home-container {
+  padding-bottom: 54px;
+
+  @media (max-width:400px) {
+    padding-top: 144px;
+  }
+
+  img {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 54px;
+  }
+
+  .home-text {
+    margin: 0 auto;
+    margin-bottom: 36px;
+    text-align: center;
+    font-size: 24px;
+    color: $lightgray;
+
+    @media (max-width:400px) {
+      font-size: 16px;
+    }
+  }
+
+  button {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 54px;
+    color: #fff;
+    font-size: 1.2rem;
+    background-color: $blue;
+    padding: .8rem 1.6rem;
+    border-radius: 4px;
+    transition: background-color .1s ease;
+    box-shadow: 0 2px 4px 0 rgba($black, 0.3);
+    border-color: rgba($gray, 0.1);
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: $blue-hover;
+  }
+  
 }
 
 .sidebar {
@@ -49,15 +144,64 @@
   }
 }
 
+@media (max-width: 719px) {
+  .site-name {
+    text-overflow: clip !important;
+  }
+
+  .site-name:after, .home-link:before, .home-link:after {
+    display: none;
+  }
+}
+
+@media (min-width: 1200px) {
+
+  .sidebar-sub-headers::before {
+    content: 'Table of Contents';
+    font-size: 18px;
+    font-weight: bold;
+    color: $main-gray;
+    position: fixed;
+    margin-top: -36px;
+  }
+
+  .sidebar-sub-headers {
+    position: fixed;
+    right: 0;
+    top: 58px;
+    width: 252px;
+    height: 100%;
+    padding-top: 52px !important;
+  }
+
+  .sidebar-sub-header {
+    margin-left: 24px;
+
+    .sidebar-link {
+      padding-left: 8px !important;
+      border-left: 2px solid rgba($main-gray, 0.1) !important;
+    }
+
+    .active{
+        border-left: 2px solid $darkblue !important;
+      }
+  }
+
+  .page {
+    .theme-default-content, .page-nav {
+      padding-right: calc(40px + 252px) !important;
+    }
+  }
+}
+
 .copyright {
   text-align: center;
-  padding-top: 50px;
-  margin-bottom: -50px;
+  border-top: 1px solid lightgray;
+  padding: 16px 36px;
 }
 
 .page {
-  .theme-default-content:not(.custom) {
-    max-width: 1000px;
+  .theme-default-content {
     a {
       font-weight: 400;
       color: $green;
@@ -67,11 +211,15 @@
 
   img {
     margin-top: 16px;
-    margin-bottom: 8px;
+    margin-bottom: 16px;
+  }
+
+  .mt-0 {
+    margin-top: 0px;
   }
 
   .spacer {
-    height: 24px;
+    height: 16px;
   }
 
   .spacer-sm {
@@ -113,48 +261,89 @@
           list-style: none;
         }
         li:before{
-          content: '';
-          display: inline-block;
-          width: 5px;
-          height: 5px;
-          margin: -2px 12px auto auto;
-          vertical-align: middle;
-          border-right: 2px solid $main-gray;
-          border-top: 2px solid $main-gray;
-          transform: rotate(45deg)
+          content: '·';
+          margin-right: 8px;
         }
       }
     }
   }
 
+  h1, h2, h3, h4, h5, h6 {
+    padding: 0 !important;
+    margin-bottom: 16px !important;
+  }
+
+  h1, h2 {
+    margin-top: 48px !important;
+  }
+
+  h3, h4 {
+    margin-top: 32px !important
+  }
+
   h1 {
     font-weight: bold;
     font-size: 48px;
+    margin-top: 52px !important;
   }
 
   h2 {
     font-weight: bold;
-
-    .header-anchor {
-      float: none;
-      opacity: 1;
-      padding-left: 16px;
-      padding-right: 0px;
-      color: $main-gray;
-    }
+    font-size: 32px;
+    padding-bottom: 8px !important;
   }
 
   h3 {
-    font-weight: 500;
+    font-size: 22px;
+  }
+
+  h3:before {
+    content: "◼";
   }
 
   h4 {
-    font-size: 20px;
+    font-size: 18px;
+  }
+
+  h4:before {
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    margin: -4px 8px auto auto;
+    vertical-align: middle;
+    border-right: 4px solid $main-gray;
+    border-top: 4px solid $main-gray;
+    transform: rotate(45deg);
   }
 
   h5 {
     font-size: 16px;
-    margin-bottom: 0;
+    margin-top: 32px !important;
+  }
+
+  h5:before {
+    content: "🔎";
+  }
+
+  h6 {
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 16px !important;
+  }
+
+  h6:before {
+    content: "💡 ";
+  }
+
+  .construction{
+    width: 4px;
+    height: 4px;
+  }
+
+  .construction:before {
+    content: " 🚧 작성 중 ";
+    font-weight: bold;
   }
 
   code {
@@ -173,6 +362,21 @@
     padding-top: 20px;
     padding-bottom: 20px;
     border-radius: 4px;
+
+    h4 {
+      font-size: 16px;
+      margin: 0 !important;
+    }
+
+    h4:before {
+      content: '';
+      width: 4px;
+      height: 4px;
+      margin-top: -2px;
+      border-right: 3px solid $main-gray;
+      border-top: 3px solid $main-gray;
+    }
+
     p, ul {
       margin-bottom: 0;
     }
@@ -210,7 +414,7 @@
 
   .info {
     background-color: #f2fafd;
-    color: #6b5900;
+    color: $dark-gray;
     border-radius: 4px;
     border-left: 0.5rem solid #2a98b9;
     padding: 0.1rem 1.5rem;
@@ -231,10 +435,6 @@
     ul{
       margin-bottom: 0;
     }
-  }
-
-  .page-nav {
-    max-width: 1000px;
   }
 
   table {

@@ -60,7 +60,7 @@ value = (v |> :binary.decode_unsigned()) + 1
 
 
 ##### 예시2) Virtual Tag에 1을 더하고 싶을 때
-Virtual Tag에 직접 값을 입력하거나 다른 Tag의 값을 가지고 올 때는 Binary 형태가 아닌 Value 형태가 적용됩니다.
+Virtual Tag에 직접 값을 입력하거나 다른 Tag의 값을 가지고 올 때는 Binary 형태가 아닌 Value 형태가 적용됩니다.  
 ![img](../../img/details/transform_example2_1.png)  
 
 `{device, GGG, DDD, tag1}`의 value는 <<>>가 아닌 Value type이 적용된 값을 가집니다. 이 때의 값이 1이라면, 예제 1번과 같이 데이터 타잎을 변환하는 코드 없이 원하는 계산을 바로 입력하면 원하는 결과인 2를 만들 수 있습니다.  

@@ -132,7 +132,7 @@ Interactor에서 외부 프로그램으로 데이터를 전송할 때 JSON 구�
 
 ## Extenal Program Code Example
 ### Elixir로 작성된 외부 프로그램
-<div id="elixir_port"><h5>🔎 예시) 사용자가 입력한 "msg"의 value에 "Hello "를 붙여서 응답하는 코드  </h5></div>  
+##### 예시) 사용자가 입력한 "msg"의 value에 "Hello "를 붙여서 응답하는 코드
 
 
 ``` elixir

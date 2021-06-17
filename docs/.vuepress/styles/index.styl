@@ -1,5 +1,5 @@
 .navbar {
-  background-color: $darkgray;
+  background-color: $gray;
   border-bottom: 0px;
 
   .sidebar-button {
@@ -11,20 +11,42 @@
   }
 
   .site-name {
-    color: $green !important;
+    color: $blue !important;
   }
+
   .site-name::before {
-    content: "Edgehub-i";
-    color: $blue;
-    margin-right: 16px;
-    border-right: 2px solid $gray;
-    padding-right: 16px;
+    content: "EDGE  ";
+    color: white;
+    margin-left: 4px;
   }
 
   .site-name::after {
-    content: "Docs";
+    content: "Interactor";
+    padding-left: 8px;
+    color: $green;
+    margin-left: 8px;
+  }
+
+  .home-link {
+    height: 35px !important;
+    overflow: hiddden;
+  }
+
+  .home-link:before {
+    content: "｜"
+    position: fixed;
+    top: 10px;
+    left: 136px;
+    color: $lightgray;
+    z-index: 50;
+    font-weight: bold;
+  }
+
+  .home-link:after {
+    content: " Docs";
     color: white;
-    margin-left: 16px;
+    margin-left: 8px;
+    font-size: 20px;
   }
 
   .links{
@@ -32,6 +54,7 @@
 
   }
 }
+
 .hero {
   display: none;
 }
@@ -47,27 +70,40 @@
 }
 
 .home-container {
-  padding-bottom: 58px;
+  padding-bottom: 54px;
   img {
     display: block;
     margin: 0 auto;
     margin-bottom: 54px;
   }
 
+  .home-text {
+    margin: 0 auto;
+    margin-bottom: 36px;
+    text-align: center;
+    font-size: 24px;
+    color: $gray;
+  }
+
   button {
     display: block;
     margin: 0 auto;
-    margin-bottom: 92px;
+    margin-bottom: 54px;
     color: #fff;
     font-size: 1.2rem;
     background-color: $blue;
     padding: .8rem 1.6rem;
     border-radius: 4px;
     transition: background-color .1s ease;
-    box-sizing: border-box;
+    box-shadow: 0 2px 4px 0 rgba($black, 0.3);
     border-color: rgba($gray, 0.1);
     cursor: pointer;
   }
+
+  button:hover {
+    background-color: $blue-hover;
+  }
+  
 }
 
 .sidebar {
@@ -99,6 +135,16 @@
   }
 }
 
+@media (max-width: 719px) {
+  .site-name {
+    text-overflow: clip !important;
+  }
+
+  .site-name:after, .home-link:before, .home-link:after {
+    display: none;
+  }
+}
+
 @media (min-width: 1200px) {
 
   .sidebar-sub-headers::before {
@@ -127,16 +173,8 @@
       border-left: 2px solid rgba($main-gray, 0.1) !important;
     }
 
-    .active:before{
-        content: '';
-        display: inline-block;
-        width: 5px;
-        height: 5px;
-        margin: -2px 12px auto auto;
-        vertical-align: middle;
-        border-right: 2px solid $blue;
-        border-top: 2px solid $blue;
-        transform: rotate(45deg)
+    .active{
+        border-left: 2px solid $darkblue !important;
       }
   }
 
@@ -149,6 +187,8 @@
 
 .copyright {
   text-align: center;
+  border-top: 1px solid lightgray;
+  padding: 16px 36px;
 }
 
 .page {

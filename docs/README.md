@@ -3,10 +3,12 @@ home: true
 ---
 
 <div class="home-container">
-  <img src="./img/invalid-name.svg" alt="interactor-logo">
-  <button onclick="location.href='md/introduction/guide'">Quick Started</button>
+  <img src="./img/invalid-name.svg" alt="main-logo">
+  <img src="./img/loginlogo-interactor.svg" alt="interactor-logo">
 
-  ---
+  <div class="home-text">~~~~~~~~~~~~ Web Application</div>
+
+  <button onclick="location.href='md/introduction/guide'">GET STARTED</button>
   
   <div class="copyright">CC-BY-NC-ND Licensed | Copyright © 2021-present Taeyoon Yu</div>
 </div>

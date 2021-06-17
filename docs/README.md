@@ -6,7 +6,7 @@ home: true
   <img src="./img/invalid-name.svg" alt="main-logo">
   <img src="./img/loginlogo-interactor.svg" alt="interactor-logo">
 
-  <div class="home-text">~~~~~~~~~~~~ Web Application</div>
+  <div class="home-text">Edge Computing Solution by LS-ELECTRIC</div>
 
   <button onclick="location.href='md/introduction/guide'">GET STARTED</button>
   

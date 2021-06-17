@@ -22,9 +22,9 @@ Buffer를 사용하여 저장된 데이터는 `HTTP`와 `Tag reference`에서 �
 Buffer에 포함된 모든 데이터를 한번에 읽는것과 특정 순서의 Buffer의 데이터만 읽는것이 가능합니다. Interactor의 IP가 `127.0.0.1`이고, HTTP Server의 Port가 `2290`으로 설정된 HTTP Tag가 아래와 같이 설정되었을 떄 읽는 방법을 설명합니다.
 <img src="../../img/details/buffer_http.png">
 
-#### :black_medium_square: Buffer에 포함된 모든 데이터 읽기
+### Buffer에 포함된 모든 데이터 읽기
 Path 뒤에 `.buffer`를 붙이면 Buffer의 모든 데이터를 읽을 수 있습니다. Buffer가 3로 설정된 경우 3개의 Buffer 데이터가 `JSON 배열`로 출력됩니다.  
-##### :mag_right: 예시) `http://127.0.0.1:2290/aaa/.buffer`
+##### 예시) `http://127.0.0.1:2290/aaa/.buffer`
 ``` json
 [
   {
@@ -75,9 +75,9 @@ Path 뒤에 `.buffer`를 붙이면 Buffer의 모든 데이터를 읽을 수 있�
 ]
 ```
 
-#### :black_medium_square: Buffer에 포함된 특정 데이터 읽기
+### Buffer에 포함된 특정 데이터 읽기
 Path 뒤에 .숫자 붙이면 Buffer의 특정 위치의 데이터를 읽을 수 있습니다. 마지막에 수집된 데이터가 `0`이고, 값이 증가할때 마다 이전 인터벌에 수집된 Buffer를 가르킵니다. (즉, Buffer가 3으로 설정되었을 때 .2가 Buffer에 있는 가장 오래된 데이터)  
-##### :mag_right: 예시) `http://127.0.0.1:2290/aaa/.0` 
+##### 예시) `http://127.0.0.1:2290/aaa/.0` 
 ``` json
 {
   "value_string": "3832",
@@ -99,13 +99,13 @@ Path 뒤에 .숫자 붙이면 Buffer의 특정 위치의 데이터를 읽을 수
 ### 2. Tag reference
 Tag reference를 사용하여 Buffer의 데이터를 읽을 수 있습니다.
 
-#### :black_medium_square: Buffer에 포함된 모든 데이터 읽기
+### Buffer에 포함된 모든 데이터 읽기
 Tag reference 마지막에 , buffer를 입력하면 Buffer의 모든 데이터를 읽을 수 있습니다. 데이터는 List 안에 각각의 Buffer 데이터가 Elixir 데이터 구조 Map으로 저장되어 있습니다.  
 
-##### :mag_right: 예시) Buffer 전체 데이터 수집 설정
+##### 예시) Buffer 전체 데이터 수집 설정
 <img src="../../img/details/buffer_tag1.png">
 
-##### :mag_right: 예시) Buffer 전체 데이터 수집 결과
+##### 예시) Buffer 전체 데이터 수집 결과
 ``` elixir
 [
   %{
@@ -138,5 +138,5 @@ Tag reference 마지막에 , buffer를 입력하면 Buffer의 모든 데이터�
 ]
 ```
 
-#### :black_medium_square: Buffer에 포함된 특정 데이터 읽기
-Tag reference로 가지고 올 수 있는 Buffer가 Elixir...(작성중)
+### Buffer에 포함된 특정 데이터 읽기
+Tag reference로 가지고 올 수 있는 Buffer가 Elixir...(<span class="construction"/>)

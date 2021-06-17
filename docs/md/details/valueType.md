@@ -32,15 +32,13 @@ Internal Entity의 Tag에 Float를 사용하면 항상 배정밀도가 적용 �
 :::
 
 
-#### :black_medium_square: 단정밀도 (Float, IEEE754 Single precision 32-bit)
+### 단정밀도 (Float, IEEE754 Single precision 32-bit)
 Tag의 값이 **4바이트**인 경우 단정밀도가 사용됩니다. _예를 들어,_ Binary 값이 0x3F00000의 단정밀도 Decimal 값은 0.5 입니다. 0x3F000000의 값을 가지는 Tag에 Float를 적용하면 Data Value가 0.5로 출력 됩니다.  
-<div class="spacer-sm"/>
-:bulb: **참고**: <https://www.binaryconvert.com/convert_float.html>
+###### **참고**: <https://www.binaryconvert.com/convert_float.html>
 
-#### :black_medium_square: 배정밀도 (Double, IEEE754 Double precision 64-bit)
+### 배정밀도 (Double, IEEE754 Double precision 64-bit)
 Tag의 값이 **8바이트**인 경우 배정밀도가 사용됩니다. _예를 들어,_ Binary 값이 0x3F00000의 단정밀도 Decimal 값은 0.5 입니다. 0x3F000000의 값을 가지는 Tag에 Float를 적용하면 Data Value가 0.5로 출력 됩니다.  
-<div class="spacer-sm"/>
-:bulb: **참고**: <https://www.binaryconvert.com/convert_double.html>
+###### **참고**: <https://www.binaryconvert.com/convert_double.html>
 
 
 ## 4. Binary

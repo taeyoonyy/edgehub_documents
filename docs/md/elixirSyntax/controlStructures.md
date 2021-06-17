@@ -32,7 +32,7 @@ else
 end
 # 조건에 대한 결과가 false이므로 "This is not an Integer"가 반환됩니다.
 ```
-##### :mag_right: 예시) Virtual Entity의 Logic에서의 사용
+##### 예시) Virtual Entity의 Logic에서의 사용
 {virtual, aaa, tag1} 의 값이 3일 때 tag2는 2의 값을 가지게 됩니다.  
 
 ``` elixir

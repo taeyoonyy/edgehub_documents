@@ -148,7 +148,7 @@
 @media (min-width: 1200px) {
 
   .sidebar-sub-headers::before {
-    content: 'Contents';
+    content: 'Table of Contents';
     font-size: 18px;
     font-weight: bold;
     color: $main-gray;
@@ -166,7 +166,7 @@
   }
 
   .sidebar-sub-header {
-    margin-left: 16px;
+    margin-left: 24px;
 
     .sidebar-link {
       padding-left: 8px !important;
@@ -202,11 +202,15 @@
 
   img {
     margin-top: 16px;
-    margin-bottom: 8px;
+    margin-bottom: 16px;
+  }
+
+  .mt-0 {
+    margin-top: 0px;
   }
 
   .spacer {
-    height: 24px;
+    height: 16px;
   }
 
   .spacer-sm {
@@ -248,40 +252,89 @@
           list-style: none;
         }
         li:before{
-          content: '';
-          display: inline-block;
-          width: 5px;
-          height: 5px;
-          margin: -2px 12px auto auto;
-          vertical-align: middle;
-          border-right: 2px solid $main-gray;
-          border-top: 2px solid $main-gray;
-          transform: rotate(45deg)
+          content: '·';
+          margin-right: 8px;
         }
       }
     }
   }
 
+  h1, h2, h3, h4, h5, h6 {
+    padding: 0 !important;
+    margin-bottom: 16px !important;
+  }
+
+  h1, h2 {
+    margin-top: 48px !important;
+  }
+
+  h3, h4 {
+    margin-top: 32px !important
+  }
+
   h1 {
     font-weight: bold;
     font-size: 48px;
+    margin-top: 52px !important;
   }
 
   h2 {
     font-weight: bold;
+    font-size: 32px;
+    padding-bottom: 8px !important;
   }
 
   h3 {
-    font-weight: 500;
+    font-size: 22px;
+  }
+
+  h3:before {
+    content: "◼";
   }
 
   h4 {
-    font-size: 20px;
+    font-size: 18px;
+  }
+
+  h4:before {
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    margin: -4px 8px auto auto;
+    vertical-align: middle;
+    border-right: 4px solid $main-gray;
+    border-top: 4px solid $main-gray;
+    transform: rotate(45deg);
   }
 
   h5 {
     font-size: 16px;
-    margin-bottom: 0;
+    margin-top: 32px !important;
+  }
+
+  h5:before {
+    content: "🔎";
+  }
+
+  h6 {
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 16px !important;
+  }
+
+  h6:before {
+    content: "💡 ";
+  }
+
+  .construction{
+    width: 4px;
+    height: 4px;
+  }
+
+  .construction:before {
+    content: " 🚧 작성 중 ";
+    font-weight: bold;
   }
 
   code {
@@ -300,6 +353,20 @@
     padding-top: 20px;
     padding-bottom: 20px;
     border-radius: 4px;
+
+    h4 {
+      font-size: 16px;
+    }
+
+    h4:before {
+      content: '';
+      width: 4px;
+      height: 4px;
+      margin-top: -2px;
+      border-right: 3px solid $main-gray;
+      border-top: 3px solid $main-gray;
+    }
+
     p, ul {
       margin-bottom: 0;
     }
@@ -337,7 +404,7 @@
 
   .info {
     background-color: #f2fafd;
-    color: #6b5900;
+    color: $dark-gray;
     border-radius: 4px;
     border-left: 0.5rem solid #2a98b9;
     padding: 0.1rem 1.5rem;

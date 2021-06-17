@@ -19,23 +19,23 @@ Confirm을 클릭하기 전 text 입력창을 클릭하면 선택된 Predefined 
 ## 2. User Defined Function 사용  
 EdgeHub에서 사용자가 생성한 함수를 사용하는 방법입니다. `Use Predefined Function`이 `None`인 상태에서 text 입력창에 사용을 원하는 함수를 입력합니다. 사용자 생성 함수의 자세한 사용법은 (작성예정)을 참고주세요.   
 
-##### :mag_right: 예시)  
+##### 예시)  
 ``` elixir
 EdgeHub.function("AAA.reverse", [argument: v])
 ```
 ::: tip <p class="custom-block-title"><img src="../../img/icon/tip.svg">NOTICE</p>
-##### :arrow_forward: 입력 조건
+#### 입력 조건
 Tag의 Value는 v로 정의되어 있습니다.
 :::
 
 ## 3. Elixir 사용
 Elixir Syntax를 직접 입력하여 전처리를 수행할 수 있습니다. 전처리를 위한 Tag의 값은 `v`로 정의되어 있으며, 데이터가 value type이 적용되기 전 `raw`인 것에 주의하여 Elixir Syntax를 적용해야 합니다.
 
-##### :mag_right: 예시1) Modbus TCP Protocol을 사용하는 Device에서 수집된 데이터에 1을 더하고 싶을 때
+##### 예시1) Modbus TCP Protocol을 사용하는 Device에서 수집된 데이터에 1을 더하고 싶을 때
 Modbus TCP 프로토콜로 1 word의 데이터 `257`을 수집하면, 수집된 값인 `Raw`는 `<<1, 1>>`과 같은 형태의 Binary 데이터가 됩니다.
 10진수 `257`은 hex로 표현하면 `0x0101`이고, 이를 Elixir의 바이너리 형태로 표현하면 `<<1, 1>>`입니다. 
 ::: tip <p class="custom-block-title"><img src="../../img/icon/tip.svg">NOTICE</p>
-##### :arrow_forward: Elixir의 Binary
+#### Elixir의 Binary
 Elixir의 Binray 데이터는 `<< >>`를 사용하여 표현합니다.  
 `<< >>` 안에는 10진수를 1바이트로 Comma`,`로 구분되어 다음과 같은 형태로 나열됩니다.  
 ``` elixir
@@ -63,7 +63,7 @@ value = (v |> :binary.decode_unsigned()) + 1
 ![img](../../img/details/transform_example1.png)
 
 
-##### :mag_right: 예시2) Virtual Tag에 1을 더하고 싶을 때
+##### 예시2) Virtual Tag에 1을 더하고 싶을 때
 Virtual Tag에 직접 값을 입력하거나 다른 Tag의 값을 가지고 올 때는 Binary 형태가 아닌 Value 형태가 적용됩니다.
 ![img](../../img/details/transform_example2_1.png)  
 

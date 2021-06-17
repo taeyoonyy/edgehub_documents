@@ -11,7 +11,7 @@ HTTP 및 HTTPS(이하 HTTPS 생략) 클라이언트의 요청에 응답할 수 �
 http://{Interactor IP 주소}:{HTTP 생성 시 입력한 Port}/{path}
 ```
 
-##### :mag_right: 예시) Interactor의 모든 Tag 정보를 가져오고 싶은 경우
+##### 예시) Interactor의 모든 Tag 정보를 가져오고 싶은 경우
 - URL 입력
 ```  http
 http://127.0.0.1:2290/data/tag
@@ -42,7 +42,7 @@ http://127.0.0.1:2290/data/tag
 ::: tip  <p class="custom-block-title"><img src="../../img/icon/tip.svg">NOTICE</p>
 `json`의 key값을 `path`로 사용하여 특정 데이터를 가져올 수 있습니다(단, TagID까지만 접근가능).
 
-##### :mag_right: 예시) `http://127.0.0.1:2290/data/tag/device/Port`
+##### 예시) `http://127.0.0.1:2290/data/tag/device/Port`
 ``` json
 {
   "elixir": { // entity name
@@ -60,7 +60,7 @@ http://127.0.0.1:2290/data/tag
 ```
 :::
 
-##### :mag_right: 예시) Server의 Tags에 있는 `tag1` 값을 가져오고 싶은 경우 
+##### 예시) Server의 Tags에 있는 `tag1` 값을 가져오고 싶은 경우 
 - URL 입력
 ```  http
 http://127.0.0.1:2290/custom/tag1
@@ -78,10 +78,10 @@ http://127.0.0.1:2290/custom/tag1
   "binary": "hello world"
 }
 ```
-:bulb: **Custom path**에 대한 내용은 아래의 [Tag Information](#tag-information)을 참고해 주십시오.
+###### **Custom path**에 대한 내용은 아래의 [Tag Information](#tag-information)을 참고해 주십시오.
 
 ## Response 구조
-#### :black_medium_square: 정상적인 Path 사용
+### 정상적인 Path 사용
 ``` json
 {
   "value_string": "0x64", // Value의 hex를 String으로 나타낸 값
@@ -111,14 +111,13 @@ http://127.0.0.1:2290/custom/tag1
 ```
 :::
 
-#### :black_medium_square: 존재하지 않는 Path 사용
+### 존재하지 않는 Path 사용
 ``` json
 null
 ```
-
 ## Connection Information
 
-#### :black_medium_square: Port
+### Port
 URL에 입력하는 포트 번호 입니다. Interactor의 Server에서 사용중인 Port를 입력하면, **자동**으로 Interactord의 Server에서 사용하지 않는 Port로 변경됩니다.
 
 ## Server Access Control
@@ -134,14 +133,14 @@ HTTP의 엑세스 제어와 인증을 위해 **"Basic"** 인증을 설정할 수
 ## Tag Information
 HTTP Client에서 요청할 타겟 `Tag`와 `path`를 설정합니다.  
 
-#### :black_medium_square: Path
+### Path
 URL에서 `http://Interactor IP 주소:HTTP 생성 시 입력한 Port/custom/` 뒤에 입력되는 Path입니다. Path는 영문자와 점(`.`) 을 사용하여 설정할 수 있습니다. 
 
-#### :black_medium_square: 단일 Path
+### 단일 Path
 점(`.`) 없이 영문자 또는 숫자를 입력하여 Path를 만들면, 하나의 Tag 값을 가르키는 Path가 됩니다.  
 <img src="../../img/server/path1.png" width="800">  
 
-##### :mag_right: 예시) tag1의 데이터를 수집하기 위해 `http://127.0.0.1:2290/custom/aaa` 를 사용한 결과
+##### 예시) tag1의 데이터를 수집하기 위해 `http://127.0.0.1:2290/custom/aaa` 를 사용한 결과
 ``` json
 {
   "value_string": "0x00",
@@ -153,11 +152,11 @@ URL에서 `http://Interactor IP 주소:HTTP 생성 시 입력한 Port/custom/` �
   "binary": "\u0000"
 }
 ```
-#### :black_medium_square: 두 개 이상의 Tag 값을 가지는 Path
+### 두 개 이상의 Tag 값을 가지는 Path
 점(`.`)을 사용하여 Path를 만들면 두 개 이상의 Tag 값을 가지는 Path가 됩니다.  
 <img src="../../img/server/path2.png" width="800">  
 
-##### :mag_right: 예시) `http://127.0.0.1:2290/custom/aaa`를 사용한 결과  
+##### 예시) `http://127.0.0.1:2290/custom/aaa`를 사용한 결과  
 
 ``` json
 {
@@ -182,8 +181,8 @@ URL에서 `http://Interactor IP 주소:HTTP 생성 시 입력한 Port/custom/` �
 }
 ```
 
-#### :black_medium_square: Category / Group / Entity / Tag
+### Category / Group / Entity / Tag
 응답의 타겟이 되는 Tag를 설정합니다.
 
-#### :black_medium_square: Value Type
+### Value Type
 타겟이 되는 Tag의 Value Type을 출력합니다.  

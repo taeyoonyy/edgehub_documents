@@ -1,5 +1,5 @@
 # Web Page 
-이 페이지는 <u>Edgegub-i | Interactor Web Application(이하 Interactor)</u>의 사용 방법을 설명합니다.
+이 페이지는 <u>Interactor  Web Application</u>의 사용 방법을 설명합니다.
 
 ## Web Structure  
 Web 전체적인 구조에 대해서 설명합니다. 아래는 Login 후 출력되는 화면입니다.   

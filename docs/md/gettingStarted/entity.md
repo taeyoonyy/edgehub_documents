@@ -1,5 +1,5 @@
 # Entity
-이 페이지는 <u>Edgegub-i | Interactor Web Application(이하 Interactor)</u>에서의 Entity 등록 및 사용 방법을 설명합니다.
+이 페이지는 <u>Interactor</u>의 Entity 등록 및 사용 방법을 설명합니다.
 ::: tip <p class="custom-block-title"><img src="../../img/icon/tip.svg">NOTICE</p>
 Interactor에 등록되는 Entity는 크게 두 가지로 분류할 수 있습니다.
 * **External Entity**: 외부 디바이스 또는 SW와 연결되는 Entity **(Device, Server, Database)**

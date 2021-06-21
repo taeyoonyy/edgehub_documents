@@ -2,7 +2,8 @@
 InfluxDB와 <u>Interactor</u>를 연결하여 DATABASE에 데이터를 WRITE, READ할 수 있습니다.
 
 ::: tip <p class="custom-block-title"><img src="../../img/icon/tip.svg">NOTICE</p>
-Calls의 InfluxQL을 이용하여 WRITE, READ가 모두 가능하지만 특정 데이터만 READ하기 위해서는 Virtual[(예제)](#example)을 이용해야 합니다. 이러한 특성에 따라 Calls은 WRITE를 위한 목적으로 사용할 것을 권장합니다. 
+- Calls의 InfluxQL을 이용하여 WRITE, READ가 모두 가능하지만 특정 데이터만 READ하기 위해서는 Virtual[(예제)](#example)을 이용해야 합니다. 이러한 특성에 따라 Calls은 WRITE를 위한 목적으로 사용할 것을 권장합니다.
+- InfluxDB는 `v1.x`만 사용 가능합니다.
 :::
 
 ## Connection Information
@@ -157,15 +158,45 @@ v |> List.first |> Map.get("series") |> List.first |> Map.get("values") |> List.
 ``` sql
 SELECT * FROM MODBUS ORDER BY DESC LIMIT 1
 ```
+- `Database > Calls > Data > Value`
+``` json
+{
+  "status_code": 200,
+  "body": {
+    "results": [
+      {
+        "statement_id": 0,
+        "series": [
+          {
+            "values": [
+              [
+                "2021-06-21T08:00:50.2871563Z",
+                "3",
+                5
+              ]
+            ],
+            "name": "MODBUS",
+            "columns": [
+              "time",
+              "ADDRESS",
+              "VALUE"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
+```
 
 - `Virtual > Tags > Tag Information > Logic`
 ``` elixir 
-v |> Map.get("body") |> Map.get("results") |> List.first |> Map.get("series") |> List.first |> Map.get("values") |> List.flatten
+{call, database, MYDB, CALL} |> Map.get("body") |> Map.get("results") |> List.first |> Map.get("series") |> List.first |> Map.get("values") |> List.flatten
 ```
 ::: tip <p class="custom-block-title"><img src="../../img/icon/tip.svg">NOTICE</p>
 Interactor에서 제공하는 Function을 사용하면 다음과 같이 보다 간결하게 값을 가져올 수 있습니다.
 ``` elixir 
-v |> Interactor.Object.get_in( ["body", "results","0", "series","0","values"]) |> List.flatten
+{call, database, MYDB, CALL} |> Interactor.Object.get_in( ["body", "results","0", "series","0","values"]) |> List.flatten
 ```
 :::
 

@@ -1,111 +1,75 @@
 # InfluxDB
-시계얼 데이터베이스(Time-series database, TSDB)인 InfluxDB와 Interactor를 연결하여 데이터를 읽거나 쓸 수 있습니다. `Connection Information`에서 InfluxDB와 연결하기 위한 설정을 하고, `Calls`에서 Influx Query Lanaguage(이하 InfluxQL)를 사용하여 사용자가 원하는 Query를 사용하여 데이터를 읽거나 쓸 수 있습니다. `Tags`에서는 Interactor에서 지정한 형식에 따라 InfluxDB의 데이터를 수집할 수 있고, `Actions`을 이용하여 InfluxDB에 데이터를 쓸 수 있습니다.
+InfluxDB와 <u>Interactor</u>를 연결하여 DATABASE에 데이터를 WRITE, READ할 수 있습니다.
 
 ::: tip <p class="custom-block-title"><img src="../../img/icon/tip.svg">NOTICE</p>
-<!-- - Calls의 InfluxQL을 이용하여 WRITE, READ가 모두 가능하지만 특정 데이터만 READ하기 위해서는 Virtual[(예제)](#example)을 이용해야 합니다. 이러한 특성에 따라 Calls은 WRITE를 위한 목적으로 사용할 것을 권장합니다. -->
-Interactor를는 InfluxDB v1.8.x 버전을 지원합니다.
+- Calls의 InfluxQL을 이용하여 WRITE, READ가 모두 가능하지만 특정 데이터만 READ하기 위해서는 Virtual[(예제)](#example)을 이용해야 합니다. 이러한 특성에 따라 Calls은 WRITE를 위한 목적으로 사용할 것을 권장합니다.
+- InfluxDB는 `v1.x`만 사용 가능합니다.
 :::
 
 ## Connection Information
-Interactor와 InfluxDB를 연결하기 위한 설정 입니다.
+`Connection Information`은 InfluxDB의 configuration입니다.
 
-| Key | Description | Required |
-| :- | :- | :-: |
-| _Address_ | InfluxDB가 설치된 PC의 IP Address | * |
-| _Port_ | InfluxDB가 사용하는 Port | * |
-| _Database_ | 수집 대상이 되는 DATABASE 이름 | * |
-| _Username_ | 수집 대상이 되는 DATABASE에 설정된 Username |
-| _Password_ | 수집 대상이 되는 DATABASE에 설정된 Password |
-| _Precision_ | DATABASE에 설정된 Timestamp의 시간 정밀도 | * | 
+| Key | Description |
+| :- | :- |
+| _Address_ | InfluxDB가 저장된 Device의 IP Address |
+| _Port_ | InfluxDB의 http service Port |
+| _Database_ | 가져오고자 하는 데이터의 DATABASE 이름 |
+| _Username_ | DATABASE의 Username(User가 없는 경우 space 입력하여 설정) |
+| _Password_ | DATABASE의 Password(User가 없는 경우 space 입력하여 설정) |
+| _Precision_ | DATABASE에 설정된 Timestamp의 시간 정밀도 |  
 
 ::: warning <p class="custom-block-title"><img src="../../img/icon/warning.svg">WARNING</p>
-- 입력한 `Port`를 다른 프로그램에서 사용하고 있다면, Left Nav의 연결 상태가 `Connected`인 초록색으로 표시될 수 있습니다. 
-- 연결 상태가 `Connected` 이지만 데이터를 읽고 쓰는게 되지 않는다면 `Port`를 확인해주세요.
- 같은 번호의 `Port`를 사용하고 있을 시 연결된 상태로 확인될 수 있습니다.
-:::
-::: warning <p class="custom-block-title"><img src="../../img/icon/warning.svg">WARNING</p>
-_Username_/_Password_ 가 틀렸을 시, `Calls`의 Read한 데이터의 `status_code`가 `403`으로 응답되며, `error authorizing ...`과 같은 error message가 확인됩니다.
+- 다른 프로그램에서 같은 번호의 `Port`를 사용하고 있을 시 연결된 상태로 확인될 수 있습니다.
+- _Username_/_Password_ 가 틀렸을 시, `Calls`의 Read한 데이터의 `status_code`가 `403`으로 응답되며, `error authorizing ...`과 같은 error message가 확인됩니다.
 :::
 
 ## Calls
-Influx 전용 Query인 InfluxQL을 사용하여 InfluxDB의 데이터를 읽거나 쓰기 위한 데이터를 설정하고, 응답을 확인할 수 있습니다.
 
-### Call Information
-`Call` 단위로 InfluxDB에 Query를 보내기 위해 필요한 데이터를 입력합니다.
-| Key | Description | Required |
-| :- | :- | :-: |
-| _InfluxQL_ | 원하는 데이터를 읽거나 쓰기 위해 InfluxQL를 입력합니다. | * |
-| _Retention_ | 지난 데이터들을 자동으로 만료시키는 interval을 설정합니다.  |  |
-| _Consistency_ | 데이터 Write의 일관성 수준을 설정합니다.</br>(`all`, `any`, `one`, `quorum`)|  |
-::: warning <p class="custom-block-title"><img src="../../img/icon/warning.svg">WARNING</p>
-InfluxDB의 Field는 이전에 사용된 데이터타입과 다른 데이터타입의 입력을 허용하지 않습니다. **처음 생성되는 Field**에 `Tag Reference`를 이용하여 데이터를 입력할 때, 타겟 `Tag`가 값을 가지기 전 이라면 `null`이 입력되어 그 뒤에 입력되는 데이터 타입이 달라지는 문제가 발생할 수 있습니다. 그러므로  `Tag Reference`를 사용할 때는 **default** 값을 설정할 것을 권장합니다.
-<img src="../../img/database/influx_tag_ref_default.png">
-:::
-
-### Data
-| Info | Description |
-| :- | :- |
-| _Value_ | InfluxDB의 응답으로 JSON 데이터가 수신됩니다. 수신된 데이터는 HTTP 상태 코드인 `status_code`와 `body`를 Key로 가지는 JSON 데이터 입니다. `body`는 입력된 InfluxQL에 따라서 데이터 형태가 다릅니다. |
-
-
-
-## Tags
-InfluxDB의 데이터를 읽기 위해 필요한 설정을 하고, 응답을 확인할 수 있습니다.
-
-### Tag Information
-`Tag` 단위로 InfluxDB의 데이터를 읽기 위해 필요한 설정을 합니다. 읽기 요청에 대한 응답이 `Tag`의 값이 됩니다.
-
-| Key | Description | required | 
-| :- | :- | :-: |
-| _Measurement_ | 수집 대상이 되는 Measurement 이름 | * |
-| _Tag key sets_ | Field key 수집의 조건이 되는 Tag의 Key와 Value|  |
-| _Field key_ | 수집 대상인 Field key | * |
-| _Value Type_ | 수집된 `Tag`의 Value Type 설정 | * |
-
-<!-- ::: tip <p class="custom-block-title"><img src="../../img/icon/tip.svg">NOTICE</p>
-`Tag Key sets`는 다음과 같이 사용합니다(key: 큰따옴표`" "`, value: 작은따옴표`' '`).
-<img src="../../img/database/influx_tag_info.png">
-::: -->
-::: tip <p class="custom-block-title"><img src="../../img/icon/tip.svg">NOTICE - 문자 입력</p>
-- `Measurement`, `Feild Key` 그리고 `Tag key sets`의 Key에 입력되는 문자는 큰 따옴표`" "` 없이 입력할 수 있습니다.
--  단, key가 InfluxDB에서 사용되는 키워드인 경우 `" "`를 사용해야 합니다.
--  예시) Field key 이름이 measurement인 경우 "measurement"
-:::
-::: tip <p class="custom-block-title"><img src="../../img/icon/tip.svg">NOTICE - Tag key sets</p>
-- `Tag key sets`를 2개 이상 사용할 때는 and로 연결합니다.
-- value는 작은따옴표`' '`를 사용합니다.
--  예시) kag='aa' and "tag"='1'
-:::
-
-
-## Call Example
-Call에서 InfluxQL 입력과 Data에 출력된 응답 예시 입니다.
-##### 예시1) NEW_MEASUREMENT에 `{tag reference}`로 가져온 데이터 추가
-* InfluxQL 입력
+### InfluxQL
+#### **INSERT**: Measurement에 데이터 Insert/Rewrite(Update)
+##### 예시) NEW_MEASUREMENT에 `{tag reference}`로 가져온 데이터 추가
 ``` sql
 INSERT NEW_MEASUREMENT,tag=1 field={device, GROUP1, DEVICE1, FIRST}
 ```
-* Data 에 출력된 응답
+
+::: warning <p class="custom-block-title"><img src="../../img/icon/warning.svg">WARNING</p>
+InfluxDB의 Field는 이전에 사용된 데이터타입과 다른 데이터타입은 허용하지 않습니다. **새로운 Field**에 **Number Type의 Data**를 `Tag Reference`를 이용하여 Insert할 경우, 데이터를 가져오는 동안 `null`이 임시로 저장되기 때문에 데이터 타입 에러가 납니다. 그러므로 다음과 같이 **default** 값을 반드시 세팅하여 주시기 바랍니다.
+<img src="../../img/database/influx_tag_ref_default.png">
+:::
+
+#### **DELETE**: Measurement의 데이터 삭제
+##### 예시) ADDRESS가 '5'인 데이터 삭제
+``` sql
+DELETE FROM MODBUS WHERE ADDRESS='5'
+```
+#### **SELECT**: Measurement의 데이터 조회
+##### 예시) MODBUS에서 가장 최신 데이터 조회
+``` sql
+SELECT * FROM MODBUS order by desc limit 1
+```
+
+<div class="spacer-sm"/>
+
+### Retention
+지난 데이터들을 자동으로 만료시키는 interval을 설정합니다(InfluxDB의 Retention Policy). 
+
+<div class="spacer-sm"/>
+
+### Consistency
+데이터 Write의 일관성 수준(**all | any | one | quorum**)을 설정합니다.
+
+### Response Data Structures
+#### INSERT 
 ``` json
 {"status_code":204,"body":""}
 ```
 
-##### 예시2) ADDRESS가 '5'인 데이터 삭제
-* InfluxQL 입력
-``` sql
-DELETE FROM MODBUS WHERE ADDRESS='5'
-```
-* Data 에 출력된 응답
+#### DELETE
 ``` json
 {"status_code":200,"body":{"results":[{"statement_id":0}]}}
 ```
 
-##### 예시3) MODBUS에서 가장 최신 데이터 조회
-* InfluxQL 입력
-``` sql
-SELECT * FROM MODBUS order by desc limit 1
-```
-* Data 에 출력된 응답
+#### SELECT
 ``` json
 {
   "status_code": 200,
@@ -136,13 +100,65 @@ SELECT * FROM MODBUS order by desc limit 1
 }
 ```
 
-##### 예시4) Call의 응답을 Parsing 특정 데이터 -  "values"만 사용하고 싶을 때
+## Tags
+### Tag Information
 
-* InfluxQL 입력
+| Key | Description | required | 
+| :- | :- | :-: |
+| _Measurement_ | Data가 저장된 Measurement 이름 | * |
+| _Tag key sets_ | Field key와 함께 가져오고 싶은 Tag key |  |
+| _Field key_ | 조회하고자 하는 Field key | * |
+| _Value Type_ | List로 데이터 Read(Condition의 transform을 사용한 경우는 제외) | * |
+
+::: tip <p class="custom-block-title"><img src="../../img/icon/tip.svg">NOTICE</p>
+`Tag Key sets`는 다음과 같이 사용합니다(key: 큰따옴표`" "`, value: 작은따옴표`' '`).
+<img src="../../img/database/influx_tag_info.png">
+:::
+
+### Condition
+#### Transform
+List로 전달되는 데이터를 변환 및 가공하여 특정 데이터만 Read할 수 있습니다. 
+
+##### 예시) 특정 데이터만 Read하고 싶은 경우
+- Database의 Tags를 통해 Read되는 Data Structure
+``` elixir
+[%{
+    "series" => [%{
+        "columns" => [
+          "time",
+          "VALUE"
+        ],
+        "name" => "MODBUS",
+        "values" => [
+          [
+            "2021-06-21T01:19:52.6980444Z",
+            10
+          ]
+        ]
+      }
+    ],
+    "statement_id" => 0
+  }
+]
+```
+- `Condition > Transform ` 설정
+
+``` elixir
+# 'VALUE' column의 값만 가져오고 싶은 경우
+v |> List.first |> Map.get("series") |> List.first |> Map.get("values") |> List.flatten |> List.last
+```
+
+`Value Type`을 `Signed Integer`로 설정하면 `Data > Value`에서 10을 확인할 수 있습니다. 
+
+
+## Example
+##### 예시) 가장 최근에 저장된 Database의 값을 가져오고 싶은 경우
+
+- `Database > Calls > Call Information > InfluxQL`
 ``` sql
 SELECT * FROM MODBUS ORDER BY DESC LIMIT 1
 ```
-* Data 에 출력된 응답
+- `Database > Calls > Data > Value`
 ``` json
 {
   "status_code": 200,
@@ -173,78 +189,41 @@ SELECT * FROM MODBUS ORDER BY DESC LIMIT 1
 }
 ```
 
-- Parsing 예시1) Elixir Syntax만 사용하여 Parsing
+- `Virtual > Tags > Tag Information > Logic`
 ``` elixir 
 {call, database, MYDB, CALL} |> Map.get("body") |> Map.get("results") |> List.first |> Map.get("series") |> List.first |> Map.get("values") |> List.flatten
 ```
-- Parsing 예시2) Interactor 전용 Syntax를 사용하여 Parsing
+::: tip <p class="custom-block-title"><img src="../../img/icon/tip.svg">NOTICE</p>
+Interactor에서 제공하는 Function을 사용하면 다음과 같이 보다 간결하게 값을 가져올 수 있습니다.
 ``` elixir 
 {call, database, MYDB, CALL} |> Interactor.Object.get_in( ["body", "results","0", "series","0","values"]) |> List.flatten
 ```
-사용된 Syntax의 자세한 설명은 Elixir Syntax 페이지를 참고해주세요.
-
-
-## Tag Example
-##### 예시) Tag를 이용해 수집된 데이터 중 특정 데이터만 value로 설정하기 위해 Transform 사용
-- Transform 사용 전 Tag Value
-``` elixir
-[%{
-    "series" => [%{
-        "columns" => [
-          "time",
-          "VALUE"
-        ],
-        "name" => "MODBUS",
-        "values" => [
-          [
-            "2021-06-21T01:19:52.6980444Z",
-            10
-          ]
-        ]
-      }
-    ],
-    "statement_id" => 0
-  }
-]
-```
-- `Transform` 설정 예시
-
-``` elixir
-v |> List.first |> Map.get("series") |> List.first |> Map.get("values") |> List.flatten |> List.last
-```
-
- - Transform 사용 후 Tag Value
-```
-10
-```
+:::
 
 
 ## InfluxDB Configuration
-InfluxDB를 사용하기 위해 필요한 InfluxDB의 설정 데이터 예시 입니다. 아래 내용은 influxDB가 설치된 위치의 influxdb.conf 파일에서 확인할 수 있습니다. 자세한 내용은 InfluxDB의 사용 매뉴얼을 참고해주세요.
-### Port 설정
+
+### Port
 ``` conf
 # The bind address used by the HTTP service.
 # bind-address = ":8086"
 ```
-### Username & Password 사용 여부 설정
-
-auth-enabled 값이 `true` 이면 Username과 Password를 사용하고, `false`면 사용하지 않습니다.
+### Username & Password
+아래의 내용을 `true`로 변경하면 Username & Password를 사용할 수 있습니다.
 ```
 # Determines whether user authentication is enabled over HTTP/HTTPS.
 # auth-enabled = false
 ```
 
 ### Precision
-InfluxDB 전체에 적용되는 Precision 기본값 입니다.  
-Interactor의 Call을 사용한 입력은 Connection Information에서 Precision 설정이 우선 순위로 적용 됩니다.
+
 ``` config
 # InfluxDB precision for timestamps on received points ("" or "n", "u", "ms", "s", "m", "h")
 # precision = ""
 ```
 
 ### Retention
-InfluxDB 전체에 적용되는 Retention 기본값 입니다.  
-Interactor의 Call을 사용한 입력은 Connection Information에서 Retention 설정이 우선 순위로 적용 됩니다.
+
 ``` config
 # Automatically create a default retention policy when creating a database.
 # retention-autocreate = true
@@ -257,8 +236,6 @@ Interactor의 Call을 사용한 입력은 Connection Information에서 Retention
   # check-interval = "30m"
 ```
 ### Consistency
-InfluxDB 전체에 적용되는 Consistency 기본값 입니다.  
-Interactor의 Call을 사용한 입력은 Connection Information에서 Consistency 설정이 우선 순위로 적용 됩니다.
 - **all**: 쓰기가 모든 클러스터 멤버에 도달 한 경우에만 성공
 - **any**: 쓰기가 클러스터 멤버에 도달하면 쓰기가 성공.
 - **one**: 쓰기가 하나 이상의 클러스터 멤버에 도달하면 쓰기가 성공

@@ -1,0 +1,32 @@
+{
+  "status_code": 200,
+  "body": {
+    "results": [
+      {
+        "statement_id": 0,
+        "series": [
+          {
+            "values": [
+              [
+                "2021-06-18T06:05:53.8877497Z",
+                "1",
+                0
+              ],
+              [
+                "2021-06-18T06:33:53.675662Z",
+                "1",
+                1859
+              ]
+            ],
+            "name": "MODBUS",
+            "columns": [
+              "time",
+              "ADDRESS",
+              "VALUE"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

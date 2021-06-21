@@ -55,7 +55,7 @@ value = (v |> :binary.decode_unsigned()) + 1
 <<value::size(16)>>
 ```
 
-위 예제는 Interactor에 다음과 같이 적용됩니다.
+위 예시는 Interactor에 다음과 같이 적용됩니다.
 ![img](../../img/details/transform_example1.png)
 
 
@@ -68,5 +68,5 @@ Virtual Tag에 직접 값을 입력하거나 다른 Tag의 값을 가지고 올 
 v + 1
 ``` 
 
-위 예제는 Interactor에 다음과 같이 적용됩니다.
+위 예시는 Interactor에 다음과 같이 적용됩니다.
 ![img](../../img/details/transform_example2_2.png)

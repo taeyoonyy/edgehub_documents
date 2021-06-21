@@ -29,7 +29,8 @@ module.exports = {
         sidebarDepth: 1,
         children: [
           './md/general/tags',
-          './md/general/actions'
+          './md/general/actions',
+          './md/general/calls'
         ]
       },
       {
@@ -63,6 +64,7 @@ module.exports = {
         title: 'Database',
         sidebarDepth: 1,
         children: [
+          './md/database/influxDB'
         ]
       },
       {

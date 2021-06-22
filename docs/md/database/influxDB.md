@@ -7,7 +7,7 @@ Interactor를는 InfluxDB v1.8.x 버전을 지원합니다.
 :::
 
 ## Connection Information
-Interactor와 InfluxDB를 연결하기 위해 필요한 데이터를 설정 합니다.
+Interactor와 InfluxDB를 연결하기 위해 필요한 데이터를 설정합니다.
 
 | Key | Description | Required |
 | :- | :- | :-: |
@@ -265,7 +265,7 @@ InfluxDB를 사용하기 위해 필요한 InfluxDB의 설정 데이터 예시입
   # check-interval = "30m"
 ```
 ### Consistency
-- InfluxDB 전체에 적용되는 Consistency 기본값 입니다.  
+- InfluxDB 전체에 적용되는 Consistency 기본값입니다.  
 - Interactor의 Call을 사용한 입력은 Connection Information에서 Consistency 설정이 우선 순위로 적용 됩니다.
 - **Options**: `all`, `any`, `one`, `quorum`
 ```

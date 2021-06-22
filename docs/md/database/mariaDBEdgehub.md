@@ -87,7 +87,7 @@ Tag의 정보가 저장된 테이블입니다.
 :::
 
 ### tag_history
-Tag의 history가 저장된 테이블입니다. 본 테이블을 사용을 위해서는 `Tags > Condition > History`를 `enable`로 변경해 주시기 바랍니다.
+Tag의 history가 저장된 테이블입니다. 본 테이블의 사용을 위해서는 `Tags > Condition > History`를 `enable`로 변경해 주시기 바랍니다.
 | Column | Description | Data Type | Key |
 | :- | :- | :-: | :-: |
 | *tag_history_id* | Tag History 식별자 | INT | PK |

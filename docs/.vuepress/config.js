@@ -64,7 +64,8 @@ module.exports = {
         title: 'Database',
         sidebarDepth: 1,
         children: [
-          './md/database/influxDB'
+          './md/database/influxDB',
+          './md/database/mariaDBEdgehub'
         ]
       },
       {

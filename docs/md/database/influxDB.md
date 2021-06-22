@@ -73,7 +73,7 @@ InfluxDB의 데이터를 읽기 위해 필요한 설정을 입력하고, 응답�
 ::: tip <p class="custom-block-title"><img src="../../img/icon/tip.svg">NOTICE</p>
 #### 문자 입력
 - `Measurement`, `Feild Key` 그리고 `Tag key sets`의 Key에 입력되는 문자는 큰 따옴표`" "` 없이 입력할 수 있습니다.
--  단, key가 InfluxDB에서 사용되는 키워드인 경우 `" "`를 사용해야 합니다.  
+-  단, key가 InfluxDB의 예약어인 경우 `" "`를 사용해야 합니다.  
   예시) Field key 이름이 measurement인 경우 <u>"measurement"</u>
 :::
 
@@ -84,7 +84,7 @@ InfluxDB의 데이터를 읽기 위해 필요한 설정을 입력하고, 응답�
 :::
 
 
-## Call Example
+## Calls Example
 Call에서 InfluxQL 입력과 Data에 출력된 응답 예시 입니다.
 ##### 예시1) NEW_MEASUREMENT에 `{tag reference}`로 가져온 데이터 추가
 * InfluxQL 입력
@@ -109,7 +109,7 @@ DELETE FROM MODBUS WHERE ADDRESS='5'
 ##### 예시3) MODBUS에서 가장 최신 데이터 조회
 * InfluxQL 입력
 ``` sql
-SELECT * FROM MODBUS order by desc limit 1
+SELECT * FROM MEMBER order by desc limit 1
 ```
 * Data 에 출력된 응답
 ``` json
@@ -179,18 +179,18 @@ SELECT * FROM MODBUS ORDER BY DESC LIMIT 1
 }
 ```
 
-- Parsing 예시1) Elixir Syntax만 사용하여 Parsing
+**Parsing 예시1)** Elixir Syntax만 사용하여 Parsing  
 ``` elixir 
 {call, database, MYDB, CALL} |> Map.get("body") |> Map.get("results") |> List.first |> Map.get("series") |> List.first |> Map.get("values") |> List.flatten
 ```
-- Parsing 예시2) Interactor 전용 Syntax를 사용하여 Parsing
+**Parsing 예시2)** Interactor 전용 Syntax를 사용하여 Parsing  
 ``` elixir 
 {call, database, MYDB, CALL} |> Interactor.Object.get_in( ["body", "results","0", "series","0","values"]) |> List.flatten
 ```
-사용된 Syntax의 자세한 설명은 Elixir Syntax 페이지를 참고해주세요.
+###### 사용된 Syntax의 자세한 설명은 Elixir Syntax 페이지를 참고해주세요.
 
 
-## Tag Example
+## Tags Example
 ##### 예시) Tag를 이용해 수집된 데이터 중 특정 데이터만 value로 설정하기 위해 Transform 사용
 - Transform 사용 전 Tag Value
 ``` elixir
@@ -226,7 +226,9 @@ v |> List.first |> Map.get("series") |> List.first |> Map.get("values") |> List.
 
 
 ## InfluxDB Configuration
-InfluxDB를 사용하기 위해 필요한 InfluxDB의 설정 데이터 예시 입니다. 아래 내용은 influxDB가 설치된 위치의 influxdb.conf 파일에서 확인할 수 있습니다. 자세한 내용은 InfluxDB의 사용 매뉴얼을 참고해주세요.
+InfluxDB를 사용하기 위해 필요한 InfluxDB의 설정 데이터 예시입니다. 아래 내용은 InfluxDB가 설치된 위치의 `influxdb.conf` 파일에서 확인할 수 있습니다.
+###### 자세한 내용은 InfluxDB의 사용 매뉴얼을 참고해주세요.
+
 ### Port 설정
 ``` conf
 # The bind address used by the HTTP service.
@@ -266,7 +268,7 @@ Interactor의 Call을 사용한 입력은 Connection Information에서 Retention
 InfluxDB 전체에 적용되는 Consistency 기본값 입니다.  
 Interactor의 Call을 사용한 입력은 Connection Information에서 Consistency 설정이 우선 순위로 적용 됩니다.
 - **all**: 쓰기가 모든 클러스터 멤버에 도달 한 경우에만 성공
-- **any**: 쓰기가 클러스터 멤버에 도달하면 쓰기가 성공.
+- **any**: 쓰기가 클러스터 멤버에 도달하면 쓰기가 성공
 - **one**: 쓰기가 하나 이상의 클러스터 멤버에 도달하면 쓰기가 성공
 - **quorum**: 쓰기는 쓰기가 클러스터 구성원의 쿼럼에 도달한 경우에만 성공
 ```

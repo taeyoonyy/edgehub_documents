@@ -130,6 +130,14 @@ http://127.0.0.1:2290/data/tag
   .
   .
 }
+
+##### 예시) Interactor의 특정 Tag 정보를 가져오고 싶은 경우
+- URL 입력
+```  http
+http://127.0.0.1:2290/data/tag/device/Port
+```
+- 수집 데이터
+``` json
 ```
 ::: tip  <p class="custom-block-title"><img src="../../img/icon/tip.svg">NOTICE</p>
 `json`의 key값을 `path`로 사용하여 특정 데이터를 가져올 수 있습니다(단, TagID까지만 접근가능).

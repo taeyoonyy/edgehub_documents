@@ -187,8 +187,7 @@ SELECT * FROM MODBUS ORDER BY DESC LIMIT 1
 ``` elixir 
 {call, database, MYDB, CALL} |> Interactor.Object.get_in( ["body", "results","0", "series","0","values"]) |> List.flatten
 ```
-###### 사용된 Syntax의 자세한 설명은 Elixir Syntax 페이지를 참고 바랍니다.
-
+###### 사용된 Syntax에 대한 내용은 [Elixir Syntax](../elixir/elixirSyntax.md)를 참고 바랍니다.  
 
 ## Tags Example
 ##### 예시) Tag를 이용해 수집된 데이터 중 특정 데이터만 value로 설정하기 위해 Transform 사용
@@ -227,7 +226,7 @@ v |> List.first |> Map.get("series") |> List.first |> Map.get("values") |> List.
 
 ## InfluxDB Configuration
 InfluxDB를 사용하기 위해 필요한 InfluxDB의 설정 데이터 예시입니다. 아래 내용은 InfluxDB가 설치된 위치의 `influxdb.conf` 파일에서 확인할 수 있습니다.
-###### 자세한 내용은 InfluxDB의 사용 매뉴얼을 참고 바랍니다.
+###### 자세한 내용은 **InfluxDB의 사용 매뉴얼**을 참고 바랍니다.
 
 ### Port 설정
 ``` conf

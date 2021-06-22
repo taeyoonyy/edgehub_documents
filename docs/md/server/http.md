@@ -74,6 +74,7 @@ http://127.0.0.1:2290/custom/tag1
   "binary": "hello world"
 }
 ```
+
 ###### **Custom path**에 대한 내용은 아래의 [Tag Information](#tag-information)을 참고 바랍니다.
 
 ## Response 구조

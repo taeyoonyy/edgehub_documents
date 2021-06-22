@@ -35,9 +35,9 @@ InfluxDB에 사용할 Query를 입력하고, 필요한 경우 Retention, Consist
 
 | Key | Description | Required |
 | :- | :- | :-: |
-| _InfluxQL_ | 원하는 데이터를 읽거나 쓰기 위해 InfluxQL를 입력합니다. | * |
-| _Retention_ | 지난 데이터들을 자동으로 만료시키는 interval을 설정합니다.  |  |
-| _Consistency_ | 데이터 Write의 일관성 수준을 설정합니다.</br>(`all`, `any`, `one`, `quorum`)|  |
+| _InfluxQL_ | 원하는 데이터를 읽거나 쓰기 위한 InfluxQL | * |
+| _Retention_ | 지난 데이터들을 자동으로 만료시키는 Interval  |  |
+| _Consistency_ | 데이터 Write의 일관성 수준(`all`, `any`, `one`, `quorum`)|  |
 
 ::: warning <p class="custom-block-title"><img src="../../img/icon/warning.svg">WARNING</p>
 - InfluxDB의 Field는 한 종류의 데이터 타입만 입력을 허용합니다. **처음 생성되는 Field**에 `Tag Reference`를 이용하여 데이터를 입력할 때, 타겟 `Tag`가 값을 가지기 전 이라면 `null`이 입력되어 그 뒤에 입력되는 데이터 타입이 달라지게 되어 입력이 되지 않는 문제가 발생할 수 있습니다.  
@@ -73,11 +73,11 @@ InfluxDB의 데이터를 읽기 위해 필요한 설정을 입력하고, 응답�
 ::: tip <p class="custom-block-title"><img src="../../img/icon/tip.svg">NOTICE</p>
 #### 문자 입력
 - `Measurement`, `Feild Key` 그리고 `Tag key sets`의 Key에 입력되는 문자는 큰 따옴표`" "` 없이 입력할 수 있습니다.
--  단, key가 InfluxDB의 예약어인 경우 `" "`를 사용해야 합니다.  
-  예시) Field key 이름이 measurement인 경우 <u>"measurement"</u>
+-  단, key가 InfluxDB의 예약어인 경우 `" "`를 사용해야 합니다. 예를 들어, Field key 이름이 measurement인 경우 <u>"measurement"</u>로 입력합니다.
 :::
 
-::: tip <p class="custom-block-title"><img src="../../img/icon/tip.svg">NOTICE - Tag key sets</p>
+::: tip <p class="custom-block-title"><img src="../../img/icon/tip.svg">NOTICE</p>
+#### Tag key sets
 - `Tag key sets`를 2개 이상 사용할 때는 and로 연결합니다.
 - value는 작은따옴표`' '`를 사용합니다.  
   예시) kag='aa' and "tag"='1'
@@ -85,7 +85,7 @@ InfluxDB의 데이터를 읽기 위해 필요한 설정을 입력하고, 응답�
 
 
 ## Calls Example
-Call에서 InfluxQL 입력과 Data에 출력된 응답 예시 입니다.
+Call에서 InfluxQL 입력과 Data에 출력된 응답 예시입니다.
 ##### 예시1) NEW_MEASUREMENT에 `{tag reference}`로 가져온 데이터 추가
 * InfluxQL 입력
 ``` sql
@@ -101,7 +101,7 @@ INSERT NEW_MEASUREMENT,tag=1 field={device, GROUP1, DEVICE1, FIRST}
 ``` sql
 DELETE FROM MODBUS WHERE ADDRESS='5'
 ```
-* Data 에 출력된 응답
+* Data에 출력된 응답
 ``` json
 {"status_code":200,"body":{"results":[{"statement_id":0}]}}
 ```
@@ -179,15 +179,15 @@ SELECT * FROM MODBUS ORDER BY DESC LIMIT 1
 }
 ```
 
-**Parsing 예시1)** Elixir Syntax만 사용하여 Parsing  
+- Elixir Syntax만 사용하여 Parsing하는 방법은 다음과 같습니다.
 ``` elixir 
 {call, database, MYDB, CALL} |> Map.get("body") |> Map.get("results") |> List.first |> Map.get("series") |> List.first |> Map.get("values") |> List.flatten
 ```
-**Parsing 예시2)** Interactor 전용 Syntax를 사용하여 Parsing  
+- Interactor 전용 Syntax를 사용하여 Parsing하는 방법은 다음과 같습니다.
 ``` elixir 
 {call, database, MYDB, CALL} |> Interactor.Object.get_in( ["body", "results","0", "series","0","values"]) |> List.flatten
 ```
-###### 사용된 Syntax의 자세한 설명은 Elixir Syntax 페이지를 참고해주세요.
+###### 사용된 Syntax의 자세한 설명은 Elixir Syntax 페이지를 참고 바랍니다.
 
 
 ## Tags Example
@@ -227,7 +227,7 @@ v |> List.first |> Map.get("series") |> List.first |> Map.get("values") |> List.
 
 ## InfluxDB Configuration
 InfluxDB를 사용하기 위해 필요한 InfluxDB의 설정 데이터 예시입니다. 아래 내용은 InfluxDB가 설치된 위치의 `influxdb.conf` 파일에서 확인할 수 있습니다.
-###### 자세한 내용은 InfluxDB의 사용 매뉴얼을 참고해주세요.
+###### 자세한 내용은 InfluxDB의 사용 매뉴얼을 참고 바랍니다.
 
 ### Port 설정
 ``` conf
@@ -236,23 +236,23 @@ InfluxDB를 사용하기 위해 필요한 InfluxDB의 설정 데이터 예시입
 ```
 ### Username & Password 사용 여부 설정
 
-auth-enabled 값이 `true` 이면 Username과 Password를 사용하고, `false`면 사용하지 않습니다.
+- auth-enabled 값이 `true` 이면 Username과 Password를 사용하고, `false`면 사용하지 않습니다.
 ```
 # Determines whether user authentication is enabled over HTTP/HTTPS.
 # auth-enabled = false
 ```
 
 ### Precision
-InfluxDB 전체에 적용되는 Precision 기본값 입니다.  
-Interactor의 Call을 사용한 입력은 Connection Information에서 Precision 설정이 우선 순위로 적용 됩니다.
+- InfluxDB 전체에 적용되는 Precision 기본값 입니다.  
+- Interactor의 Call을 사용한 입력은 Connection Information에서 Precision 설정이 우선 순위로 적용 됩니다.
 ``` config
 # InfluxDB precision for timestamps on received points ("" or "n", "u", "ms", "s", "m", "h")
 # precision = ""
 ```
 
 ### Retention
-InfluxDB 전체에 적용되는 Retention 기본값 입니다.  
-Interactor의 Call을 사용한 입력은 Connection Information에서 Retention 설정이 우선 순위로 적용 됩니다.
+- InfluxDB 전체에 적용되는 Retention 기본값 입니다.  
+- Interactor의 Call을 사용한 입력은 Connection Information에서 Retention 설정이 우선 순위로 적용 됩니다.
 ``` config
 # Automatically create a default retention policy when creating a database.
 # retention-autocreate = true
@@ -265,12 +265,9 @@ Interactor의 Call을 사용한 입력은 Connection Information에서 Retention
   # check-interval = "30m"
 ```
 ### Consistency
-InfluxDB 전체에 적용되는 Consistency 기본값 입니다.  
-Interactor의 Call을 사용한 입력은 Connection Information에서 Consistency 설정이 우선 순위로 적용 됩니다.
-- **all**: 쓰기가 모든 클러스터 멤버에 도달 한 경우에만 성공
-- **any**: 쓰기가 클러스터 멤버에 도달하면 쓰기가 성공
-- **one**: 쓰기가 하나 이상의 클러스터 멤버에 도달하면 쓰기가 성공
-- **quorum**: 쓰기는 쓰기가 클러스터 구성원의 쿼럼에 도달한 경우에만 성공
+- InfluxDB 전체에 적용되는 Consistency 기본값 입니다.  
+- Interactor의 Call을 사용한 입력은 Connection Information에서 Consistency 설정이 우선 순위로 적용 됩니다.
+- **Options**: `all`, `any`, `one`, `quorum`
 ```
 [[opentsdb]]
   # consistency-level = "one"

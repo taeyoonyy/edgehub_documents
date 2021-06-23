@@ -1,8 +1,5 @@
 # Calls
-
-<div class="spacer"/>
-
-(<span class="construction"/>)
+Calls Table에서 공통적으로 사용되는 Column에 대해 설명합니다(<span class="construction"/>).
 
 ## Call ID
 ### Call

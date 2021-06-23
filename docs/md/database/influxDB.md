@@ -20,7 +20,7 @@ Interactor와 InfluxDB를 연결하기 위해 필요한 데이터를 설정합�
 
 ::: warning <p class="custom-block-title"><img src="../../img/icon/warning.svg">WARNING</p>
 - 입력한 `Port`를 다른 프로그램에서 사용하고 있다면, Left Nav의 연결 상태가 `Connected`인 초록색으로 표시될 수 있습니다. 
-- 연결 상태가 `Connected` 이지만 InfluxDB 사용에 문제가 있다면 `Port`를 확인해주세요.
+- 연결 상태가 `Connected` 이지만 InfluxDB 사용에 문제가 있다면 `Port`를 확인 바랍니다.
 :::
 
 ::: warning <p class="custom-block-title"><img src="../../img/icon/warning.svg">WARNING</p>
@@ -243,7 +243,7 @@ InfluxDB를 사용하기 위해 필요한 InfluxDB의 설정 데이터 예시입
 
 ### Precision
 - InfluxDB 전체에 적용되는 Precision 기본값 입니다.  
-- Interactor의 Call을 사용한 입력은 Connection Information에서 Precision 설정이 우선 순위로 적용 됩니다.
+- Interactor의 Call을 사용한 입력은 Connection Information에서 Precision 설정이 우선 순위로 적용됩니다.
 ``` config
 # InfluxDB precision for timestamps on received points ("" or "n", "u", "ms", "s", "m", "h")
 # precision = ""
@@ -251,7 +251,7 @@ InfluxDB를 사용하기 위해 필요한 InfluxDB의 설정 데이터 예시입
 
 ### Retention
 - InfluxDB 전체에 적용되는 Retention 기본값 입니다.  
-- Interactor의 Call을 사용한 입력은 Connection Information에서 Retention 설정이 우선 순위로 적용 됩니다.
+- Interactor의 Call을 사용한 입력은 Connection Information에서 Retention 설정이 우선 순위로 적용됩니다.
 ``` config
 # Automatically create a default retention policy when creating a database.
 # retention-autocreate = true
@@ -265,7 +265,7 @@ InfluxDB를 사용하기 위해 필요한 InfluxDB의 설정 데이터 예시입
 ```
 ### Consistency
 - InfluxDB 전체에 적용되는 Consistency 기본값입니다.  
-- Interactor의 Call을 사용한 입력은 Connection Information에서 Consistency 설정이 우선 순위로 적용 됩니다.
+- Interactor의 Call을 사용한 입력은 Connection Information에서 Consistency 설정이 우선 순위로 적용됩니다.
 - **Options**: `all`, `any`, `one`, `quorum`
 ```
 [[opentsdb]]

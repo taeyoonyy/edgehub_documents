@@ -5,9 +5,9 @@
 - Interactor에서는 Register 타입(40001, 30001, ...)이 아닌 `Function Code`와 `Address`를 구분하여 사용합니다.  
 
 ## Connection Information
-Connection Information은 타겟 디바이스와 통신하기 위해 모든 데이터에 공통으로 적용되는 설정 값 입니다.
+Connection Information은 타겟 디바이스와 통신하기 위해 모든 데이터에 공통으로 적용되는 설정값입니다.
 
-### 디바이스에서 확인이 필요한 디바이스의 설정 값
+### 디바이스에서 확인이 필요한 디바이스의 설정값
 | Key | Description | Required |
 | :- | :- | :-: |
 | _Address_ | 디바이스의 아이피 주소 | * |
@@ -37,12 +37,15 @@ Tag 단위로 타겟 디바이스의 데이터를 읽기 위해서 필요한 설
 
 | Info | Description | Required |
 | :- | :- | :-: |
-| _Function Code_ | Modbus 프로토콜에서 제공하는 명령어 코드 입니다. Function Code에 따라 데이터 형태와 Modbus에서 가르키는 메모리 영역이 다릅니다.<ul><li>__Coil (0x)__: Function Code 01, Read Coil (Bit)</li><li>__Discrete Input (1x)__: Function Code 02, Read Discreate Input (Bit)</li><li>__Input Regiester (3x)__: Function Code 04, Read Input Register (Word)</li><li>__Holding Register (4x)__: Function Code 03, Read Holding Register (Word)</li></ul> | * |
-| _Address_ | 타겟 데이터의 시작 주소입니다.<br/>Modbus 프로토콜에서 지원하는 주소 범위인 0부터 65535까지 사용할 수 있습니다. | * |
-| _Length_ | 타겟 데이터의 시작 주소 부터의 데이터 길이 입니다.<br/>Modbus 프로토콜에서 지원하는 데이터 길이인 1부터 최대 125까지 사용할 수 있습니다. | * |
+| _Function Code_ | Modbus 프로토콜에서 제공하는 명령어 코드입니다. Function Code에 따라 데이터 형태와 Modbus에서 가르키는 메모리 영역이 다릅니다.<ul><li>__Coil (0x)__: Function Code 01, Read Coil (Bit)</li><li>__Discrete Input (1x)__: Function Code 02, Read Discreate Input (Bit)</li><li>__Input Regiester (3x)__: Function Code 04, Read Input Register (Word)</li><li>__Holding Register (4x)__: Function Code 03, Read Holding Register (Word)</li></ul> | * |
+| _Address_ | <ul><li>타겟 데이터의 시작 주소입니다.</li><li>Modbus 프로토콜에서 지원하는 주소 범위인 0부터 65535까지 사용할 수 있습니다.</li></ul> | * |
+| _Length_ | <ul><li>타겟 데이터의 시작 주소 부터의 데이터 길이 입니다.</li><li>Modbus 프로토콜에서 지원하는 데이터 길이인 1부터 최대 125까지 사용할 수 있습니다.</li></ul> | * |
 
+### Data
 
-- Data > Value: Function Coie, Address, Length의 설정값을 사용한 데이터 요청에 대해 정상적인 응답을 받았을 때 수집된 데이터가 출력됩니다.<br/>통신 실패나, 비정상적인 응답을 받은 경우는 출력하지 않습니다.|
+| Info | Description |
+| :- | :- |
+| _Value_ | Function Coie, Address, Length의 설정값을 사용한 데이터 요청에 대해 정상적인 응답을 받았을 때 수집된 데이터가 출력됩니다. 통신 실패나, 비정상적인 응답을 받은 경우는 출력하지 않습니다. |
 
 
 ##### 예시) Read Coil 읽기 결과

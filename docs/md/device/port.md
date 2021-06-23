@@ -1,8 +1,8 @@
 # Port
-Interactor는 외부 프로그램과 연결을 위해 `Port` 기능을 제공 합니다. `Port`는 표준 스트림을 이용하여 외부 프로그램과 데이터를 주고 받을 수 있습니다. `Connection Information`에서 외부 프로그램과의 연결을 위한 설정을 하고, `Tag Information`에서 전송 할 데이터를 설정합니다. 외부 프로그램의 응답은 `Tag Information`에서 설정한 Value Type에 따라 값을 가지며 Data - Value에서 값을 확인하거나, 다른 Tag 사용 방법과 동일하게 Tag reference를 이용하여 다른 Entity에서 사용할 수 있습니다.
+Interactor는 외부 프로그램과 연결을 위해 `Port` 기능을 제공합니다. `Port`는 표준 스트림을 이용하여 외부 프로그램과 데이터를 주고 받을 수 있습니다. `Connection Information`에서 외부 프로그램과의 연결을 위한 설정을 하고, `Tag Information`에서 전송할 데이터를 설정합니다. 외부 프로그램의 응답은 `Tag Information`에서 설정한 Value Type에 따라 값을 가지며 Data - Value에서 값을 확인하거나, 다른 Tag 사용 방법과 동일하게 Tag reference를 이용하여 다른 Entity에서 사용할 수 있습니다.
 
 ## Connection Information
-Interactor와 외부 프로그램을 연결하기 위한 설정 입니다.
+Interactor와 외부 프로그램을 연결하기 위한 설정입니다.
 
 ### Executable
 
@@ -21,16 +21,19 @@ python
 <img src="../../img/customProtocol/port-2.png">
 
 ### Arguments
-Executable에 입력된 실행파일에 필요한 Arguments를 입력합니다. 자세한 입력 방법은 대상 실행파일의 Arguments 입력 방법을 확인해 주세요.
-##### 예시1) Python 의 Arguments
-Executable에 python.exe가 입력된 경우 python.exe 실행에 필요한 Argument(.py의 경로) 입력
+Executable에 입력된 실행파일에 필요한 Arguments를 입력합니다. 
+
+###### 자세한 입력 방법은 **대상 실행파일의 Arguments 입력 방법**을 참고 바랍니다.
+
+##### 예시1) Python의 Arguments
+Executable에 `python.exe`가 입력된 경우 python.exe 실행에 필요한 Argument(.py의 경로) 입력
 ``` bash
 C:\workspace\test_python.py
 ```
 <img src="../../img/customProtocol/port-3.png">
 
 ##### 예시2) Cmd의 Arguments
-Executable에 cmd.exe가 입력된 경우 cmd.exe를 실행하기 위해 필요한 Argument 입력
+Executable에 `cmd.exe`가 입력된 경우 cmd.exe를 실행하기 위해 필요한 Argument 입력
 ``` bash
 cmd.exe
 ```
@@ -99,7 +102,7 @@ Length는 Data가 몇 바이트인지 알려주며, Length는 Communication Info
 
 
 ### Request Data
-Interactor에서 외부 프로그램으로 데이터를 전송할 때 JSON 구조 입니다.
+Interactor에서 외부 프로그램으로 데이터를 전송할 때 JSON 구조입니다.
 - **id**: Request와 Response를 연결하기 위한 트렌잭션 아이디 (0과 1,000,000 사이의 임의의 정수)
 - **data/tagInfo**: Tag Information에서 설정된 Tag의 Key와 사용자가 입력한 Value
 - **data/command**: Tag 를 이용한 Read reqest (read_tag)와 Action을 이용한 Write request(write_tag)
@@ -118,7 +121,7 @@ Interactor에서 외부 프로그램으로 데이터를 전송할 때 JSON 구�
 ```
 
 ### Response Data
-외부 프로그램에서 Interactor의 요청에 대해 응답할 때 사용자가 작성해야 하는 JSON 구조 입니다.
+외부 프로그램에서 Interactor의 요청에 대해 응답할 때 사용자가 작성해야 하는 JSON 구조입니다.
 - **id**: 트렌잭션 아이디 (Request에서 받은 id 사용)
 - **value**: Data / Value에 표시되며 Tag의 값이 되는 응답 데이터
 
@@ -132,9 +135,8 @@ Interactor에서 외부 프로그램으로 데이터를 전송할 때 JSON 구�
 
 ## Extenal Program Code Example
 ### Elixir로 작성된 외부 프로그램
-##### 예시) 사용자가 입력한 "msg"의 value에 "Hello "를 붙여서 응답하는 코드
-
-
+##### 예시) 사용자가 입력한 "msg"의 value 앞에 "Hello "를 붙여서 응답하는 코드
+- Elixir Code
 ``` elixir
 defmodule PortWithElixir do
   @packet_byte 4
@@ -149,10 +151,10 @@ defmodule PortWithElixir do
     length = IO.read(:stdio, @packet_byte) |> :binary.decode_unsigned
     # 데이터의 길이만큼 잘라서 데이터를 읽음
     data = IO.read(:stdio, length)
-    # Interactor로 보낼 데이터를 가공후 Response
+    # Interactor로 보낼 데이터를 가공 후 Response
     data |> decode_json |> encode_json |> parse_binary |> send_data
     # Loop
-    communication_loop(file_path)
+    communication_loop()
   end
 
   def decode_json(data) do
@@ -161,7 +163,7 @@ defmodule PortWithElixir do
   end
 
   def encode_json(data_from_interactor) do
-    # Tag Information의 'msg'의 값에 " world"를 추가해서 String 형태로 encode
+    # Tag Information의 'msg'의 값 앞에 "Hello"를 추가해서 String 형태로 encode
     msg = data_from_interactor["data"]["tagInfo"]["msg"]
     data_from_interactor |> Map.delete("data") |> Map.put("value",  "Hello " <> msg) |> Poison.encode!
   end
@@ -179,4 +181,4 @@ defmodule PortWithElixir do
 
 end
 ```
-Tag Information의 Key"msg"에 LS를 입력한 경우 "Hello LS"를 응답
+- Tag Information의 Key"msg"에 LS를 입력한 경우 "Hello LS"를 응답

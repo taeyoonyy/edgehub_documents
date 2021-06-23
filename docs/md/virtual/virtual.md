@@ -2,18 +2,15 @@
 Virtual를 통해 다른 Entity의 Tag/Call을 불러와 가공하거나 [Elixir Syntax](../elixir/elixirSyntax.md)를 이용해 다른 Entity에서 사용할 수 있는 Tag를 생성할 수 있습니다.
 
 ::: tip <p class="custom-block-title"><img src="../../img/icon/tip.svg">NOTICE</p>
-Virtual Tag를 만드는 것은 External Entity(Device, Server, Database)와 대부분 동일하지만, Tag의 Connection information 또는 Tag information 같이 대상이 되는 Entity의 정보가 입력하는 것과 다르게 `Logic` 에 원하는 값을 직접 입력하여 만듭니다.
+Virtual Tag를 만드는 것은 External Entity(Device, Server, Database)와 대부분 동일하지만, Tag의 Connection information 또는 Tag information 같이 대상이 되는 Entity의 정보를 입력하는 것과 다르게 `Logic` 에 원하는 값을 직접 입력하여 만듭니다.
 :::
 
 ## Virtual Tags
 외부 디바이스와 통신이 아닌 Interactor 내부에서 값을 생성하고, 다른 Entity에서 사용할 수 있는 Tag를 만듭니다. 생성된 Virtual Tag는 다른 Entity에서 `{Tag reference}`로 사용할 수 있습니다.
 
 ::: tip <p class="custom-block-title"><img src="../../img/icon/tip.svg">NOTICE</p>
-`Tag Reference`는 `{entity_category, (group_name), entity_name, tag_ID}`로 구성되며, Category가 Device인 경우 `group_name`이 포함됩니다.
+`Tag Reference`는 `{entity_category, (group_name,) entity_name, tag_ID}`로 구성되며, Category가 Device인 경우 `group_name`이 포함됩니다.
 :::
-
-### Tag ID
-- **Tag**: Virtual Tag를 식별할 수 있는 고유 ID입니다.
 
 ### Tag Information
 - **Logic**: [Elixir Syntax](../elixir/elixirSyntax.md)를 이용해 새로운 값을 생성하거나 다른 Entity의 Tag/Call 값을 reference하여 이를 가공할 수 있습니다.
@@ -64,6 +61,9 @@ Virtual Tag를 만드는 것은 External Entity(Device, Server, Database)와 대
 - **Value**: 마지막으로 실행된 Tag 값 (Type 설정 적용)
 - **Byte Size**: 마지막으로 실행된 Tag Value의 Byte 길이
 
+<div class="spacer"/>
+
+###### 기타 내용은 [Tags 페이지](../general/tags.md)를 참고 바랍니다.
 
 ## Virtual Actions
 Tags Tab에서 생성한 Tag에 추가적인 Action을 설정할 수 있습니다. 설정된 Action은 해당 Tag가 실행되는 시점마다 발생합니다.
@@ -134,3 +134,8 @@ Tags Tab에서 생성한 Tag에 추가적인 Action을 설정할 수 있습니�
 - **Type**: Data - Value에 출력되는 데이터의 종류 설정 (Raw, Binary, Value 중 선택)
 - **Value**: 마지막으로 실행된 Action 값 (Type 설정 적용)
 - **Byte Size**:  마지막으로 실행된 Action 값의 Byte 길이
+
+
+<div class="spacer"/>
+
+###### 기타 내용은 [Actions 페이지](../general/actions.md)를 참고 바랍니다.

@@ -24,8 +24,8 @@ iex> tl([1, 2, 3, 4, 5])
 [2, 3, 4, 5]
 ```
 ## Map
-Elixir에서 Map은 key와 value로 이루어진 store로 `%{}`와 함께 정의됩니다.  
-key는 중복이 불가하며, key와 value는 모든 데이터타입을 허용합니다.
+- Elixir에서 Map은 key와 value로 이루어진 store로 `%{}`와 함께 정의됩니다.  
+- key는 중복이 불가하며, key와 value는 모든 데이터타입을 허용합니다.
 ::: warning <p class="custom-block-title"><img src="../../img/icon/warning.svg">WARNING</p>
 Interactor에서는 Tag Reference 외에 `{}` 사용이 불가하므로, `%{}`이 아닌 다음과 같은 방법으로 map을 정의할 수 있습니다. 
 ``` elixir

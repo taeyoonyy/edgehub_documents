@@ -36,6 +36,8 @@ Heading4 안에서 구분이 필요한 경우 테이블을 사용합니다.
 사용 시 text 앞에 '💡' emoji가 추가됩니다. 
 reference를 표기할 때 사용합니다.
 
+예시) ###### 자세한 내용은 ~~~를 참고 바랍니다.  
+
 ---------------------
 
 `Code`
@@ -100,3 +102,89 @@ ETC html class 관련
 <div class="spacer"/>  16px vertical spacer
 <div class="spacer-sm"/> 4px vertical spacer
 <img class="mt-0"> img margin-top: 8px -> 0px
+
+
+---------------------
+
+[Protocol 관련 문서 Layout]
+
+# Protocol Name
+Protocol 설명
+
+
+## Connection Information
+Connection Information 설명
+| Key | Description | Required |
+| :- | :- | :-: |
+| _key_ | 명사 | * |
+
+++ 서술
+
+
+## Calls
+Calls 설명
+### Call Information
+Call Information 설명
+| Key | Description | Required |
+| :- | :- | :-: |
+| _key_ | 내용 | * |
+
+### Data
+Data 설명
+| Key | Description | Required |
+| :- | :- | :-: |
+| _key_ | 내용 | * |
+
+## Tags
+Tags 설명
+### Tag Information
+Tag Information 설명
+| Key | Description | Required |
+| :- | :- | :-: |
+| _key_ | 내용 | * |
+
+## Actions
+Actions 설명
+
+## Calls Example
+Calls Example 설명
+##### 예시1) 예시 제목
+- step 1
+```
+코드 또는 데이터
+```
+- step 2
+```
+코드 또는 데이터
+```
+
+## Tags Example
+Tags Example 설명
+##### 예시1) 예시 제목
+- step 1
+```
+코드 또는 데이터
+```
+- step 2
+```
+코드 또는 데이터
+```
+
+
+## Actions Example
+Actions Example 설명
+##### 예시1) 예시 제목
+- step 1
+```
+코드 또는 데이터
+```
+- step 2
+```
+코드 또는 데이터
+```
+
+## 기타 내용()
+
+::: tip Notice
+#### title
+:::

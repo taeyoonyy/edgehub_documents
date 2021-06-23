@@ -29,7 +29,7 @@ end
 # 조건에 대한 결과가 false이므로 "This is not an Integer"가 반환됩니다.
 ```
 ##### 예시) Virtual Entity의 Logic에서의 사용
-{virtual, aaa, tag1} 의 값이 3일 때 tag2는 2의 값을 가지게 됩니다.  
+- `{virtual, aaa, tag1}`의 값이 `3`일 때 `tag2`는 `2`의 값을 가지게 됩니다.  
 
 ``` elixir
 if {virtual, virtual_name, tag1} === 1 do
@@ -39,7 +39,7 @@ else
 end
 ```
 ## case
-case 뒤에 오는 값에 따라 결과값을 반환합니다.
+- case 뒤에 오는 값에 따라 결과값을 반환합니다.
 ``` elixir
 order = "latte"
 

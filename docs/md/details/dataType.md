@@ -5,10 +5,10 @@
 
 
 ## Raw
-수집 또는 생성된 시점의 원본 데이터 입니다.
+수집 또는 생성된 시점의 원본 데이터입니다.
 
 ## Hex (in Hex)
-Value Type이 적용된 데이터를 Hex 형태로 변환한 데이터 입니다.
+Value Type이 적용된 데이터를 Hex 형태로 변환한 데이터입니다.
 
 ## Value
-Raw 데이터에 [Value Type](./valueType)이 적용된 데이터 입니다.
+Raw 데이터에 [Value Type](./valueType)이 적용된 데이터입니다.

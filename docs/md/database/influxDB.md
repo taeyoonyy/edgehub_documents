@@ -85,7 +85,7 @@ InfluxDB의 데이터를 읽기 위해 필요한 설정을 입력하고, 응답�
 
 
 ## Calls Example
-Call에서 InfluxQL 입력과 Data에 출력된 응답 예시입니다.
+Calls에서 InfluxQL 입력과 Data에 출력된 응답 예시입니다.
 ##### 예시1) NEW_MEASUREMENT에 `{tag reference}`로 가져온 데이터 추가
 * InfluxQL 입력
 ``` sql

@@ -77,7 +77,7 @@ Bit Operations은 정수만 연산 가능합니다.
 
 ## Rounding Numbers
 반올림, 올림, 내림과 같은 Round 함수를 지원합니다.
-- ***Integer***
+### Integer
 ``` elixir
 # ROUND OFF
 iex> round(5.1)
@@ -97,7 +97,7 @@ iex> floor(5.5)
 iex> floor(-5.1)
 -6
 ```
-- ***Float***
+### Float
 ``` elixir
 # ROUND OFF 
 iex> Float.round(5.55, 1)
@@ -122,7 +122,7 @@ iex> Float.floor(5.55, 1)
 
 ## Min, Max, ABS
 최소값, 최대값, 절대값을 구할 수 있는 통계함수를 지원합니다.
-- ***Number***
+### Number
 ``` elixir
 # MIN
 iex> min(1, 2)
@@ -141,7 +141,7 @@ abs(-1.203)
 1.203
 
 ```
-- ***String***
+### String
 ``` elixir
 # MIN
 iex> min("foo", "bar")
@@ -257,37 +257,39 @@ number < atom < reference < function < port < pid < tuple < map < list < bitstri
 ```
 :::
 ## String
-- ***Length***
+### Length
 ``` elixir
 iex> String.length("elixir")
 6
 ```
-- ***UpperCase, DownCase***
+### UpperCase & DownCase
 ``` elixir
 iex> String.upcase("hello")
 "HELLO" 
 iex> String.downcase("HELLO")
 "hello"
 ```
-- ***Capitalize***
+### Capitalize
 ``` elixir
 iex> String.capitalize("capital")
 "Capital"
 ```
-- ***Split***
+### Split
 ``` elixir
 iex> String.split("Hello World")
 ["Hello", "World"]
 iex> String.split("Hello,World",",")
 ["Hello", "World"]
 ```
-- ***Interpolation***: `#{}`는 변수를 String으로 반환합니다.
+### Interpolation
+- `#{}`는 변수를 String으로 반환합니다.
 ``` elixir
 iex> name = "World"
 iex> "Hello #{name}"
 "Hello World"
 ```
-- ***Concatenation***: `<>`는 String을 결합하여 반환합니다.
+### Concatenation
+- `<>`는 String을 결합하여 반환합니다.
 ``` elixir
 iex> "Nice " <> "to " <> "meet " <> "you" 
 "Nice to meet you"

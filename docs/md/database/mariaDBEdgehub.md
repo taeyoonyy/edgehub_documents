@@ -62,8 +62,15 @@ Entity의 생성 정보가 저장된 테이블입니다.
 | *created_at* | Event 발생 시간 | TIMESTAMP | |
 | *event_value* | Event 발생 시 Tag Value | VARCHAR | |
 
-#### event_id 구조
-**{Category}**`.`**{Group Name}**`.`**{Entity Name}**`_->`**{Action Condition}**`_->`**{Action Type}**`:::`**{Action To Group}**`_->`**{Action To Entity}**`_->`**{Action To Tag}**
+
+::: tip <p class="custom-block-title"><img src="../../img/icon/tip.svg">NOTICE</p>
+event_id 구조는 다음과 같습니다.
+
+<pre class="language-sql">
+  <code><span class="token operator">{Category}</span><span class="token keyword">.</span><span class="token operator">{Group Name}</span><span class="token keyword">.</span><span class="token operator">{Entity Name}</span><span class="token keyword">_-></span><span class="token operator">{Action Condition}</span><span class="token keyword">_-></span>
+  <span class="token operator">{Action Type}</span><span class="token keyword">:::</span><span class="token operator">{Action To Group}</span><span class="token keyword">_-></span><span class="token operator">{Action To Entity}</span><span class="token keyword">_-></span><span class="token operator">{Action To Tag}</span></code>
+</pre>
+:::
 
 ##### 예시) event_id
 ```
@@ -87,7 +94,7 @@ Tag의 정보가 저장된 테이블입니다.
 :::
 
 ### tag_history
-Tag의 history가 저장된 테이블입니다. 본 테이블을 사용을 위해서는 `Tags > Condition > History`를 `enable`로 변경해 주시기 바랍니다.
+Tag의 history가 저장된 테이블입니다. 본 테이블의 사용을 위해서는 `Tags > Condition > History`를 `enable`로 변경해 주시기 바랍니다.
 | Column | Description | Data Type | Key |
 | :- | :- | :-: | :-: |
 | *tag_history_id* | Tag History 식별자 | INT | PK |

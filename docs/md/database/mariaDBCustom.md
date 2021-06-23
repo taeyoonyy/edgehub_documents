@@ -29,8 +29,12 @@ Call Information의 Query Editor에 입력된 SQL문의 실행결과입니다.
 :::
 
 ::: warning <p class="custom-block-title"><img src="../../img/icon/warning.svg">WARNING</p>
-SQL error는 `{}`를 반환합니다. `INSERT`, `UPDATE`, `DELETE`문의 실행결과도 `{}`를 반환하므로 사용에 유의하시기 바랍니다.
+`SQL error`, DDL, DML(SELECT 제외)의 실행결과 모두 `{}`를 반환하므로 사용에 유의하시기 바랍니다.
 :::
+
+<div class="spacer"/>
+
+###### 자세한 내용은 [Calls 페이지](../general/calls.md)를 참고 바랍니다.
 
 ## Tags
 MariaDB의 데이터를 읽기 위해 필요한 설정을 입력하고, 응답을 확인할 수 있습니다.
@@ -46,9 +50,9 @@ MariaDB의 데이터를 읽기 위해 필요한 설정을 입력하고, 응답�
 
 ::: tip <p class="custom-block-title"><img src="../../img/icon/tip.svg">NOTICE</p>
 Interactor에서는 Input Field로 입력된 값을 다음과 같은 SQL문으로 만들어 실행합니다.
-``` sql
-SELECT "Column" FROM "Table" WHERE "Condition"
-```
+<pre class="language-sql">
+  <code><span class="token keyword">SELECT</span> {Column} <span class="token keyword">FROM</span> {Table} <span class="token keyword">WHERE</span> {Condition}</code>
+</pre>
 :::
 <!-- 
 ## Actions
@@ -57,13 +61,13 @@ Actionsdml Event에 대한 내용 Logging 하거나 Right bar의 Sytem Log에 �
 
 ## Calls Example
 `Calls`에서 Query Editor 입력과 Data에 출력된 응답 예시입니다.
+<!-- | CREATE | | |
+| ALTER | | |
+| TRUNCATE | | |
+| DROP | | | -->
 
 | 예시 | SQL문 | Value | 
 | :- | :- | :- |
-| CREATE | | |
-| ALTER | | |
-| TRUNCATE | | |
-| DROP | | |
 | SELECT | <pre class="language-sql"><code><span class="token keyword">SELECT </span><span class="token operator">* </span><span class="token keyword">FROM </span>MEMBER</code></pre> | `[[1,"Mike",20],[2,"Jerry",30]]`|
 | SELECT with<br>WHERE CLAUSE | <pre class="language-sql"><code><span class="token keyword">SELECT</span> AGE <span class="token keyword">FROM</span> MEMBER <span class="token keyword">WHERE</span> NAME <span class="token operator">=</span> <span class="token string">"Tom"</span></code></pre> | `15` |
 | INSERT | <pre class="language-sql"><code><span class="token keyword">INSERT</span> <span class="token keyword">INTO</span> MEMBER <span class="token punctuation">(</span>NAME<span class="token punctuation">,</span> AGE<span class="token punctuation">)</span> <span class="token keyword">VALUES</span> <span class="token punctuation">(</span><span class="token string">'John Doe'</span><span class="token punctuation">,</span> <span class="token number">20</span><span class="token punctuation">)</span></code></pre> | `{}` |
@@ -79,8 +83,7 @@ SELECT * FROM `LIMIT`
 :::
 
 ## Tags Example
-`Tags`사용을 위한 예시입니다.
-##### 예시1) 예시 제목
+`Tags`사용을 위한 예시입니다(<span class="construction"/>).
 
 ## Actions Example
-`Actions`사용을 위한 예시입니다.
+`Actions`사용을 위한 예시입니다(<span class="construction"/>).

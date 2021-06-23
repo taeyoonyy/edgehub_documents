@@ -62,8 +62,15 @@ Entity의 생성 정보가 저장된 테이블입니다.
 | *created_at* | Event 발생 시간 | TIMESTAMP | |
 | *event_value* | Event 발생 시 Tag Value | VARCHAR | |
 
-#### event_id 구조
-**{Category}**`.`**{Group Name}**`.`**{Entity Name}**`_->`**{Action Condition}**`_->`**{Action Type}**`:::`**{Action To Group}**`_->`**{Action To Entity}**`_->`**{Action To Tag}**
+
+::: tip <p class="custom-block-title"><img src="../../img/icon/tip.svg">NOTICE</p>
+event_id 구조는 다음과 같습니다.
+
+<pre class="language-sql">
+  <code><span class="token operator">{Category}</span><span class="token keyword">.</span><span class="token operator">{Group Name}</span><span class="token keyword">.</span><span class="token operator">{Entity Name}</span><span class="token keyword">_-></span><span class="token operator">{Action Condition}</span><span class="token keyword">_-></span>
+  <span class="token operator">{Action Type}</span><span class="token keyword">:::</span><span class="token operator">{Action To Group}</span><span class="token keyword">_-></span><span class="token operator">{Action To Entity}</span><span class="token keyword">_-></span><span class="token operator">{Action To Tag}</span></code>
+</pre>
+:::
 
 ##### 예시) event_id
 ```

@@ -57,7 +57,8 @@ module.exports = {
         title: 'Server',
         sidebarDepth: 1,
         children: [
-          './md/server/http'
+          './md/server/http',
+          './md/server/apiServer'
         ]
       },
       {

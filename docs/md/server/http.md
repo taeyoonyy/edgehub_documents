@@ -3,7 +3,7 @@
 - HTTP는 파일 경로를 지정하여 웹 서버를 만들 수 있습니다.
 
 ## Connection Information
-HTTP 또는 HTTPS 서버를 만들기 위해 필요한 데이터를 설정 합니다.
+HTTP 또는 HTTPS 서버를 만들기 위해 필요한 데이터를 설정합니다.
 
 | Key | Description | Required |
 | :- | :- | :-: |

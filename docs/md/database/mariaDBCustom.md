@@ -119,16 +119,18 @@ SELECT * FROM `LIMIT`
 ```
 
 ## Actions Example
-`Actions`사용을 위한 예시입니다(<span class="construction"/>).
+`Actions`사용을 위한 예시입니다.
 
-##### 예시) "COUNT" tag값이 100이 넘을 시 event 발생 시키기
+##### 예시) MEMBER TABLE에 데이터가 10개가 넘어가면 제일 오래된 데이터 삭제하기
 
-- Tags 설정: MEMBER 테이블에 저장된 사람 카운트
+- Action의 대상이 되는 Tag
 
 <img src="../../img/database/maria_custom_actions1.png" class="mt-0">
 
-- Actions 설정
+- Actions 설정 내용: `COUNT` Tag의 값이 10이 넘어가면 `DELETE_OLD` Call 호출
 
 <img src="../../img/database/maria_custom_actions2.png" class="mt-0">
 
-- MEMBER 테이블에 저장된 데이터가 100이 넘을 경우 EdgeHub InnerDB로 Event history가 저장됩니다.
+- Calls 설정 내용: Query Editor에 쓰인 `{Tag Reference}`는 가장 오래된 데이터의 `NAME`을 가져옵니다.
+
+<img src="../../img/database/maria_custom_actions3.png" class="mt-0">

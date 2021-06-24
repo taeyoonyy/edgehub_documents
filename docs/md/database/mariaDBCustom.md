@@ -70,14 +70,14 @@ Actionsdml Event에 대한 내용 Logging 하거나 Right bar의 Sytem Log에 �
 | TRUNCATE | | |
 | DROP | | | -->
 
-| 예시 | SQL문 | Value | 
+| 예시 | Query Editor | Value | 
 | :- | :- | :- |
 | SELECT | <pre class="language-sql"><code><span class="token keyword">SELECT </span><span class="token operator">* </span><span class="token keyword">FROM </span>MEMBER</code></pre> | `[[1,"Mike",20],[2,"Jerry",30]]`|
 | SELECT with<br>WHERE CLAUSE | <pre class="language-sql"><code><span class="token keyword">SELECT</span> AGE <span class="token keyword">FROM</span> MEMBER <span class="token keyword">WHERE</span> NAME <span class="token operator">=</span> <span class="token string">"Tom"</span></code></pre> | `15` |
 | INSERT | <pre class="language-sql"><code><span class="token keyword">INSERT</span> <span class="token keyword">INTO</span> MEMBER <span class="token punctuation">(</span>NAME<span class="token punctuation">,</span> AGE<span class="token punctuation">)</span> <span class="token keyword">VALUES</span> <span class="token punctuation">(</span><span class="token string">'John Doe'</span><span class="token punctuation">,</span> <span class="token number">20</span><span class="token punctuation">)</span></code></pre> | `{}` |
 | UPDATE | <pre class="language-sql"><code><span class="token keyword">UPDATE</span> MEMBER <span class="token keyword">SET</span> AGE<span class="token operator">=</span><span class="token number">27</span> <span class="token keyword">WHERE</span> NAME <span class="token operator">=</span> <span class="token string">'Tom'</span></code></pre> | `{}` |
 | DELETE | <pre class="language-sql"><code><span class="token keyword">DELETE</span> <span class="token keyword">FROM</span> MEMBER <span class="token keyword">WHERE</span> NAME <span class="token operator">=</span> <span class="token string">'John Doe'</span></code></pre> | `{}` |
-|  WHERE CLAUSE에 해당되는 데이터가 없는 경우 | <pre class="language-sql"><code><span class="token keyword">SELECT</span> AGE <span class="token keyword">FROM</span> MEMBER <span class="token keyword">WHERE</span> NAME <span class="token operator">=</span> <span class="token string">"Jane"</span></code></pre> | `[]` |
+| 결과가 없을 시 | <pre class="language-sql"><code><span class="token keyword">SELECT</span> AGE <span class="token keyword">FROM</span> MEMBER <span class="token keyword">WHERE</span> NAME <span class="token operator">=</span> <span class="token string">"Jane"</span></code></pre> | `[]` |
 
 ::: tip <p class="custom-block-title"><img src="../../img/icon/tip.svg">NOTICE</p>
 사용하는 Table명 또는 Column명이 SQL의 예약어인 경우 \`Grave accent\`를 사용하여야 합니다. 예를 들어, Table명이 `LIMIT`인 경우 다음과 같이 입력합니다.
@@ -87,7 +87,48 @@ SELECT * FROM `LIMIT`
 :::
 
 ## Tags Example
-`Tags`사용을 위한 예시입니다(<span class="construction"/>).
+`Tags`사용을 위한 예시입니다.
+##### 예시1) MEMBER 테이블에서 MIKE의 나이 가져오기
+- Tag Information 설정
+
+<img src="../../img/database/maria_custom_tags1.png" class="mt-0">
+
+- Data Value
+``` 
+15
+```
+
+##### 예시2) MEMBER 테이블에서 나이가 20이 넘으면서 이름이 'J'로 시작하는 데이터 가져오기
+
+- Tag Information 설정
+
+<img src="../../img/database/maria_custom_tags2.png" class="mt-0">
+
+- Data Value
+``` json
+[
+  [
+    "JANE",
+    50
+  ],
+  [
+    "JULIA",
+    25
+  ]
+]
+```
 
 ## Actions Example
 `Actions`사용을 위한 예시입니다(<span class="construction"/>).
+
+##### 예시) "COUNT" tag값이 100이 넘을 시 event 발생 시키기
+
+- Tags 설정: MEMBER 테이블에 저장된 사람 카운트
+
+<img src="../../img/database/maria_custom_actions1.png" class="mt-0">
+
+- Actions 설정
+
+<img src="../../img/database/maria_custom_actions2.png" class="mt-0">
+
+- MEMBER 테이블에 저장된 데이터가 100이 넘을 경우 EdgeHub InnerDB로 Event history가 저장됩니다.

@@ -57,7 +57,8 @@ module.exports = {
         title: 'Server',
         sidebarDepth: 1,
         children: [
-          './md/server/http'
+          './md/server/http',
+          './md/server/apiServer'
         ]
       },
       {
@@ -66,7 +67,8 @@ module.exports = {
         children: [
           './md/database/influxDB',
           './md/database/mariaDBEdgehub',
-          './md/database/mariaDBCustom'
+          './md/database/mariaDBCustom',
+          './md/database/msSqlDB'
         ]
       },
       {
@@ -80,6 +82,7 @@ module.exports = {
         title: 'Sync',
         sidebarDepth: 1,
         children: [
+          './md/sync/sync'
         ]
       },
       {

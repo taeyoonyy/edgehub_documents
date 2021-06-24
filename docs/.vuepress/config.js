@@ -86,6 +86,7 @@ module.exports = {
         title: 'Function',
         sidebarDepth: 1,
         children: [
+          './md/function/function'
         ]
       },
       {

@@ -1,6 +1,6 @@
 # HTTP & HTTPS
-HTTP 또는 HTTPS 클라이언트의 요청에 응답하는 서버를 만들 수 있습니다.  클라이언트의 데이터 수집을 위해 두 가지 방법을 제공하는데, 첫 번째는 Interactor가 기본적으로 제공하는 Path를 사용하는 방법이고, 두 번째는 사용자가 직접 만드는 Path를 사용하는 방법입니다.  
-HTTP는 파일 경로를 지정하여 웹 서버를 만들 수 있습니다.
+- HTTP 또는 HTTPS 클라이언트의 요청에 응답하는 서버를 만들 수 있습니다.  클라이언트의 데이터 수집을 위해 두 가지 방법을 제공하는데, 첫 번째는 Interactor가 기본적으로 제공하는 Path를 사용하는 방법이고, 두 번째는 사용자가 직접 만드는 Path를 사용하는 방법입니다.  
+- HTTP는 파일 경로를 지정하여 웹 서버를 만들 수 있습니다.
 
 ## Connection Information
 HTTP 또는 HTTPS 서버를 만들기 위해 필요한 데이터를 설정 합니다.
@@ -54,51 +54,8 @@ HTTP Client에서 요청할 대상 `Tag`와 `path`를 설정합니다.
 
 ### Path 입력 방법
 URL에서 `http://Interactor IP 주소:HTTP 생성 시 입력한 Port/custom/` 뒤에 입력되는 Path입니다. Path는 영문자와 점(`.`) 을 사용하여 설정할 수 있습니다. 
-
-#### 단일 Path
- 점(`.`) 없이 영문자 또는 숫자를 입력하여 Path를 만들면, 하나의 Tag 값을 가르키는 Path가 됩니다.  
-<img src="../../img/server/path1.png" width="800">  
-
-##### 예시) tag1의 데이터를 수집하기 위해 `http://127.0.0.1:2290/custom/aaa` 를 사용한 결과
-``` json
-{
-  "value_string": "0x00",
-  "value": "\u0000",
-  "timestamp": 1620645752942,
-  "raw_string": "0",
-  "raw": 0,
-  "binary_string": "0x00",
-  "binary": "\u0000"
-}
-```
-#### 두 개 이상의 Tag 값을 가지는 Path
-점(`.`)을 사용하여 Path를 만들면 두 개 이상의 Tag 값을 가지는 Path가 됩니다.    
-<img src="../../img/server/path2.png" width="800">  
-
-##### 예시) `http://127.0.0.1:2290/custom/aaa`를 사용한 결과  
-
-``` json
-{
-  "bbb": {
-    "value_string": "0x64",
-    "value": "d",
-    "timestamp": 1620646058780,
-    "raw_string": "100",
-    "raw": 100,
-    "binary_string": "0x64",
-    "binary": "d"
-  },
-  "ccc": {
-    "value_string": "0x00",
-    "value": "\u0000",
-    "timestamp": 1620646058780,
-    "raw_string": "0",
-    "raw": 0,
-    "binary_string": "0x00",
-    "binary": "\u0000"
-  }
-}
-```
+- **단일 Path**: 점(`.`) 없이 영문자 또는 숫자를 입력하여 Path를 만들면, 하나의 Tag 값을 가르키는 Path가 됩니다.  
+- **두 개 이상의 Tag 값을 가지는 Path**: 점(`.`)을 사용하여 Path를 만들면 두 개 이상의 Tag 값을 가지는 Path가 됩니다.    
 
 ## Client의 데이터 요청 URL
 Client의 요청에 대해 JSON 형태로 데이터를 받을 수 있습니다.
@@ -108,86 +65,12 @@ Interactor에서 제공하는 Path 구조를 사용하여 전체 데이터를 �
 http://{Interactor IP 주소}:{HTTP 생성 시 입력한 Port}/data/tag/{path}
 ```
 
-##### 예시) Interactor의 모든 Tag 데이터 요청
-- URL 입력
-```  http
-http://127.0.0.1:2290/data/tag
-```
-- 수집 데이터
-``` json
-{
-  "device": { // category
-    "Port": { // Device group name
-      "elixir": { // Device entity name
-        "tag1": { // tag ID
-          "value_string": "\"hello\"",
-          "value": "hello",
-          "timestamp": 1623394069668,
-          "raw_string": "0x68656C6C6F",
-          "raw": "hello",
-          "binary_string": "0x68656C6C6F",
-          "binary": "hello"
-        }
-      }
-    }
-  },
-  .
-  .
-  .
-}
-```
-
-##### 예시) Interactor의 특정 Tag 데이터 요청
-- URL 입력
-```  http
-http://127.0.0.1:2290/data/tag/device/Port
-```
-- 수집 데이터
-``` json
-{
-  "elixir": { // entity name
-    "tag1": { // tag ID
-      "value_string": "\"hello\"",
-      "value": "hello",
-      "timestamp": 1623394325673,
-      "raw_string": "0x68656C6C6F",
-      "raw": "hello",
-      "binary_string": "0x68656C6C6F",
-      "binary": "hello"
-    }
-  }
-}
-```
-::: tip  <p class="custom-block-title"><img src="../../img/icon/tip.svg">NOTICE</p>
-* `json`의 key값을 `path`로 사용하여 해당 범위까지 데이터를 요청할 수 있습니다.
-* `Category`, `Group`, `Entity`, `Tag` 단위까지 데이터를 요청할 수 있습니다.
-:::
-
 ### Custom Path를 사용한 Tag 데이터 요청
 Tags에서 사용자가 설정한 Path를 사용하여 지정한 Tag 데이터를 요청할 수 있습니다.
 ``` http
 http://{Interactor IP 주소}:{HTTP 생성 시 입력한 Port}/{path}
 ```
 
-
-##### 예시) `Server`의 `Tags`에 tag1로 설정한 `Path`를 사용하여 `Tag` 데이터 요청
-- URL 입력
-```  http
-http://127.0.0.1:2290/custom/tag1
-```
-- 수집 데이터
-
-``` json
-{
-  "value_string": "\"hello world\"",
-  "value": "hello world",
-  "timestamp": 1623631440264,
-  "raw_string": "0x68656C6C6F20776F726C64",
-  "raw": "hello world",
-  "binary_string": "0x68656C6C6F20776F726C64",
-  "binary": "hello world"
-}
-```
 
 ## Client 요청에 대한 응답 데이터
 응답 받은 데이터 중 Tag 데이터는 아래와 같이 구성되어 있습니다.
@@ -223,4 +106,141 @@ http://127.0.0.1:2290/custom/tag1
 ```
 Status Code: 404
 Body: "404 Not Found"
+```
+
+## Tags Example
+Tags의 사용 예시입니다.
+
+##### 예시1) 단일 Path로 Tag1 데이터 수집
+- Tag Information 설정
+
+<img src="../../img/server/path1.png" class="mt-0">  
+
+- URL 입력
+```
+http://127.0.0.1:2290/custom/aaa
+```
+
+- 수집 데이터
+``` json
+{
+  "value_string": "0x00",
+  "value": "\u0000",
+  "timestamp": 1620645752942,
+  "raw_string": "0",
+  "raw": 0,
+  "binary_string": "0x00",
+  "binary": "\u0000"
+}
+```
+
+##### 예시2) 중첩된 Path로 데이터 수집
+- Tag Information 설정
+
+<img src="../../img/server/path2.png" class="mt-0"> 
+
+- URL 입력
+```
+http://127.0.0.1:2290/custom/aaa
+```
+- 수집 데이터
+``` json
+{
+  "bbb": {
+    "value_string": "0x64",
+    "value": "d",
+    "timestamp": 1620646058780,
+    "raw_string": "100",
+    "raw": 100,
+    "binary_string": "0x64",
+    "binary": "d"
+  },
+  "ccc": {
+    "value_string": "0x00",
+    "value": "\u0000",
+    "timestamp": 1620646058780,
+    "raw_string": "0",
+    "raw": 0,
+    "binary_string": "0x00",
+    "binary": "\u0000"
+  }
+}
+```
+
+## Client 데이터 요청 URL Example
+
+
+##### 예시1) Interactor의 모든 Tag 데이터 요청
+- URL 입력
+```  http
+http://127.0.0.1:2290/data/tag
+```
+- 수집 데이터
+``` json
+{
+  "device": { // category
+    "Port": { // Device group name
+      "elixir": { // Device entity name
+        "tag1": { // tag ID
+          "value_string": "\"hello\"",
+          "value": "hello",
+          "timestamp": 1623394069668,
+          "raw_string": "0x68656C6C6F",
+          "raw": "hello",
+          "binary_string": "0x68656C6C6F",
+          "binary": "hello"
+        }
+      }
+    }
+  },
+  .
+  .
+  .
+}
+```
+
+##### 예시2) Interactor의 특정 Tag 데이터 요청
+- URL 입력
+```  http
+http://127.0.0.1:2290/data/tag/device/Port
+```
+- 수집 데이터
+``` json
+{
+  "elixir": { // entity name
+    "tag1": { // tag ID
+      "value_string": "\"hello\"",
+      "value": "hello",
+      "timestamp": 1623394325673,
+      "raw_string": "0x68656C6C6F",
+      "raw": "hello",
+      "binary_string": "0x68656C6C6F",
+      "binary": "hello"
+    }
+  }
+}
+```
+::: tip  <p class="custom-block-title"><img src="../../img/icon/tip.svg">NOTICE</p>
+* `json`의 key값을 `path`로 사용하여 해당 범위까지 데이터를 요청할 수 있습니다.
+* `Category`, `Group`, `Entity`, `Tag` 단위까지 데이터를 요청할 수 있습니다.
+:::
+
+
+##### 예시3) `Server`의 `Tags`에 tag1로 설정한 `Path`를 사용하여 `Tag` 데이터 요청
+- URL 입력
+```  http
+http://127.0.0.1:2290/custom/tag1
+```
+- 수집 데이터
+
+``` json
+{
+  "value_string": "\"hello world\"",
+  "value": "hello world",
+  "timestamp": 1623631440264,
+  "raw_string": "0x68656C6C6F20776F726C64",
+  "raw": "hello world",
+  "binary_string": "0x68656C6C6F20776F726C64",
+  "binary": "hello world"
+}
 ```

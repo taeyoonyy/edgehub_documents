@@ -12,8 +12,7 @@ HTTP 또는 HTTPS 서버를 만들기 위해 필요한 데이터를 설정 합�
 
 
 ::: warning <p class="custom-block-title"><img src="../../img/icon/warning.svg">WARNING</p>
-Interactor의 Server에서 사용중인 `Port`를 입력하면 자동으로 사용 가능한 `Port` 번호로 변경됩니다.    
-단, Interactor가 아닌 다른 프로그램에서 사용하는 `Port` 번호는 확인하지 않습니다.
+Interactor의 Server에서 사용중인 `Port`를 입력하면 자동으로 사용 가능한 `Port` 번호로 변경됩니다. 단, Interactor가 아닌 다른 프로그램에서 사용하는 `Port` 번호는 확인하지 않습니다.
 :::
 
 ## Server Access Control

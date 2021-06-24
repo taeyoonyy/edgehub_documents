@@ -13,7 +13,7 @@ Entity 내에서 Action을 구분하기 위한 ID입니다.
 | _Condition_ | Action이 발생 여부를 결정하는 조건<ul><li>Condition의 결과는 True 또는 False여야 하며, 결과가 <code>True일 경우</code> Action 실행</li> <li>선택한 Tag의 값이 좌변의 첫 번째 항이 됨</li></ul> |  |
 | _Type_ | Action Type을 설정<ul><li>Call: 설정한 조건이 만족되면 Call의 Query를 실행</li><li>Event: 설정한 조건이 만족되면 Event 발생<li>Log: 설정한 조건이 만족되면 Logging</li><li>Tag: 설정한 조건이 만족되면 Tag Value를 Elixir 문법과 함께 원하는 값으로 업데이트</li></ul> | * |
 
-##### 예시) Condition 사용 예제
+##### 예시) Condition 사용 예시
 
 ``` elixir
 

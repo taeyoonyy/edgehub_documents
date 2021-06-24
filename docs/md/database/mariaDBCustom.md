@@ -32,8 +32,6 @@ Call Information의 Query Editor에 입력된 SQL문의 실행결과입니다.
 `SQL error`, DDL, DML(SELECT 제외)의 실행결과 모두 `{}`를 반환하므로 사용에 유의하시기 바랍니다.
 :::
 
-<div class="spacer"/>
-
 ###### 자세한 내용은 [Calls 페이지](../general/calls.md)를 참고 바랍니다.
 
 ## Tags
@@ -54,6 +52,12 @@ Interactor에서는 Input Field로 입력된 값을 다음과 같은 SQL문으�
   <code><span class="token keyword">SELECT</span> {Column} <span class="token keyword">FROM</span> {Table} <span class="token keyword">WHERE</span> {Condition}</code>
 </pre>
 :::
+
+###### 자세한 내용은 [Tags 페이지](../general/tags.md)를 참고 바랍니다.
+
+## Actions
+###### 자세한 내용은 [Actions 페이지](../general/actions.md)를 참고 바랍니다.
+
 <!-- 
 ## Actions
 `Tags`에 있는 `Tag`의 값에 Action 추가. ActionID call을 통해 Calls의 Query를 실행하거나 Tags의 Tag값을 바꿀 수 있음

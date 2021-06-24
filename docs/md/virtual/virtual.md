@@ -21,17 +21,10 @@ Virtual Tag를 만드는 것은 External Entity(Device, Server, Database)와 대
   |2 | 1번에서 선택한 Tag나 Call의 Reference를 생성하여 3번에 추가합니다. |
   |3 | Elixir문법을 이용하여 원하는 값을 생성하거나 가공할 수 있습니다.|
 
-  <div class="spacer-sm"/>
-
-
-<div class="spacer"/>
-
 ###### 자세한 내용은 [Tags 페이지](../general/tags.md)를 참고 바랍니다.
 
 ## Actions
 Tags Tab에서 생성한 Tag에 추가적인 Action을 설정할 수 있습니다. 설정된 Action은 해당 Tag가 실행되는 시점마다 발생합니다.
-
-<div class="spacer"/>
 
 ###### 자세한 내용은 [Actions 페이지](../general/actions.md)를 참고 바랍니다.
 

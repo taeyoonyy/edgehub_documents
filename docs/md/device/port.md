@@ -92,7 +92,12 @@ Tags에서 외부 프로그램으로 Read Request를 전송할 때 데이터를 
 Procotol Builder에서 프로토콜 생성 시 입력한 Tag Information의 Key가 Tag Information 테이블의 헤더가 되고, Tag에 입력한 데이터가 외부 프로그램으로 전송됩니다.
 
 ### Data
-외부 프로그램의 응답으로 JSON 데이터가 수신됩니다. 수신된 json 중 `value` key의 데이터가 Tag의 값이 됩니다.  
+외부 프로그램의 응답으로 JSON 데이터가 수신됩니다. 수신된 json 중 `value` key의 데이터가 Tag의 값이 됩니다.
+
+###### 자세한 내용은 [Tags 페이지](../general/tags.md)를 참고 바랍니다.
+
+## Actions
+###### 자세한 내용은 [Actions 페이지](../general/actions.md)를 참고 바랍니다.
 
 ## Request Data & Response Data
 아래 그림은 Port를 이용하여 외부 프로그램과 데이터를 주고 받을 때 데이터 구조와 69 바이트의 JSON 데이터 `{"id":784172,"data":{"tagInfo":{"msg":"hello"},"command":"read_tag"}}`가 어떻게 구성되는지 보여줍니다.

@@ -9,7 +9,7 @@ MELSEC ETHERNET 프로토콜을 사용하여 `Mitsubishi` PLC 중 MC프로토콜
 :::
 
 ## Connection Information
-`Connection Information`은 타겟 디바이스와 통신하기 위해 해당 `Entity`의 **데이터 수집에 공통으로 적용되는 설정 값**입니다(`Max Block Size`는 `Action` 사용 시 적용 제외)
+`Connection Information`은 타겟 디바이스와 통신하기 위해 해당 `Entity`의 **데이터 수집에 공통으로 적용되는 설정 값**입니다(`Max Block Size`는 `Action` 사용 시 적용 제외).
 ### PLC 설정 정보 (PLC 확인 필요)
 | Key | Description | Required |
 | :- | :- | :-: |
@@ -20,22 +20,19 @@ MELSEC ETHERNET 프로토콜을 사용하여 `Mitsubishi` PLC 중 MC프로토콜
 | _PLC Number_ | <ul><li>요구상대 모듈 국번호</li><li>PLC를 경유하여 다른 PLC에 엑세스 하는 경우가 아닐때는 0xFF 사용</li></ul> | * |
 | _IO Number_ | <ul><li>요구상대 모듈I/O 번호</li><li>PLC를 경유하여 다른 PLC에 엑세스 하는 경우가 아닐때는 0x03FF 사용</li></ul> | * |
 | _Communication Type_ | 데이터 코드(바이너리 / ASCII)| * |
-###### 자세한 내용은 **Mitsubishi PLC 사용 설명서**를 참고 바랍니다.
 
 ### 효율적인 통신을 위한 Interactor 설정 정보
 | Key | Description |
 | :- | :- |
-| _Max Block Size_ | 한번에 수집할 데이터의 최대 길이 설정 |
+| _Max Block Size_ | 한번에 수집할 데이터의 최대 길이 설정 |  
 
-<div class="spacer-sm"/>
-
+###### 자세한 내용은 **Mitsubishi PLC 사용 설명서**를 참고 바랍니다.
 
 ## Tags
 **PLC의 데이터를 읽기 위해** 필요한 데이터를 설정하고, 응답을 확인할 수 있습니다.
 
 ### Tag Information
 `Tag` 단위로 **PLC의 데이터를 읽기 위해** 필요한 설정 데이터 입니다. 제품마다 사용 가능한 디바이스 코드와 디바이스 주소 범위가 다릅니다.  
-###### 자세한 내용은 **Mitsubishi PLC 사용 설명서**를 참고 바랍니다.
 
 | Info | Description | Required |
 | :- | :- | :-: |
@@ -50,16 +47,21 @@ MELSEC ETHERNET 프로토콜을 사용하여 `Mitsubishi` PLC 중 MC프로토콜
 
 | Info | Description |
 | :- | :- |
-| _Value_ | `Start Address`와 `Length`의 설정값을 사용한 데이터 요청에 대해 정상적인 응답을 받았을 때 수집된 데이터가 출력됩니다. 수신 실패나, 비정상적인 응답을 받은 경우는 출력하지 않습니다.  |
+| _Value_ | `Start Address`와 `Length`의 설정값을 사용한 데이터 요청에 대해 정상적인 응답을 받았을 때 수집된 데이터가 출력됩니다. 수신 실패나, 비정상적인 응답을 받은 경우는 출력하지 않습니다.  
 
-##### 예시) `Start Address` 사용(`Tags > Tag Information >Start Address`)
-| Start Address | Length | Value |
-| :-: | :-: | :- |
-| M0 | 1 | 디바이스 코드 M의 0부터 1개 비트를 가져옵니다. |
-| D100 | 10 | 디바이스 코드 D의 100부터 10개 워드(D100, D101, ..., D109)를 가져옵니다.
-| m0 | 1 | 디바이스 코드 m은 존재하지 않기 때문에 `Commit`이 되지 않습니다. |
+###### 자세한 내용은 **Mitsubishi PLC 사용 설명서**와 [Tags 페이지](../general/tags.md)를 참고 바랍니다.
 
-##### 예시) 수집 성공 후 출력된 비트 디바이스 읽기(`Tags > Data`)
+## Actions
+
+<span class="construction"/>(21년 7월 추가 예정)
+<!-- **PLC의 데이터를 쓰기 위해** 필요한 데이터를 설정합니다.   -->
+
+###### 자세한 내용은 [Actions 페이지](../general/actions.md)를 참고 바랍니다.
+
+## Tags Example
+Tags 사용 예시입니다.
+
+##### 예시1) 수집 성공 후 출력된 비트 디바이스 읽기(`Tags > Data`)
 비트 디바이스 M의 데이터가 M0: 0, M1: 0, M2: 1, M3: 1 인 경우 `Tag` 수집 결과는 다음과 같습니다.  
 
 | Start Address | Length | Value(Raw) | Byte Size |
@@ -70,7 +72,7 @@ MELSEC ETHERNET 프로토콜을 사용하여 `Mitsubishi` PLC 중 MC프로토콜
 | M0 | 3 | 0x1010 | 2 |
 | M0 | 4 | 0x1011 | 2 |
 
-##### 예시) 수집 성공 후 출력된 워드 디바이스 읽기(`Tags > Data`)
+##### 예시2) 수집 성공 후 출력된 워드 디바이스 읽기(`Tags > Data`)
 워드 디바이스 D를 읽었을 때 데이터(Decimal)가 D0: 9, D1: 10 인 경우 `Tag` 수집 결과는 다음과 같습니다.  
 | Start Address | Length | Value(Raw) | Byte Size |
 | :-: | :-: | :-: | :-: |
@@ -78,7 +80,13 @@ MELSEC ETHERNET 프로토콜을 사용하여 `Mitsubishi` PLC 중 MC프로토콜
 | D1 | 1 | 0x000A | 2 |
 | D0 | 2 | 0x0009000A | 4 |
 
-## Actions
 
+##### 예시3) `Start Address` 사용(`Tags > Tag Information > Start Address`)
+| Start Address | Length | Value |
+| :-: | :-: | :- |
+| M0 | 1 | 디바이스 코드 M의 0부터 1개 비트를 가져옵니다. |
+| D100 | 10 | 디바이스 코드 D의 100부터 10개 워드(D100, D101, ..., D109)를 가져옵니다.
+| m0 | 1 | 디바이스 코드 m은 존재하지 않기 때문에 `Commit`이 되지 않습니다. |
+
+## Actions Example
 <span class="construction"/>(21년 7월 추가 예정)
-<!-- **PLC의 데이터를 쓰기 위해** 필요한 데이터를 설정합니다.   -->

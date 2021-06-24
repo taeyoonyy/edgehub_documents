@@ -11,52 +11,12 @@
   }
 
   .site-name {
-    color: $blue !important;
-    padding-left: 8px;
+    color: white !important;
   }
+}
 
-  .site-name::before {
-    content: "EDGE  ";
-    color: white;
-    position: absolute;
-    left: -4px;
-    background-color: $gray;
-    padding-right: 8px;
-  }
-
-  .site-name::after {
-    content: "Interactor";
-    padding-left: 8px;
-    color: $green;
-    margin-left: 8px;
-  }
-
-  .home-link {
-    height: 35px !important;
-    overflow: hiddden;
-  }
-
-  .home-link:before {
-    content: "｜"
-    position: fixed;
-    top: 10px;
-    left: 130px;
-    color: $lightgray;
-    z-index: 5;
-    font-weight: bold;
-  }
-
-  .home-link:after {
-    content: " Docs";
-    color: white;
-    margin-left: 8px;
-    font-size: 20px;
-  }
-
-  .links{
-    background-color: transparent !important;
-
-  }
+.links {
+  background-color: transparent !important;
 }
 
 .hero {
@@ -145,21 +105,6 @@
 
   .sidebar-sub-header {
     font-size: 14px !important;
-  }
-}
-
-@media (max-width: 719px) {
-  .site-name {
-    text-overflow: clip !important;
-    padding-left: 12px !important;
-  }
-
-  .site-name::before {
-     left: 0px !important;
-  }
-
-  .site-name:after, .home-link:before, .home-link:after {
-    display: none;
   }
 }
 

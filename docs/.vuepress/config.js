@@ -2,7 +2,7 @@ module.exports = {
   head: [
     ['link', { rel: 'shortcut icon', href: 'favicon.ico' }]
   ],
-  title: 'Edgehub-i',
+  title: 'EdgeHub - i | Interator Docs',
   // url: 'https://127.0.0.1:1291',
   themeConfig: {
     // logo: 'headerlogo-interactor.svg',

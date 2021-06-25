@@ -1,5 +1,5 @@
 # Actions
-Actions Table에서 공통적으로 사용되는 Column에 대해 설명합니다(<span class="construction"/>).
+`Tags`에서 생성한 `Tag`에 추가적인 `Action`을 설정할 수 있습니다. 설정된 Action은 해당 Tag가 실행되는 시점마다 발생합니다. 이 페이지는 `Actions`에서 <b>공통적</b>으로 사용되는 항목에 대해 설명합니다.
 
 ## Action ID
 Entity 내에서 Action을 구분하기 위한 ID입니다. 
@@ -58,15 +58,14 @@ Action Type에 따른 입력항목은 다음과 같습니다.
 
 
 ## Property
-<div class="spacer"/>
-<span class="construction"/>
+`Action`의 속성 정보를 입력합니다.
 
 | Key | Description | Required |
 | :- | :- | :-: |
 | _Comment_ | Action의 추가적인 설명이 필요할 때 사용자가 직접 입력 |  |
 
 ## Data
-`Tag`로 수집된 데이터입니다.
+Action Information에서 사용된 `Value`값을 표기한다(<span class="construction"/>). 
 | Key | Description |
 | :- | :- |
 | _Type_ |  Value에 출력되는 데이터의 종류 설정(Raw, Binary, Value) |

@@ -24,7 +24,6 @@ Virtual Tag를 만드는 것은 External Entity(Device, Server, Database)와 대
 ###### 자세한 내용은 [Tags 페이지](../general/tags.md)를 참고 바랍니다.
 
 ## Actions
-Tags Tab에서 생성한 Tag에 추가적인 Action을 설정할 수 있습니다. 설정된 Action은 해당 Tag가 실행되는 시점마다 발생합니다.
 
 ###### 자세한 내용은 [Actions 페이지](../general/actions.md)를 참고 바랍니다.
 

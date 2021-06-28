@@ -49,6 +49,7 @@ module.exports = {
         children: [
           './md/device/melsecE',
           './md/device/modbusTcp',
+          './md/device/modbusRtu',
           './md/device/fenet',
           './md/device/port'
         ]

@@ -97,6 +97,7 @@ module.exports = {
         title: 'Protocol',
         sidebarDepth: 1,
         children: [
+          './md/protocol/protocol'
         ]
       },
       {

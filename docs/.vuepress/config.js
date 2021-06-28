@@ -58,7 +58,8 @@ module.exports = {
         sidebarDepth: 1,
         children: [
           './md/server/http',
-          './md/server/apiServer'
+          './md/server/apiServer',
+          './md/server/modbusServer'
         ]
       },
       {

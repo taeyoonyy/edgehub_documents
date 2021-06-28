@@ -1,5 +1,5 @@
 # Tags
-이 페이지는 `Tags`에서 <b>공통적</b>으로 사용되는 항목에 대해 설명합니다(<span class="construction"/>).
+이 페이지는 `Tags`에서 <strong>공통적</strong>으로 사용되는 항목에 대해 설명합니다(<span class="construction"/>).
 
 ## Tag ID
 Entity 내에서 Tag를 구분하기 위한 ID입니다. 

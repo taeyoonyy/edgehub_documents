@@ -1,7 +1,7 @@
 # Modbus TCP
 - Modbus TCP 프로토콜을 선택하여 `Modbus TCP` 프로토콜을 사용하는 디바이스의 데이터를 읽거나 쓸 수 있습니다.  
-- 데이터를 읽을 때 <b>Function Code 01(Coil Status), 02(Input Status), 0x03(Holding Register), 04(Input Register)</b>를 사용합니다.  
-- 데이터를 쓸 때 <b>Function Code 15(Write Coils), 16(Write Registers)</b>를 사용합니다.
+- 데이터를 읽을 때 <strong>Function Code 01(Coil Status), 02(Input Status), 0x03(Holding Register), 04(Input Register)</strong>를 사용합니다.  
+- 데이터를 쓸 때 <strong>Function Code 15(Write Coils), 16(Write Registers)</strong>를 사용합니다.
 - Interactor에서는 Register 타입(40001, 30001, ...)이 아닌 `Function Code`와 `Address`를 구분하여 사용합니다.  
 
 ## Connection Information

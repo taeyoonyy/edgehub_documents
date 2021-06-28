@@ -1,5 +1,5 @@
 # Actions
-`Tags`에서 생성한 `Tag`에 추가적인 `Action`을 설정할 수 있습니다. 설정된 Action은 해당 Tag가 실행되는 시점마다 발생합니다. 이 페이지는 `Actions`에서 <b>공통적</b>으로 사용되는 항목에 대해 설명합니다.
+`Tags`에서 생성한 `Tag`에 추가적인 `Action`을 설정할 수 있습니다. 설정된 Action은 해당 Tag가 실행되는 시점마다 발생합니다. 이 페이지는 `Actions`에서 <strong>공통적</strong>으로 사용되는 항목에 대해 설명합니다.
 
 ## Action ID
 Entity 내에서 Action을 구분하기 위한 ID입니다. 

@@ -40,7 +40,7 @@ MELSEC ETHERNET 프로토콜을 사용하여 `Mitsubishi` PLC 중 MC프로토콜
 | _Length_ | `Start Address`에서 선택한 대상부터 원하는 데이터의 길이를 설정합니다. 워드(Word) 디바이스는 단위가 워드가 되고, 비트(Bit) 디바이스는 단위가 비트가 됩니다. | * |
 
 ::: warning <p class="custom-block-title"><img src="../../img/icon/warning.svg">WARNING</p>
-`Start Address`를 정확히 입력하지 않으면 `Commit`이 되지 않습니다<b>(소문자 사용불가)</b>.
+`Start Address`를 정확히 입력하지 않으면 `Commit`이 되지 않습니다<strong>(소문자 사용불가)</strong>.
 :::
 
 ### Data

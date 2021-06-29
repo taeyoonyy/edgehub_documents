@@ -1,5 +1,5 @@
 # Actions
-`Tags`에서 생성한 `Tag`에 추가적인 `Action`을 설정할 수 있습니다. 설정된 Action은 해당 Tag가 실행되는 시점마다 발생합니다. 이 페이지는 `Actions`에서 <strong>공통적</strong>으로 사용되는 항목에 대해 설명합니다.
+ `Tag`가 실행될 때 추가적인 기능을 수행하기 위해 `Action`을 사용합니다. 설정된 `Action`은 해당 `Tag`가 실행되는 시점마다 발생합니다. 이 페이지는 `Actions`에서 <strong>공통적</strong>으로 사용되는 항목에 대해 설명합니다.
 
 ## Action ID
 Entity 내에서 Action을 구분하기 위한 ID입니다. 
@@ -10,7 +10,7 @@ Entity 내에서 Action을 구분하기 위한 ID입니다.
 | Key | Description | Required |
 | :- | :- | :-: |
 | _Tag_ | Action 실행의 대상이 되는 Tag 선택(선택된 Tag가 수집될 때 해당 Action 실행) | * |
-| _Condition_ | Action이 발생 여부를 결정하는 조건<ul><li>Condition의 결과는 True 또는 False여야 하며, 결과가 <code>True일 경우</code> Action 실행</li> <li>선택한 Tag의 값이 좌변의 첫 번째 항이 됨</li></ul> |  |
+| _Condition_ | Action이 발생 여부를 결정하는 조건<ul><li>Condition의 결과는 True 또는 False여야 하며, 결과가 __True__ 일 경우 Action 실행</li> <li>선택한 Tag의 값이 좌변의 첫 번째 항이 됨</li></ul> |  |
 | _Type_ | Action Type을 설정<ul><li>Call: 설정한 조건이 만족되면 Call의 Query를 실행</li><li>Event: 설정한 조건이 만족되면 Event 발생<li>Log: 설정한 조건이 만족되면 Logging</li><li>Tag: 설정한 조건이 만족되면 Tag Value를 Elixir 문법과 함께 원하는 값으로 업데이트</li></ul> | * |
 
 ##### 예시) Condition 사용 예시
@@ -37,8 +37,7 @@ Entity 내에서 Action을 구분하기 위한 ID입니다.
 ```
 
 ## Action Information
-Action을 실행할 대상에 대한 정보를 입력합니다. 
-
+Action을 실행할 타겟의 정보를 입력합니다. 
 | Key | Description | Required |
 | :- | :- | :-: |
 | _Category_ | Action 실행의 대상이 되는 Call / Tag의 Category 선택 | * |
@@ -65,7 +64,7 @@ Action Type에 따른 입력항목은 다음과 같습니다.
 | _Comment_ | Action의 추가적인 설명이 필요할 때 사용자가 직접 입력 |  |
 
 ## Data
-Action Information에서 사용된 `Value`값을 표기한다(<span class="construction"/>). 
+`Action`의 설정 데이터에 따라 실행한 결과가 정상일 때 값이 출력됩니다.
 | Key | Description |
 | :- | :- |
 | _Type_ |  Value에 출력되는 데이터의 종류 설정(Raw, Binary, Value) |

@@ -11,7 +11,7 @@
 ## Tag Information
 - `Tag` 외부 디바이스와 Communication하기 위해 필요한 설정입니다.
 - `Value Type`을 제외한 나머지 `Tag Information`은 `Protocol`마다 내용이 상이하므로 개별 페이지를 참고 바랍니다.
-d
+
 | Key | Description | Required |
 | :- | :- | :-: |
 | [Value Type](../details/valueType.md) | 수집될 데이터의 Value Type | * |

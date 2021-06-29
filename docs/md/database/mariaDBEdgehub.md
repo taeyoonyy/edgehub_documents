@@ -1,18 +1,21 @@
 # MariaDB EdgeHub
-MariaDB EdgeHub는 <u>Interactor</u>의 InnerDB로, Interactor에 생성된 `Entity`정보, `Tag`정보, `Actions`에서 만든 `event`의 정보가 저장됩니다.
+* `MariaDB EdgeHub`는 MariaDB를 사용하는 <u>Interactor</u>의 InnerDB입니다.
+* MariaDB 내 __edgehub__ 이름의 데이터베이스를 사용하며, 데이터베이스에는 <u>Interactor</u>에서 정의된 스키마가 자동으로 적용됩니다.
+* `MariaDB EdgeHub`를 연결하면 <u>Interactor</u>에서 사용자가 생성한 `Entity`정보, `Tag`정보 등 일부 정보가 자동으로 저장됩니다.
+* `MariaDB EdgeHub`를 연결하여 사용자가 저장하기 원하는 `Tag` 값과 `Event` 등 정보를 선택적으로 저장할 수 있습니다.
 
 ::: tip <p class="custom-block-title"><img src="../../img/icon/tip.svg">NOTICE</p>
-Category의 `Device`와 각 Category 하위의 `device`를 구분하기 위해 `Entity`라는 용어를 사용합니다. Table명과 column명에 사용된 `device`는 `Entity`를 뜻합니다.
+* `MariaDB EdgeHub`를 사용하기 위해서 __edgehub__ 이름의 데이터베이스는 사용자가 직접 생성해야 합니다. </br>
 :::
 
 ## Connection Information
-Interactor와 MariaDB EdgeHub를 연결하기 위해 필요한 데이터를 설정합니다.
+<u>Interactor</u>와 `MariaDB EdgeHub`를 연결하기 위해 필요한 데이터를 설정합니다.
 | Key | Description | Required |
 | :- | :- | :-: |
 | _Address_ | MariaDB가 설치된 PC의 IP Address | * |
-| _Port_ | MariaDB가 사용하는 Port | * |
-| _Database_ | 수집 대상이 되는 DATABASE 이름(고정값) | |
-| _Type_ | MariaDB EdgeHub와 MariaDB Custom 구분을 위한 항목(고정값) | |
+| _Port_ | MariaDB Port | * |
+| _Database_ | 수집 대상이 되는 DATABASE 이름( __edgehub__ 고정) | |
+| _Type_ | MariaDB EdgeHub와 MariaDB Custom 구분을 위한 항목( __edgehub__ 고정) | |
 | _Username_ | MariaDB에 설정된 Username | * |
 | _Password_ | MariaDB에 설정된 Password | * |
 
@@ -26,13 +29,13 @@ Entity의 생성 정보가 저장된 테이블입니다.
 | Column | Description | Data Type | Key |
 | :- | :- | :-: | :-: |
 | *device_id* | Entity 식별자 | INT | PK |
-| *device_key* | Entity가 속한 Category (+ Group 이름) + Entity 이름 | VARCHAR | |
+| *device_key* | Entity의 Category (+ Group 이름) + Entity 이름 | VARCHAR | |
 | *device_name* | Entity 이름 | VARCHAR | |
 | *created_at* | Entity 생성 시간 | TIMESTAMP | |
 
 ::: tip <p class="custom-block-title"><img src="../../img/icon/tip.svg">NOTICE</p>
-- `device_key`는 Category, Group Name, Entity Name을 underscore로 연결하여 만들어집니다.
-- Device를 제외한 나머지 `Category`는 `Group`이 없으므로 Category명과 Entity명 사이에 underscore
+- device_key는 `Category`, `Group` Name, `Entity` Name을 underscore로 연결하여 만들어집니다.
+- `Device`를 제외한 나머지 `Category`는 `Group`이 없기때문에 `Group`이 입력되지 않습니다.
 :::
 
 ### device_properties
@@ -94,7 +97,7 @@ Tag의 정보가 저장된 테이블입니다.
 :::
 
 ### tag_history
-Tag의 history가 저장된 테이블입니다. 본 테이블의 사용을 위해서는 `Tags > Condition > History`를 `enable`로 변경해 주시기 바랍니다.
+Tag의 history가 저장된 테이블입니다. `Tags > Condition > History`를 `enable`로 설정한 `Tag`의 데이터가 저장됩니다.
 | Column | Description | Data Type | Key |
 | :- | :- | :-: | :-: |
 | *tag_history_id* | Tag History 식별자 | INT | PK |

@@ -7,8 +7,8 @@ Custom Protocol을 통해 만들 Service 타입을 선택합니다.
 
 | Service | Description |
 | :- | :- |
-| _Port_ |  |
-| _Serial_ |  |
+| _Port_ | 외부의 다른 장비와 접속하기 위한 플러그 |
+| _Serial_ | Serial communication (직렬 통신) |
 | _TCP_ |  |
 
 ## Status
@@ -24,5 +24,5 @@ Custom Protocol 연결을 위해 필요한 정보를 추가합니다.
 (<span class="construction"/>)
 
 ## Tag Information
-Custom Protocol을 통해 특정 데이터를 가져오기 위해 필요한 정보를 입력합니다.
+특정 데이터를 가져오기 위해 필요한 정보를 입력합니다.
 (<span class="construction"/>)

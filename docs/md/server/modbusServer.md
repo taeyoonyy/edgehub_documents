@@ -30,7 +30,7 @@ Tag ID의 대상이 되는 Interactor의 Tag를 설정합니다.
 | Key | Description | Required |
 | :- | :- | :-: |
 | _Category_ | 응답의 대상이 되는 Tag의 Category 선택  | * |
-| _Group_ | 응답의 대상이 되는 Tag의 Group 선택(Category가 Device인 경우만 해당) |  |
+| _Group_ | 응답의 대상이 되는 Tag의 Group 선택(Category가 Device인 경우 해당) |  |
 | _Entity_ | 응답의 대상이 되는 Tag의 Entity 선텍  | * |
 | _Tag_ | 응답의 타겟이 되는 Tag 선택 | * |
 

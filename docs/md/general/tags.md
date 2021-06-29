@@ -11,7 +11,7 @@
 ## Tag Information
 - `Tag` 외부 디바이스와 Communication하기 위해 필요한 설정입니다.
 - `Value Type`을 제외한 나머지 `Tag Information`은 `Protocol`마다 내용이 상이하므로 개별 페이지를 참고 바랍니다.
-d
+
 | Key | Description | Required |
 | :- | :- | :-: |
 | [Value Type](../details/valueType.md) | 수집될 데이터의 Value Type | * |
@@ -25,7 +25,7 @@ d
 | _Interval Value_ | 데이터 수집 시간 간격 | * |
 | _Interval Unit_ | Interval Value에서 입력한 시간의 단위(ms, s, m, h, d) | * |
 |  [Transform](../details/transform.md) | 데이터 수집 후 저장하기 전 전처리 설정 |  |
-| _Load Condition_ | <ul><li>Tag의 값을 Internal Database에 저장하기 위한 조건 설정</li><li>History가 enable인 경우만 사용 가능</li></ul> |  |
+| _Load Condition_ | <ul><li>Tag의 값을 Internal Database에 저장하기 위한 조건 설정</li><li>History가 enable인 경우 사용 가능</li></ul> |  |
 | _History_ | Internal Dabase에 Tag 값 저장여부 설정(Default `Disable`) | * |
 | [Buffer](../details/buffer.md) | Tag의 값을 임시로 저장하기 위한 버퍼 크기 설정(Default `1`) | * |
 

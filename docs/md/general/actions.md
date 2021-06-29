@@ -41,7 +41,7 @@ Action을 실행할 타겟의 정보를 입력합니다.
 | Key | Description | Required |
 | :- | :- | :-: |
 | _Category_ | Action 실행의 대상이 되는 Call / Tag의 Category 선택 | * |
-| _Group_ | Action 실행의 대상이 되는 Group 선택(Category가 Device인 경우만 해당) | * |
+| _Group_ | Action 실행의 대상이 되는 Group 선택(Category가 Device인 경우 해당) | * |
 | _Entity_ | Action 실행의 대상이 되는 Entity 선택 | * |
 | _Call / Tag_ | Action 실행의 대상이 되는 Tag ID 또는 Call ID 선택 | * |
 | _Value_ | Action 실행 시 사용되는 값 입력(Action Type에 따라 입력내용 상이)<ul><li>Event / Log: <code>""</code> 안에 원하는 message를 입력</li> <li>Tag: <a href="/md/elixir/elixirSyntax.html" class="">Elixir Syntax</a>를 이용하여 대싱아 되는 Tag의 값 변경 또는 Tag가 가르키는 Device에 쓰기 수행</li></ul> | * |
@@ -51,7 +51,7 @@ Action Type에 따른 입력항목은 다음과 같습니다.
 - **Call**: Category, Entity, Call/Tag
 - **Event**: Value
 - **Log**: Value
-- **Tag**: Category, Group(Category가 Device인 경우만), Entity, Call/Tag, Value
+- **Tag**: Category, Group(Category가 Device인 경우), Entity, Call/Tag, Value
 :::
 
 

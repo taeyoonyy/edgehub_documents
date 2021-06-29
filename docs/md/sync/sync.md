@@ -56,7 +56,7 @@ C:\project\0625\EdgeHub\interactor\edgehub-i\sync
 | Key | Description | Required |
 | :- | :- | :-: |
 | _Category_ | 동기화할 Tag의 Category 선택 | * |
-| _Group_ | 동기화할 Tag의 Group 선택(Category가 Device인 경우만 해당) | * |
+| _Group_ | 동기화할 Tag의 Group 선택(Category가 Device인 경우 해당) | * |
 | _Entity_ |  동기화할 Tag의 Entity 선택 | * |
 | _Tag_ | 동기화할 Tag 선택 | * |
 | _Sync_ | 동기화 사용 여부 선택<ul><li>**Enable**: 사용</li><li>**Disable**: 미사용</li></ul> | * |

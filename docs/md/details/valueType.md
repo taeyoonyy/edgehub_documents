@@ -1,11 +1,12 @@
 # Value Type
-Interactor에서 수집 또는 생성된 `Raw Type`의 데이터는 **15개의 값 타입(Value Type)** 을 적용하여 Value Type의 값을 가질 수 있습니다.
+Interactor에서 수집 또는 생성된 데이터는 **15개의 값 타입(Value Type)** 을 적용하여 Value Type의 값을 가질 수 있습니다.
 ![img](../../img/details/valuetype.png)
 | Data Type | Description |
 | :- | :- |
-| Value Type | Tag의 Raw 데이터에 적용할 Value Type |
-| Data Type | Display할 Value Type |
-| Byte Size | Tag의 Raw 값의 Byte 사이즈 |
+| (1) Value Type | Tag의 Raw 데이터에 적용할 Value Type |
+| (2) Data / Type | `Raw`, `Binary(in Hex)` 그리고 `Value` 중 (3) Data / Value 에 표시할 타입  |
+| (3) Data / Value | (1) Value Type 과 (2) Data / Type 의 Type이 반영된 Tag의 값 |
+| (4) Byte Size | `Raw` 값의 Byte 사이즈 |
 
 ::: tip <p class="custom-block-title"><img src="../../img/icon/tip.svg">NOTICE</p>
 **1️⃣ Value Type**으로 적용된 값은 **2️⃣ Data Type**이 `Value`일 때, **3️⃣ Data Value**에 출력됩니다.
@@ -37,7 +38,7 @@ Tag의 값이 **F4바이트**인 경우 단정밀도가 사용됩니다. 예를 
 <h6 class="h6-pt-0"> 자세한 내용은 <a href="https://www.binaryconvert.com/convert_float.html">https://www.binaryconvert.com/convert_float.html</a>를 참고 바랍니다.</h6>
 
 ### 배정밀도 (Double, IEEE754 Double precision 64-bit)
-Tag의 값이 **8바이트**인 경우 배정밀도가 사용됩니다. 예를 들어, Binary 값이 `0x3F00000`의 단정밀도 Decimal 값은 `0.5`입니다. `0x3F000000`의 값을 가지는 Tag에 Float를 적용하면 Data Value가 `0.5`로 출력됩니다.  
+Tag의 값이 **8바이트**인 경우 배정밀도가 사용됩니다. 예를 들어, Binary 값이 `0x3FE0000000000000`의 단정밀도 Decimal 값은 `0.5`입니다. `0x3FE0000000000000`의 값을 가지는 Tag에 Float를 적용하면 Data Value가 `0.5`로 출력됩니다.  
 
 <h6 class="h6-pt-0"> 자세한 내용은 <a href="https://www.binaryconvert.com/convert_double.html">https://www.binaryconvert.com/convert_double.html</a>를 참고 바랍니다.</h6>
 
@@ -53,8 +54,11 @@ Tag의 값이 **8바이트**인 경우 배정밀도가 사용됩니다. 예를 �
 <h6 class="h6-pt-0"> 자세한 내용은 <a href="../elixirSyntax/elixirSyntax.html">Elixir Syntax</a>를 참고 바랍니다.</h6>
 
 ## 7. Object
-**키(key)와 값(Value)** 의 데이터 구조이며, `%{"key" => "value"}`와 같이 표현하며 Elixir의 Map 자료구조의 형태와 동일합니다. 
-
+**키(key)와 값(Value)** 의 데이터 구조이며, `%{"key" => "value"}`와 같이 값을 가지며 Elixir의 Map 자료구조의 형태입니다.
+::: tip <p class="custom-block-title"><img src="../../img/icon/tip.svg">NOTICE</p>
+- Object Type의 데이터는 사용자의 가독성 위해 Value에는 JSON 형태로 표현합니다.
+- 예시) 실제값: `%{"key" => "value"}`, 표시되는 값: `{"key": "value"}`
+:::
 <h6 class="h6-pt-0"> 자세한 내용은 <a href="../elixirSyntax/elixirSyntax.html">Elixir Syntax</a>를 참고 바랍니다.</h6>
 
 ## 8. String-Int

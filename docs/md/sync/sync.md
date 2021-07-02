@@ -23,6 +23,8 @@ Sync된 Tag를 CSV File로 저장하는 옵션입니다.
 | _to_ | 저장 마침 시간 |  |
 
 ::: tip <p class="custom-block-title"><img src="../../img/icon/tip.svg">NOTICE</p>
+- CSV file에는 `Tag`의 `Value`와 함께 Timestamp가 저장됩니다.
+- `Commit` 이전 데이터는 `.archive` 확장자로 백업됩니다.  
 - `Recording from`과 `to`에 값이 하나라도 입력되지 않으면 Tag 데이터는 저장되지 않습니다.
 - `Recording from`과 `to`에 입력된 시간이 같을 시 Tag 데이터를 항상 저장합니다.
 - 시간은 00:00 ~ 24:00 까지 사용할 수 있습니다.
@@ -30,9 +32,9 @@ Sync된 Tag를 CSV File로 저장하는 옵션입니다.
 
 :::
 
-- 저장 경로는 다음과 같습니다?
+- 저장 경로는 다음과 같습니다.
 ```
-C:\project\0625\EdgeHub\interactor\edgehub-i\sync
+{Edgehub 저장 경로}\EdgeHub\interactor\edgehub-i\sync
 ```
 
 ::: warning <p class="custom-block-title"><img src="../../img/icon/warning.svg">WARNING</p>
@@ -63,7 +65,8 @@ C:\project\0625\EdgeHub\interactor\edgehub-i\sync
 | _Default_ | 동기화 시 데이터의 default값 <ul><li>**NA**: 공란</li><li>**Latest**: 최신 데이터</li></ul> | * |
 
 ::: warning <p class="custom-block-title"><img src="../../img/icon/warning.svg">WARNING</p>
-Tag 동기화를 위해서는 `Tag Information`의 `Sync`가 `enable`인 태그가 최소 하나 이상 필요합니다. 그러므로 최초 생성 태그의 `Sync`는 `enable` 이어야 합니다.
+- `Entity` 내 동일한 `Tag`는 중복하여 사용할 수 없습니다.
+- Tag 동기화를 위해서는 `Tag Information`의 `Sync`가 `enable`인 태그가 최소 하나 이상 필요합니다. 그러므로 최초 생성 태그의 `Sync`는 `enable` 이어야 합니다.
 :::
 
 ### Value
@@ -72,6 +75,12 @@ Tag Value에 대해 설정합니다.
 | Key | Description | Required |
 | :- | :- | :-: |
 | _Type_ | 동기화에 사용되는 Tag value의 Data Type | * |
+
+::: tip <p class="custom-block-title"><img src="../../img/icon/tip.svg">NOTICE</p>
+Sync의 `{tag reference}`는 `Tag` 뿐만 아니라 `Entity`도 참조 가능합니다(다른 카테고리는 안 됨).  
+예시) `{sync, sync-entity}`  
+예시) `{sync, sync-entity, tag1}`
+:::
 
 ###### 자세한 내용은 [Tags 페이지](../general/tags.md)를 참고 바랍니다.
 

@@ -45,6 +45,10 @@ SELECT * FROM [TOP]
 | _STRING_   | <ul><li>CHAR</li><li>DATE</li><li>DATETIME</li><li>DATETIME2</li><li>DATETIMEOFFSET</li><li>NCHAR</li><li>NTEXT</li><li>NVARCHAR</li><li>SMALLDATETIME</li><li>TEXT</li><li>TIME</li><li>VARCHAR</li><li>ACCOUNT_NUMBER</li></ul>  |
 | _FLOAT_    | <ul><li>DECIMAL</li><li>FLOAT</li><li>NUMERIC</li><li>REAL</li><li>SMALLMONEY</li><li>MONEY</li></ul>  | 
 
+::: tip <p class="custom-block-title"><img src="../../img/icon/tip.svg">NOTICE</p>
+Value Type을 `list`로 설정할 경우 모든 데이터를 Read합니다. 예를 들어, `"123"`이라는 String 타입의 데이터를 `List`로 설정하면`["123"]`을 확인할 수 있습니다.
+:::
+
 ###### 자세한 내용은 [Tags 페이지](../general/tags.md)를 참고 바랍니다.
 
 ## Actions

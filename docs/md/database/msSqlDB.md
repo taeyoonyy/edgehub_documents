@@ -18,6 +18,13 @@ MSSQL DB에서 사용되는 Structured Query Language(이하 SQL)를 사용하�
 ### Call Information
 (<span class="construction"/>)
 
+::: tip <p class="custom-block-title"><img src="../../img/icon/tip.svg">NOTICE</p>
+사용하는 Table명 또는 Column명이 SQL의 예약어인 경우 `[대괄호]`를 사용하여야 합니다. 예를 들어, Table명이 `TOP`인 경우 다음과 같이 입력합니다.
+``` sql
+SELECT * FROM [TOP]
+```
+:::
+
 ### Data
 (<span class="construction"/>)
 
@@ -26,6 +33,18 @@ MSSQL DB에서 사용되는 Structured Query Language(이하 SQL)를 사용하�
 ## Tags
 (<span class="construction"/>)
 ### Tag Information
+
+#### Value Type
+<!-- 설명추가 -->
+
+| Interactor Value Type | MSSQL DB Value Type |
+| :- | :- |
+| _INT_      | <ul><li>BIGINT</li><li>INT</li><li>TINYINT</li><li>SMALLINT</li></ul>  | 
+| _BINARY_   | <ul><li>BINARY</li><li>UNIQUEIDENTIFIER</li><li>VARBINARY</li><li>TIMESTAMP</li></ul>  |
+| _BOOLEAN_  | <ul><li>BIT</li><li>FLAG_BIT</li><li>NAMESTYLE_BIT</li></ul>  | 
+| _STRING_   | <ul><li>CHAR</li><li>DATE</li><li>DATETIME</li><li>DATETIME2</li><li>DATETIMEOFFSET</li><li>NCHAR</li><li>NTEXT</li><li>NVARCHAR</li><li>SMALLDATETIME</li><li>TEXT</li><li>TIME</li><li>VARCHAR</li><li>ACCOUNT_NUMBER</li></ul>  |
+| _FLOAT_    | <ul><li>DECIMAL</li><li>FLOAT</li><li>NUMERIC</li><li>REAL</li><li>SMALLMONEY</li><li>MONEY</li></ul>  | 
+
 ###### 자세한 내용은 [Tags 페이지](../general/tags.md)를 참고 바랍니다.
 
 ## Actions

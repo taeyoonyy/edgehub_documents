@@ -53,6 +53,17 @@ Interactor에서는 Input Field로 입력된 값을 다음과 같은 SQL문으�
 </pre>
 :::
 
+#### Value Type
+<!-- 설명추가 -->
+
+| Interactor Value Type | MariaDB Value Type |
+| :- | :- |
+| _INT_ | <ul><li>INT</li><li>TINYINT</li><li>SMALLINT</li><li>MEDIUMINT</li><li>BIGINT</li></ul> |
+| _BINARY_ | <ul><li>BIT</li></ul> |
+| _STRING_ | <ul><li>CHAR</li><li>VARCHAR</li><li>INT</li><li>BINARY</li><li>VARBINARY</li><li>TINYBLOB</li><li>BLOB</li><li>MEDIUMBLOB</li><li>LONGBLOB</li><li>TINYTEXT</li><li>TEXT</li><li>MEDIUMTEXT</li><li>LONGTEXT</li><li>ENUM</li><li>DATE</li><li>TIME</li><li>DATETIME</li><li>TIMESTAMP</li><li>YEAR</li></ul> |
+| _FLOAT_ | <ul><li>DECIMAL</li><li>FLOAT</li><li>DOUBLE</li></ul> |
+
+
 ###### 자세한 내용은 [Tags 페이지](../general/tags.md)를 참고 바랍니다.
 
 ## Actions
@@ -121,7 +132,7 @@ SELECT * FROM `LIMIT`
 ## Actions Example
 `Actions`사용을 위한 예시입니다.
 
-##### 예시) MEMBER TABLE에 데이터가 10개가 넘어가면 제일 오래된 데이터 삭제하기
+##### 예시1) MEMBER TABLE에 데이터가 10개가 넘어가면 제일 오래된 데이터 삭제하기(`Call`사용)
 
 - Action의 대상이 되는 Tag
 
@@ -134,3 +145,21 @@ SELECT * FROM `LIMIT`
 - Calls 설정 내용: Query Editor에 쓰인 `{Tag Reference}`는 가장 오래된 데이터의 `NAME`을 가져옵니다.
 
 <img src="../../img/database/maria_custom_actions3.png" class="mt-0">
+
+##### 예시2) DATABASE의 데이터값 업데이트하기(`Tag`사용)
+
+- Action의 대상이 되는 Tag
+
+<img src="../../img/database/maria_custom_actions4.png" class="mt-0">
+
+- Actions 설정 내용: 'Tom'의 나이가 27인 경우 28로 변경
+
+<img src="../../img/database/maria_custom_actions5.png" class="mt-0">
+
+- Tags 변경 내용: Value 27 → 28
+
+<img src="../../img/database/maria_custom_actions6.png" class="mt-0">
+
+- DATABASE 변경 내용: Value 27 → 28
+
+<img src="../../img/database/maria_custom_actions7.png" class="mt-0">

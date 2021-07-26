@@ -34,42 +34,54 @@
 }
 
 .home-container {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding-bottom: 54px;
 
-  @media (max-width:400px) {
-    padding-top: 144px;
+  #welcome-bi {
+    position: fixed;
+    top: 70px;
+    left: 130px;
   }
 
-  img {
-    display: block;
-    margin: 0 auto;
-    margin-bottom: 54px;
+  .welcome-left {
+    width: calc(100%/ 2 - 130px);
+    padding-left: 130px;
+  }
+
+  .welcome-right {
+    width: calc(100%/ 2);
+  }
+
+  .home-title{
+    font-size: 94px;
+    font-weight: bold;
+    color: #181a1f;
+    letter-spacing: -8px;
   }
 
   .home-text {
-    margin: 0 auto;
-    margin-bottom: 36px;
-    text-align: center;
-    font-size: 24px;
-    color: $lightgray;
-
-    @media (max-width:400px) {
-      font-size: 16px;
-    }
+    margin-bottom: 148px;
+    font-size: 36px;
+    font-weight: 300;
+    color: #8398ab;
+    letter-spacing: -1.62px;
   }
 
   button {
     display: block;
-    margin: 0 auto;
-    margin-bottom: 54px;
     color: #fff;
-    font-size: 1.2rem;
-    background-color: $blue;
-    padding: .8rem 1.6rem;
+    font-weight: bold;
+    font-size: 32px;
+    letter-spacing: -1.44px;
+    background-color: #2e8afe;
+    padding: 16px 60px;
     border-radius: 4px;
-    transition: background-color .1s ease;
-    box-shadow: 0 2px 4px 0 rgba($black, 0.3);
-    border-color: rgba($gray, 0.1);
+    border: none;
     cursor: pointer;
   }
 
@@ -149,9 +161,9 @@
 }
 
 .copyright {
-  text-align: center;
-  border-top: 1px solid lightgray;
-  padding: 16px 36px;
+  position: fixed;
+  left: 130px;
+  bottom: 56px;
 }
 
 .page {

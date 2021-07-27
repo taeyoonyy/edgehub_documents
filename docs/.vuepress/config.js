@@ -98,8 +98,8 @@ module.exports = {
         title: 'Protocol Builder',
         sidebarDepth: 1,
         children: [
-          './md/protocolBuilder/protocolBuilder',
-          './md/protocolBuilder/details',
+          './md/protocolBuilder/protocol',
+          './md/protocolBuilder/protocolDetail',
           './md/protocolBuilder/model',
           './md/protocolBuilder/function'
         ]

@@ -1,49 +1,16 @@
 # Model
-(<span class="construction"/>)
+`Model` 페이지 에서는 `TCP`와 `Serial`을 사용하는 Custom 프로토콜에서 데이터를 전송하거나 수신할 때의 패킷 구조를 만듭니다. 만들어진 `Model`은 `Funcion`에서 사용됩니다.
 
 ## Model Fields
-- Custom Protocol을 사용하여 데이터를 Read/Write 할 때 필요한 Model을 정의합니다.
-- 추가하고자 하는 Protocol의 Frame을 정의합니다.
-- 정의된 모델은 `Function > Read` 또는 `Write`의 `Response`와 `Request Model`에서 사용할 수 있습니다.
+ 데이터를 전송하거나 수신할 할 때 필요한 데이터 구조를 정의합니다. Fields에 생성된 순서가 전송 또는 수신할 때 데이터 순서와 같습니다.
 
 | Key | Description | Required |
 | :- | :- | :-: |
-| _Name_ |   | * |
-| _Value_ |  | * |
-| _Size_ |  | * |
-| _Type_ | <ul><li>Bits</li><li>Bytes</li><li>CRC</li><li>Float</li><li>Integer</li></ul> | * |
-| _Units_ | (Type이 Float, Integer인 경우)<ul><li>Bits</li><li>Bytes</li></ul> | * |
-| _Endianness_ | (Type이 Float, Integer인 경우)<ul><li>Native</li><li>Big</li><li>Little</li></ul> | * |
-| _Signedness_ | (Type이 Float, Integer인 경우)<ul><li>Signed</li><li>Unsigned</li></ul> | * |
-| _Mode_ | (Type이 CRC인 경우) | * |
-
-
-<!-- ##### 예시) Modbus TCP
-
-MBAP Header description Fields
-
-- PDU(Protocol Data Unit)
-- ADU(Application Data Unit)
-
-```
-             MODBUS TCP/IP ADU
-<――――――――――――――――――――――――――――――――――――――――>
-MBAP Header  |  Function Code  |  Data  |
-              <――――――――――――――――――――――――――>
-                           PDU
-```
-
-
-```
-                   Request        Indication
-―――――――――――――――――  ―――――――――――――――――――――――――>  ―――――――――――――――――
-| MODBUS Client |                              | MODBUS Server | 
-―――――――――――――――――  ―――――――――――――――――――――――――>  ―――――――――――――――――
-                   Confirmation    Response
-```
-
-
-- MODBUS Request ADU encoding
-```
-MBAP Header + MODBUS request
-``` -->
+| _Name_ | Field 이름. `Function`에서 각 Field를 구분하기 위한 용도  | * |
+| _Value_ | Field에 항상 특정 값이 예상될 때 입력. 설정된 값과 입력된 데이터의 값이 다르면 Model이 사용되지 않음 |  |
+| _Size_ | Field의 사이즈. 숫자 또는 다른 Field의 Name을 입력하여 동적으로 연결 가능 | * |
+| _Type_ | 데이터 타입 설정 (integer, ...) | * |
+| _Units_ | Type이 Float, Integer인 경우 Units (Bits, Bytes) 설정 |  |
+| _Endianness_ | Type이 Float, Integer인 경우 Units (Native, Big, Little) 설정  |  |
+| _Signedness_ | Type이 Float, Integer인 경우 Signedness (Signed, Unsigned) 설정 |  |
+| _Mode_ | Type이 CRC인 경우 CRC Mode 설정 |  |

@@ -95,13 +95,13 @@ module.exports = {
         ]
       },
       {
-        title: 'Protocol',
+        title: 'Protocol Builder',
         sidebarDepth: 1,
         children: [
-          // './md/protocol/protocol',
-          './md/protocol/details',
-          './md/protocol/model',
-          './md/protocol/function'
+          './md/protocolBuilder/protocol',
+          './md/protocolBuilder/protocolDetail',
+          './md/protocolBuilder/model',
+          './md/protocolBuilder/function'
         ]
       },
       {

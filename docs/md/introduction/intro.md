@@ -24,5 +24,5 @@
 
 ## About
 
-- Last Updated: 05/27/2021
-- Version 0.1.0
+- Last Updated: 07/29/2021
+- Version 0.9.0

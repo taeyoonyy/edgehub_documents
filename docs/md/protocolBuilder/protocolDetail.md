@@ -1,8 +1,8 @@
 # Protocol Detail
-Built-in 프로토콜과 Custom 프로토콜의 service, status, connection information 및 tag information 정보를 보여줍니다.
+Built-in 프로토콜과 Custom 프로토콜의 service, status, connection information 및 tag information 확인하거나 설정하는 화면입니다. 
 
 ## Service
-프로토콜의 서비스 종류를 보여주거나 선택합니다.
+프로토콜에서 사용할 수 있는 서비스 종류 입니다.
 
 | Service | Description |
 | :- | :- |
@@ -21,7 +21,7 @@ Custom protocol의 수정 가능 / 불가능 상태를 제어합니다. `Device 
 
 
 ## Connection Information
-Custom 프로토콜 연결을 위해 필요한 정보를 설정합니다. 해당 프로토콜을 `Device Entity`에서 선택하면 아래 설정된 내용이 `Device Information` > `Connection informarion`에서 설정할 수 있게 출력 됩니다.
+Custom 프로토콜을 사용하여 디바이스와 연결을 위해 필요한 정보를 설정합니다. 해당 프로토콜을 `Device Entity`에서 선택하면 아래 설정된 내용이 `Device Information` > `Connection informarion`에 출력됩니다.
 
 | Key | Description |
 | :- | :- |
@@ -33,7 +33,7 @@ Custom 프로토콜 연결을 위해 필요한 정보를 설정합니다. 해당
 
 
 ## Tag Information
-Custom 프로토콜 사용시 데이터를 수집할 때 필요한 Tag를 만들기 위한 정보를 설정합니다. 해당 프로토콜을 `Device Entity`에서 선택하면 아래 설정된 내용이 `Tags` > `Tag informarion`에서 설정할 수 있게 출력 됩니다.
+Custom 프로토콜 사용시 데이터를 수집할 때 필요한 Tag를 만들기 위한 정보를 설정합니다. 해당 프로토콜을 `Device Entity`에서 선택하면 아래 설정된 내용이 `Tags` > `Tag informarion`에 출력됩니다.
 
 | Key | Description |
 | :- | :- |
@@ -50,6 +50,6 @@ Custom 프로토콜 사용시 데이터를 수집할 때 필요한 Tag를 만들
 
 ::: warning <p class="custom-block-title"><img src="../../img/icon/warning.svg">WARNING</p>
 
-  생성된 `Connection Information` 과 `Tag Information`의 `Key`는 수정할 수 없습니다.
+  `Connection Information` 과 `Tag Information`의 `Key`는 수정할 수 없습니다.  
 
 :::

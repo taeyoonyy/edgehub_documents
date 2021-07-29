@@ -1,8 +1,14 @@
 # Model
-`Model` 화면에서는 `TCP`와 `Serial`을 사용하는 Custom 프로토콜에서 데이터를 전송하거나 수신할 때 사용되는 데이터의 패킷 구조를 만듭니다. 만들어진 `Model`은 `Funcion`에서 사용됩니다.
+Custom 프로토콜에서 데이터를 전송하거나 수신할 때 사용되는 데이터의 패킷 구조를 만듭니다. 생성된 `Model`은 `Funcion`에서 사용됩니다.
+
+::: tip <p class="custom-block-title"><img src="../../img/icon/tip.svg">NOTICE</p>
+
+  `Model`은 `TCP`와 `Serial` 전용으로 `Port`에서는 사용하지 않습니다.
+  
+:::
 
 ## Model Fields
- 데이터를 전송하거나 수신할 할 때 필요한 데이터 구조를 정의합니다. Fields에 생성된 순서가 전송 또는 수신할 때 데이터 순서와 같습니다.
+ 데이터를 전송하거나 수신할 할 때 필요한 데이터 구조를 정의합니다. Fields의 순서가 전송 또는 수신할 때 데이터 순서와 같습니다.
 
 | Key | Description | Required |
 | :- | :- | :-: |

@@ -31,7 +31,7 @@
 ###### 각 항목의 자세한 내용은 Details의 해당 페이지를 참고 바랍니다.
 
 ## Property
-Interactor의 동작과 상관없이 사용자가 원하는 정보를 입력하기 위한 설정입니다.
+Interactor의 동작과 상관없이 사용자가 원하는 정보를 입력하기 위해 입력합니다.
 | Key | Description | Required |
 | :- | :- | :-: |
 | _Category_ | 동일한 성질을 가진 *Tag*의 분류가 필요할 때 사용자가 직접 입력 |  |

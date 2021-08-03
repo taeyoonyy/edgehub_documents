@@ -1,5 +1,5 @@
 # Web Page 
-이 페이지는 <u>Interactor</u>의 사용 방법과 Component에 대해 설명합니다.
+이 페이지는 Interactor의 사용 방법과 Component에 대해 설명합니다.
 
 ## Web Structure  
 Web 전체적인 구조에 대해서 설명합니다. 아래는 Login 후 출력되는 화면입니다.   
@@ -28,8 +28,8 @@ Web 전체적인 구조에 대해서 설명합니다. 아래는 Login 후 출력
 | 5 | _Account_| <ul><li>Login에 사용되는 계정 정보입니다. `+` 버튼을 클릭하여 계정을 추가할 수 있습니다.</li><li>자세한 내용은 Account 페이지를 참고 바랍니다.</li></ul> |
 
 ## Group
-- Device Entity의 Group 정보를 출력하는 페이지입니다.  
-- Management 페이지에서 Left Navitagion의 Group을 클릭하면 해당 페이지로 이동합니다.
+- <u>Device Entity</u>의 <u>Group</u> 정보를 출력하는 페이지입니다.  
+- Management 페이지에서 Left Navitagion의 <u>Group</u>을 클릭하면 해당 페이지로 이동합니다.
 
 <img src="../../img/web/group.png">
 
@@ -45,7 +45,7 @@ Web 전체적인 구조에 대해서 설명합니다. 아래는 Login 후 출력
 | 8 | _Device Descriptio_ | Device Information에서 등록된 Device의 세부정보입니다. |
 
 ## Entity Information
-- Entity에 적용되는 공통적인 설정 페이지입니다.  
+- <u>Entity</u>에 적용되는 공통적인 설정 페이지입니다.  
 - Management 페이지의 Left Navigation에서 Entity 클릭 후 Content 화면에서 Information 탭을 클릭하면 해당 Content가 출력됩니다.
 
 <img src="../../img/web/information.png">
@@ -60,11 +60,11 @@ Web 전체적인 구조에 대해서 설명합니다. 아래는 Login 후 출력
 | 6 | _Server Access Control_ | <ul><li>외부 Client에서 Interactor로 데이터를 요청할 때 아이디와 패스워드 사용하기 위해 사용합니다.</li><li>Server Entity에서만 사용하는 기능입니다.</li></ul> |
 
 ## Entity Tags
-- Tag를 생성할 수 있는 Entity에서 제공되는 페이지입니다.  
-- External Entity의 데이터 수집 또는 Internal Entity의 데이터 생성을 위한 세부 설정 및 수집된 값을 확인할 수 있는 페이지입니다.
-- Interactor에서는 값을 가지는 데이터의 구분을 위해 Tag ID를 설정합니다.  
-- Tags 페이지는 Category 와 Protocol에 따라 사용되는 column이 다릅니다.  
-Management 페이지의 Left Navigation에서 Entity 클릭 후 Content 화면에서 Tag 탭을 클릭하면 해당 Content가 출력됩니다.
+- <u>Tag</u>를 생성할 수 있는 <u>Entity</u>에서 제공되는 페이지입니다.  
+- <u>External Entity</u>의 데이터 수집 또는 <u>Internal Entity</u>의 데이터 생성을 위한 세부 설정 및 수집된 값을 확인할 수 있는 페이지입니다.
+- Interactor에서는 값을 가지는 데이터의 구분을 위해 <u>Tag ID</u>를 설정합니다.  
+- Tags 페이지는 <u>Category</u>와 <u>Protocol</u>에 따라 사용되는 column이 다릅니다.  
+Management 페이지의 Left Navigation에서 <u>Entity</u> 클릭 후 Content 화면에서 Tags 탭을 클릭하면 해당 Content가 출력됩니다.
 
 <img src="../../img/web/tags.png">
 
@@ -78,9 +78,9 @@ Management 페이지의 Left Navigation에서 Entity 클릭 후 Content 화면�
 | 6 | _Data_ | 설정 정보가 Commit 되고 수집된 데이터를 확인할 수 있습니다.<br/><ul><li>Type: Raw, Binary, Value의 3가지 타잎중에 선택할 수 있습니다. Raw는 수집된 실제 데이터를 출력하고, Binary는 이진데이터를 16진수로 변환하여 값을 출력하고, Value는 Tag Information에서 선택한 Value Type에 따라 변환된 값을 출력합니다.</li><li>Value: 수집된 Tag의 value입니다. 수집주기와 상관없이 1초마다 값이 갱신됩니다.</li><li>Byte Size: 데이터의 크기를 Byte 단위로 나타냅니다.</li></ul> |
 
 ## Entity Actions
-- Tag가 수집되었을 때 추가적인 동작을 위해 Action을 사용합니다.  
-- Action을 생성할 수 있는 Entity에서 제공되는 페이지입니다.  
-- Management 페이지의 Left Navigation에서 Entity 클릭 후 Content 화면에서 Action 탭을 클릭하면 해당 Content가 출력됩니다.
+- <u>Tag</u>가 수집되었을 때 추가적인 동작을 위해 <u>Action</u>을 사용합니다.  
+- <u>Action</u>을 생성할 수 있는 <u>Entity</u>에서 제공되는 페이지입니다.  
+- Management 페이지의 Left Navigation에서 <u>Entity</u> 클릭 후 Content 화면에서 Actions 탭을 클릭하면 해당 Content가 출력됩니다.
 
 <img src="../../img/web/actions.png">
 
@@ -92,9 +92,9 @@ Management 페이지의 Left Navigation에서 Entity 클릭 후 Content 화면�
 | 4 | _Data_ | Tags 의 Data와 동일합니다. |
 
 ## Entity Calls
-- Call은 Database에 사용자가 직접 Query를 작성하여 사용하기를 윈할 때 사용합니다.   
-- Call을 생성할 수 있는 Entity에서 제공되는 페이지입니다.  
-- Management 페이지의 Left Navigation에서 Entity 클릭 후 Content 화면에서 Call 탭을 클릭하면 해당 Content가 출력됩니다.
+- <u>Call</u>은 Database에 사용자가 직접 Query를 작성하여 사용하기를 윈할 때 사용합니다.   
+- <u>Call</u>을 생성할 수 있는 <u>Entity</u>에서 제공되는 페이지입니다.  
+- Management 페이지의 Left Navigation에서 <u>Entity</u> 클릭 후 Content 화면에서 Calls 탭을 클릭하면 해당 Content가 출력됩니다.
 
 <img src="../../img/web/calls.png">
 
@@ -121,7 +121,7 @@ Interactor의 External Entity에서 사용하는 프로토콜을 관리하는 �
 
 ## Protocol Builder
 - Protocol 페이지의 Content 화면에서 프로토콜을 선택하면 해당 페이지로 이동합니다.
-Built-in 프로토콜은 설정된 정보를 보여주고, 커스텀 프로토콜은 설정할 수 있습니다.  
+<u>Built-in Protocol</u>은 설정된 정보를 보여주고, <u>Custom Protocol</u>은 설정할 수 있습니다.  
 - 다음은 커스텀 프로토콜에 대한 설명입니다.  
 
 <img src="../../img/web/protocol_builder.png">

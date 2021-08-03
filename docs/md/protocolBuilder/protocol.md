@@ -1,5 +1,5 @@
 # Protocol
-Interactor에서는 Protocol Builder를 사용하여 사용자가 원하는 프로토콜을 직접 추가할 수 있습니다. 이 페이지에서는 Interactor에서 기본적으로 제공하는 Built-in 프로토콜과 사용자가 직접 추가하는 Custom 프로토콜에 대해서 설명합니다. Custom 프로토콜을 만드는 자세한 방법은 `Protocol Detail`, `Model` 그리고 `function` 페이지에서 설명합니다.
+Interactor에서는 Protocol Builder를 사용하여 사용자가 원하는 프로토콜을 직접 추가할 수 있습니다. 이 페이지에서는 Interactor에서 기본적으로 제공하는 Built-in 프로토콜과 사용자가 직접 추가하는 Custom 프로토콜에 대해서 설명합니다. Custom 프로토콜을 만드는 자세한 방법은 <u>Protocol Detail</u>, `Model` 그리고 `function` 페이지에서 설명합니다.
 
 ## Built-in Protocol
 Interactor 화면 상단의 `Protocol` 버튼으로 클릭하여 `Protocol` 페이지로 이동하면 현재 Interactor에서 사용할 수 있는 프로토콜의 목록이 표시됩니다. Interactor에서 기본적으로 제공하는 Built-in 프로토콜의 목록은 다음과 같습니다.

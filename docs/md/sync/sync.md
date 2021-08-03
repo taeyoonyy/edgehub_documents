@@ -6,7 +6,7 @@
 
 ## Sync Mode
 `Sync`는 데이터 동기화를 위해 Bucket을 만들어 데이터를 수집을 컨트롤합니다. 
-데이터는 Interactor로 전달되기 전 Bucket에 도착하여 `Sync > Tags > Tag Information > Sync` 설정 값이 `enable`인 데이터를 기다립니다.
+데이터는 Interactor로 전달되기 전 Bucket에 도착하여 <u>Sync > Tags > Tag Information > Sync</u> 설정 값이 `enable`인 데이터를 기다립니다.
 
 | Option | Description |
 | :-: | :- |

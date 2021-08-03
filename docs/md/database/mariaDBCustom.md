@@ -1,5 +1,5 @@
 # MariaDB Custom
-관계형 데이터베이스(Relational Database, RDB)인 MariaDB와 Interactor를 연결하여 데이터를 읽거나 쓸 수 있습니다. `Connection Information`에서 MariaDB와 연결하기 위한 설정을 하고, `Calls`에서 사용자가 원하는 Query를 사용하여 데이터를 읽거나 쓸 수 있습니다. `Tags`에서는 Interactor에서 지정한 형식에 따라 MariaDB의 데이터를 수집할 수 있고, `Actions`을 이용하여 MariaDB에 데이터를 쓸 수 있습니다.
+관계형 데이터베이스(Relational Database, RDB)인 MariaDB와 Interactor를 연결하여 데이터를 읽거나 쓸 수 있습니다. *Connection Information*에서 MariaDB와 연결하기 위한 설정을 하고, *Calls*에서 사용자가 원하는 Query를 사용하여 데이터를 읽거나 쓸 수 있습니다. *Tags*에서는 Interactor에서 지정한 형식에 따라 MariaDB의 데이터를 수집할 수 있고, *Actions*을 이용하여 MariaDB에 데이터를 쓸 수 있습니다.
 
 ## Connection Information
 Interactor와 MariaDB Custom을 연결하기 위해 필요한 데이터를 설정합니다.
@@ -22,7 +22,7 @@ MariaDB에서 실행할 Query를 입력합니다.
 | _Query Editor_ | 원하는 데이터를 읽거나 쓰기 위한 SQL문 | * |
 
 ### Data
-Call Information의 Query Editor에 입력된 SQL문의 실행결과입니다.
+*Call Information*의 Query Editor에 입력된 SQL문의 실행결과입니다.
 
 ::: tip <p class="custom-block-title"><img src="../../img/icon/tip.svg">NOTICE</p>
 조건에 맞는 데이터가 없을 경우 빈 List(`[]`)를 반환합니다.
@@ -37,7 +37,7 @@ Call Information의 Query Editor에 입력된 SQL문의 실행결과입니다.
 ## Tags
 MariaDB의 데이터를 읽기 위해 필요한 설정을 입력하고, 응답을 확인할 수 있습니다.
 ### Tag Information
-`Tag` 단위로 MariaDB의 데이터를 읽기 위해 필요한 설정을 입력 합니다. 읽기 요청에 대한 응답이 `Tag`의 값이 됩니다.
+*Tag* 단위로 MariaDB의 데이터를 읽기 위해 필요한 설정을 입력 합니다. 읽기 요청에 대한 응답이 *Tag*의 값이 됩니다.
 
 | Key | Description | Required |
 | :- | :- | :-: |
@@ -75,7 +75,7 @@ Interactor에서는 Input Field로 입력된 값을 다음과 같은 SQL문으�
 Actionsdml Event에 대한 내용 Logging 하거나 Right bar의 Sytem Log에 출력 가능 -->
 
 ## Calls Example
-`Calls`에서 Query Editor 입력과 Data에 출력된 응답 예시입니다.
+*Calls*에서 Query Editor 입력과 Data에 출력된 응답 예시입니다.
 <!-- | CREATE | | |
 | ALTER | | |
 | TRUNCATE | | |
@@ -98,7 +98,7 @@ SELECT * FROM `LIMIT`
 :::
 
 ## Tags Example
-`Tags`사용을 위한 예시입니다.
+*Tags* 사용을 위한 예시입니다.
 ##### 예시1) MEMBER 테이블에서 MIKE의 나이 가져오기
 - Tag Information 설정
 
@@ -130,33 +130,33 @@ SELECT * FROM `LIMIT`
 ```
 
 ## Actions Example
-`Actions`사용을 위한 예시입니다.
+*Actions* 사용을 위한 예시입니다.
 
-##### 예시1) MEMBER TABLE에 데이터가 10개가 넘어가면 제일 오래된 데이터 삭제하기(`Call`사용)
+##### 예시1) MEMBER TABLE에 데이터가 10개가 넘어가면 제일 오래된 데이터 삭제하기(*Call* 사용)
 
-- Action의 대상이 되는 Tag
+- *Action*의 대상이 되는 *Tag*
 
 <img src="../../img/database/maria_custom_actions1.png" class="mt-0">
 
-- Actions 설정 내용: `COUNT` Tag의 값이 10이 넘어가면 `DELETE_OLD` Call 호출
+- *Actions* 설정 내용: `COUNT` *Tag*의 값이 10이 넘어가면 `DELETE_OLD` *Call* 호출
 
 <img src="../../img/database/maria_custom_actions2.png" class="mt-0">
 
-- Calls 설정 내용: Query Editor에 쓰인 `{Tag Reference}`는 가장 오래된 데이터의 `NAME`을 가져옵니다.
+- *Calls* 설정 내용: Query Editor에 쓰인 `{Tag Reference}`는 가장 오래된 데이터의 `NAME`을 가져옵니다.
 
 <img src="../../img/database/maria_custom_actions3.png" class="mt-0">
 
-##### 예시2) DATABASE의 데이터값 업데이트하기(`Tag`사용)
+##### 예시2) DATABASE의 데이터값 업데이트하기(*Tag*사용)
 
-- Action의 대상이 되는 Tag
+- *Action*의 대상이 되는 *Tag*
 
 <img src="../../img/database/maria_custom_actions4.png" class="mt-0">
 
-- Actions 설정 내용: 'Tom'의 나이가 27인 경우 28로 변경
+- *Actions* 설정 내용: 'Tom'의 나이가 27인 경우 28로 변경
 
 <img src="../../img/database/maria_custom_actions5.png" class="mt-0">
 
-- Tags 변경 내용: Value 27 → 28
+- *Tags* 변경 내용: Value 27 → 28
 
 <img src="../../img/database/maria_custom_actions6.png" class="mt-0">
 

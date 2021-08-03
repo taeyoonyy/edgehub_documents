@@ -2,11 +2,11 @@
 이 페이지는 Elixir의 기본 연산에 대해 설명합니다.
 <div class="info">
   <div class="info-title"><img src="../../img/icon/info.svg">WHERE TO USE</div>
-  - <p>Device, Database, Virtual > Tags > <b>Transform</b></p>
-  - <p>Device, Database, Virtual > Tags > <b>Load Condition</b></p>
-  - <p>Device, Database, Virtual, Sync > Actions > <b>Condition</b></p>
-  - <p>Device, Database, Virtual, Sync > Actions > <b>Logic</b></p>
-  - <p>Virtual > Tags > <b>Logic</b></p>
+  - <p><em>Device, Database, Virtual > Tags > <b>Transform</b></em></p>
+  - <p><em>Device, Database, Virtual > Tags > <b>Load Condition</b></em></p>
+  - <p><em>Device, Database, Virtual, Sync > Actions > <b>Condition</b></em></p>
+  - <p><em>Device, Database, Virtual, Sync > Actions > <b>Logic</b></em></p>
+  - <p><em>Virtual > Tags > <b>Logic</b></em></p>
 </div>
 
 ## Arithmetic

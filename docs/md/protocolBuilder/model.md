@@ -1,9 +1,9 @@
 # Model
-Custom 프로토콜에서 데이터를 전송하거나 수신할 때 사용되는 데이터의 패킷 구조를 만듭니다. 생성된 `Model`은 `Funcion`에서 사용됩니다.
+Custom 프로토콜에서 데이터를 전송하거나 수신할 때 사용되는 데이터의 패킷 구조를 만듭니다. 생성된 *Model*은 *Funcion*에서 사용됩니다.
 
 ::: tip <p class="custom-block-title"><img src="../../img/icon/tip.svg">NOTICE</p>
 
-  `Model`은 `TCP`와 `Serial` 전용으로 `Port`에서는 사용하지 않습니다.
+  *Model*은 **TCP**와 **Serial** 전용으로 *Port*에서는 사용하지 않습니다.
   
 :::
 
@@ -12,7 +12,7 @@ Custom 프로토콜에서 데이터를 전송하거나 수신할 때 사용되�
 
 | Key | Description | Required |
 | :- | :- | :-: |
-| _Name_ | Field 이름. `Function`에서 각 Field를 구분하기 위한 용도  | * |
+| _Name_ | Field 이름. *Function*에서 각 Field를 구분하기 위한 용도  | * |
 | _Value_ | Field에 항상 특정 값이 예상될 때 입력. 설정된 값과 입력된 데이터의 값이 다르면 Model이 사용되지 않음 |  |
 | _Size_ | Field의 사이즈. 숫자 또는 다른 Field의 Name을 입력하여 동적으로 연결 가능 | * |
 | _Type_ | 데이터 타입 설정 (integer, Float, CRC, Bytes, Bits) | * |
@@ -23,11 +23,11 @@ Custom 프로토콜에서 데이터를 전송하거나 수신할 때 사용되�
 
 ::: tip <p class="custom-block-title"><img src="../../img/icon/tip.svg">NOTICE</p>
 
-  타겟 디바이스에 데이터를 요청하여 Tag를 만들기 위해서는 최소 2개의 `Model`이 필요합니다.
+  타겟 디바이스에 데이터를 요청하여 *Tag*를 만들기 위해서는 최소 2개의 *Model*이 필요합니다.
   
 :::
 ::: tip <p class="custom-block-title"><img src="../../img/icon/tip.svg">NOTICE</p>
 
-  Action을 이용하여 타겟 디바이스에 데이터를 쓰기 위해서는 최소 2개의 `Model`이 필요합니다.
+  *Action*을 이용하여 타겟 디바이스에 데이터를 쓰기 위해서는 최소 2개의 *Model*이 필요합니다.
   
 :::

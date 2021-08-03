@@ -1,5 +1,5 @@
 # Port
-Interactor는 외부 프로그램과 연결을 위해 `Port` 기능을 제공합니다. `Port`는 표준 스트림을 이용하여 외부 프로그램과 데이터를 주고 받을 수 있습니다. `Connection Information`에서 외부 프로그램과의 연결을 위한 설정을 하고, `Tag Information`에서 전송할 데이터를 설정합니다. 외부 프로그램의 응답은 `Tag Information`에서 설정한 Value Type에 따라 값을 가지며 Data - Value에서 값을 확인하거나, 다른 Tag 사용 방법과 동일하게 Tag reference를 이용하여 다른 Entity에서 사용할 수 있습니다.
+Interactor는 외부 프로그램과 연결을 위해 **Port** 기능을 제공합니다. *Port*는 표준 스트림을 이용하여 외부 프로그램과 데이터를 주고 받을 수 있습니다. *Connection Information*에서 외부 프로그램과의 연결을 위한 설정을 하고, *Tag Information*에서 전송할 데이터를 설정합니다. 외부 프로그램의 응답은 *Tag Information*에서 설정한 *Value Type*에 따라 값을 가지며 *Data* - *Value*에서 값을 확인하거나, 다른 Tag 사용 방법과 동일하게 *Tag reference*를 이용하여 다른 *Entity*에서 사용할 수 있습니다.
 
 ## Connection Information
 Interactor와 외부 프로그램을 연결하기 위한 설정입니다.
@@ -86,13 +86,13 @@ Interactor와 외부프로그램의 데이터 송수신 방법을 선택합니�
 :::
 
 ## Tags
-Tags에서 외부 프로그램으로 Read Request를 전송할 때 데이터를 설정하고, 응답을 확인할 수 있습니다.
+*Tags*에서 외부 프로그램으로 Read Request를 전송할 때 데이터를 설정하고, 응답을 확인할 수 있습니다.
 
 ### Tag Information
-Procotol Builder에서 프로토콜 생성 시 입력한 Tag Information의 Key가 Tag Information 테이블의 헤더가 되고, Tag에 입력한 데이터가 외부 프로그램으로 전송됩니다.
+*Procotol Builder*에서 프로토콜 생성 시 입력한 *Tag Information*의 Key가 *Tag Information* 테이블의 헤더가 되고, *Tag*에 입력한 데이터가 외부 프로그램으로 전송됩니다.
 
 ### Data
-외부 프로그램의 응답으로 JSON 데이터가 수신됩니다. 수신된 json 중 `value` key의 데이터가 Tag의 값이 됩니다.
+외부 프로그램의 응답으로 JSON 데이터가 수신됩니다. 수신된 json 중 *Value* key의 데이터가 *Tag*의 값이 됩니다.
 
 ###### 자세한 내용은 [Tags 페이지](../general/tags.md)를 참고 바랍니다.
 
@@ -100,17 +100,17 @@ Procotol Builder에서 프로토콜 생성 시 입력한 Tag Information의 Key�
 ###### 자세한 내용은 [Actions 페이지](../general/actions.md)를 참고 바랍니다.
 
 ## Request Data & Response Data
-아래 그림은 Port를 이용하여 외부 프로그램과 데이터를 주고 받을 때 데이터 구조와 69 바이트의 JSON 데이터 `{"id":784172,"data":{"tagInfo":{"msg":"hello"},"command":"read_tag"}}`가 어떻게 구성되는지 보여줍니다.
+아래 그림은 *Port*를 이용하여 외부 프로그램과 데이터를 주고 받을 때 데이터 구조와 69 바이트의 JSON 데이터 `{"id":784172,"data":{"tagInfo":{"msg":"hello"},"command":"read_tag"}}`가 어떻게 구성되는지 보여줍니다.
 <img src="../../img/customProtocol/port-5.png">
 
-Length는 Data가 몇 바이트인지 알려주며, Length는 Communication Information에서 설정한 Packet 갯수의 바이트로 구성되어 있습니다. Data에는 JSON 구조의 ASCII 데이터가 Length 바이트로 구성되어 있습니다.
+*Length*는 Data가 몇 바이트인지 알려주며, *Length*는 *Communication Information*에서 설정한 Packet 갯수의 바이트로 구성되어 있습니다. *Data*에는 JSON 구조의 ASCII 데이터가 Length 바이트로 구성되어 있습니다.
 
 
 ### Request Data
 Interactor에서 외부 프로그램으로 데이터를 전송할 때 JSON 구조입니다.
 - **id**: Request와 Response를 연결하기 위한 트렌잭션 아이디 (0과 1,000,000 사이의 임의의 정수)
-- **data/tagInfo**: Tag Information에서 설정된 Tag의 Key와 사용자가 입력한 Value
-- **data/command**: Tag 를 이용한 Read reqest (read_tag)와 Action을 이용한 Write request(write_tag)
+- **data/tagInfo**: *Tag Information*에서 설정된 *Tag*의 Key와 사용자가 입력한 *Value*
+- **data/command**: *Tag* 를 이용한 Read request(read_tag)와 *Action*을 이용한 Write request(write_tag)
 
 ##### 예시) Request Data
 ``` json
@@ -128,7 +128,7 @@ Interactor에서 외부 프로그램으로 데이터를 전송할 때 JSON 구�
 ### Response Data
 외부 프로그램에서 Interactor의 요청에 대해 응답할 때 사용자가 작성해야 하는 JSON 구조입니다.
 - **id**: 트렌잭션 아이디 (Request에서 받은 id 사용)
-- **value**: Data / Value에 표시되며 Tag의 값이 되는 응답 데이터
+- **value**: *Data*/*Value*에 표시되며 *Tag*의 값이 되는 응답 데이터
 
 ##### 예시) Response Data Structure
 ``` json
@@ -186,4 +186,4 @@ defmodule PortWithElixir do
 
 end
 ```
-- Tag Information의 Key"msg"에 LS를 입력한 경우 "Hello LS"를 응답
+- *Tag Information*의 Key"msg"에 LS를 입력한 경우 "Hello LS"를 응답

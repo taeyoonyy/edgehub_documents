@@ -1,5 +1,5 @@
 # MSSQL DB
-관계형 데이터베이스(Relational Database, RDB)인 MSSQL DB와 Interactor를 연결하여 데이터를 읽거나 쓸 수 있습니다. `Connection Information`에서 MSSQL DB와 연결하기 위한 설정을 하고, `Calls`에서 사용자가 원하는 Query를 사용하여 데이터를 읽거나 쓸 수 있습니다. `Tags`에서는 Interactor에서 지정한 형식에 따라 MSSQL DB의 데이터를 수집할 수 있고, `Actions`을 이용하여 MSSQL DB에 데이터를 쓸 수 있습니다.
+관계형 데이터베이스(Relational Database, RDB)인 MSSQL DB와 Interactor를 연결하여 데이터를 읽거나 쓸 수 있습니다. *Connection Information*에서 MSSQL DB와 연결하기 위한 설정을 하고, *Calls*에서 사용자가 원하는 Query를 사용하여 데이터를 읽거나 쓸 수 있습니다. *Tags*에서는 Interactor에서 지정한 형식에 따라 MSSQL DB의 데이터를 수집할 수 있고, *Actions*을 이용하여 MSSQL DB에 데이터를 쓸 수 있습니다.
 
 ## Connection Information
 Interactor와 MSSQL DB를 연결하기 위해 필요한 데이터를 설정합니다.

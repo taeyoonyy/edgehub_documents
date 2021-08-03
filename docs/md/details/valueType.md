@@ -1,15 +1,15 @@
 # Value Type
-Interactor에서 수집 또는 생성된 데이터는 **15개의 값 타입(Value Type)** 을 적용하여 Value Type의 값을 가질 수 있습니다.
+Interactor에서 수집 또는 생성된 데이터는 **15개의 값 타입(Value Type)** 을 적용하여 *Value Type*의 값을 가질 수 있습니다.
 ![img](../../img/details/valuetype.png)
 | Data Type | Description |
 | :- | :- |
-| (1) Value Type | Tag의 Raw 데이터에 적용할 Value Type |
-| (2) Data / Type | `Raw`, `Binary(in Hex)` 그리고 `Value` 중 (3) Data / Value 에 표시할 타입  |
-| (3) Data / Value | (1) Value Type 과 (2) Data / Type 의 Type이 반영된 Tag의 값 |
-| (4) Byte Size | `Raw` 값의 Byte 사이즈 |
+| *(1) Value Type* | *Tag*의 Raw 데이터에 적용할 Value Type |
+| *(2) Data / Type* | *Raw*, *Binary(in Hex)* 그리고 *Value* 중 *(3) Data / Value*에 표시할 타입  |
+| *(3) Data / Value* | *(1) Value Type*과 *(2) Data / Type*의 Type이 반영된 *Tag*의 값 |
+| *(4) Byte Size* | Raw 값의 Byte 사이즈 |
 
 ::: tip <p class="custom-block-title"><img src="../../img/icon/tip.svg">NOTICE</p>
-**1️⃣ Value Type**으로 적용된 값은 **2️⃣ Data Type**이 `Value`일 때, **3️⃣ Data Value**에 출력됩니다.
+**1️⃣ Value Type**으로 적용된 값은 **2️⃣ Data Type**이 *Value*일 때, **3️⃣ Data Value**에 출력됩니다.
 :::
 
 ## 1. Signed Integer
@@ -20,25 +20,25 @@ Interactor에서 수집 또는 생성된 데이터는 **15개의 값 타입(Valu
 
 ## 3. Float
 부동 소수점 숫자 형식으로 **실수 타입**입니다. 
-`32비트 단정밀도(Single-precision)`와 `64비트 배정밀도(Double-precision)`을 지원합니다.  
+**32비트 단정밀도(Single-precision)** 와 **64비트 배정밀도(Double-precision)** 을 지원합니다.  
 
 ::: tip <p class="custom-block-title"><img src="../../img/icon/tip.svg">NOTICE</p>
-- External Entity의 Tag에 Float를 사용할 때 데이터가 4바이트면 자동으로 단정밀도, 8바이트면 자동으로 배정밀도가 적용됩니다.  
-- Internal Entity의 Tag에 Float를 사용하면 항상 배정밀도가 적용됩니다.  
+- *External Entity*의 *Tag*에 Float를 사용할 때 데이터가 4바이트면 자동으로 단정밀도, 8바이트면 자동으로 배정밀도가 적용됩니다.  
+- *Internal Entity*의 *Tag*에 Float를 사용하면 항상 배정밀도가 적용됩니다.  
 :::
 
 ::: warning <p class="custom-block-title"><img src="../../img/icon/warning.svg">WARNING</p>
-대상 Tag의 값이 32비트(4바이트) 또는 64비트(8바이트)가 아니면 의도하지 않은 값이 출력될 수 있습니다.  
+대상 *Tag*의 값이 32비트(4바이트) 또는 64비트(8바이트)가 아니면 의도하지 않은 값이 출력될 수 있습니다.  
 :::
 
 
 ### 단정밀도 (Float, IEEE754 Single precision 32-bit)
-Tag의 값이 **F4바이트**인 경우 단정밀도가 사용됩니다. 예를 들어, Binary 값이 `0x3F00000`의 단정밀도 Decimal 값은 `0.5`입니다. `0x3F000000`의 값을 가지는 Tag에 Float를 적용하면 Data Value가 `0.5`로 출력됩니다.
+*Tag*의 값이 **F4바이트**인 경우 단정밀도가 사용됩니다. 예를 들어, Binary 값이 `0x3F00000`의 단정밀도 Decimal 값은 `0.5`입니다. `0x3F000000`의 값을 가지는 *Tag*에 Float를 적용하면 *Data Value*가 `0.5`로 출력됩니다.
 
 <h6 class="h6-pt-0"> 자세한 내용은 <a href="https://www.binaryconvert.com/convert_float.html">https://www.binaryconvert.com/convert_float.html</a>를 참고 바랍니다.</h6>
 
 ### 배정밀도 (Double, IEEE754 Double precision 64-bit)
-Tag의 값이 **8바이트**인 경우 배정밀도가 사용됩니다. 예를 들어, Binary 값이 `0x3FE0000000000000`의 단정밀도 Decimal 값은 `0.5`입니다. `0x3FE0000000000000`의 값을 가지는 Tag에 Float를 적용하면 Data Value가 `0.5`로 출력됩니다.  
+*Tag*의 값이 **8바이트**인 경우 배정밀도가 사용됩니다. 예를 들어, Binary 값이 `0x3FE0000000000000`의 단정밀도 Decimal 값은 `0.5`입니다. `0x3FE0000000000000`의 값을 가지는 *Tag*에 Float를 적용하면 *Data Value*가 `0.5`로 출력됩니다.  
 
 <h6 class="h6-pt-0"> 자세한 내용은 <a href="https://www.binaryconvert.com/convert_double.html">https://www.binaryconvert.com/convert_double.html</a>를 참고 바랍니다.</h6>
 
@@ -83,4 +83,4 @@ Tag의 값이 **8바이트**인 경우 배정밀도가 사용됩니다. 예를 �
 **""** 안의 문자열(String)이 16진수인 경우 **부호가 없는 10진수**로 표현합니다. 예를 들어, `"1"`은 `1`, `"10"`은 `16`, `"FFFF"`는 `65535`, `"FF01"`은 `65281`입니다.
 
 ## 15. Hex-Float
-**""** 안의 문자열(String)이 16진수인 경우 **부호를 가지는 10진수**로 표햔합니다. 예를 들어, `"1"`은 `1.0`, `"10"`은 `16.0`, `"FFFF"`는 `-1.0`, `"FF01"`은 `-255.0`입니다. 이때 실수는 배정밀도의 8바이트로 표현되며, Value가 `-255.0`일 때 Binary는 `0xC06FE00000000000`입니다.  
+**""** 안의 문자열(String)이 16진수인 경우 **부호를 가지는 10진수**로 표현합니다. 예를 들어, `"1"`은 `1.0`, `"10"`은 `16.0`, `"FFFF"`는 `-1.0`, `"FF01"`은 `-255.0`입니다. 이때 실수는 배정밀도의 8바이트로 표현되며, Value가 `-255.0`일 때 Binary는 `0xC06FE00000000000`입니다.  

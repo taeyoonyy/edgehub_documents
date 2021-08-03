@@ -1,20 +1,11 @@
 module.exports = {
   head: [
-    ['link', { rel: 'shortcut icon', href: 'favicon.ico' }]
+    ['/', { rel: 'shortcut icon', href: 'favicon.ico' }]
   ],
-  title: 'EdgeHub - i | Interator Docs',
-  // url: 'https://127.0.0.1:1291',
+  title: 'EdgeHub - i | Interator User Manual',
   themeConfig: {
-    // logo: 'headerlogo-interactor.svg',
     sidebar: [
       './md/introduction/intro',
-      // {
-      //   title: 'Introduction',
-      //   sidebarDepth: 1,
-      //   children: [
-      //     './md/introduction/intro'
-      //   ]
-      // },
       {
         title: 'Getting Started',
         sidebarDepth: 1,
